@@ -1,0 +1,553 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/d:themes/d:base/f:jquery.ui.accordion.css" caret="0" fromTop="0" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:HtmlHelpers/f:PagingHelpers.cs" caret="131" fromTop="5" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Navigation/f:Menu.ascx" caret="298" fromTop="5" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:AccountController.cs" caret="6767" fromTop="20" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="1953" fromTop="12" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:ShippingDetails.cs" caret="124" fromTop="6" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/f:Web.config" caret="3281" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/f:Global.asax.cs" caret="2344" fromTop="11" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:ConnectionDb.cs" caret="376" fromTop="12" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Home/f:Index.aspx" caret="408" fromTop="13" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Category.cs" caret="3074" fromTop="17" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Ingridient.cs" caret="3270" fromTop="17" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:ReceptInCategory.cs" caret="2618" fromTop="11" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:NavigationController.cs" caret="35" fromTop="1" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:ReceptsController.cs" caret="564" fromTop="7" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="524" fromTop="15" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:CartLine.cs" caret="159" fromTop="6" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:ItemInSklad.cs" caret="4583" fromTop="17" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:IngridientInRecept.cs" caret="5410" fromTop="85" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:OrderLine.cs" caret="227" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Index.aspx" caret="0" fromTop="0" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Completed.aspx" caret="0" fromTop="0" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:CheckOut.aspx" caret="0" fromTop="0" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:Site.Master" caret="569" fromTop="9" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Recepts/f:List.aspx" caret="0" fromTop="0" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="119" fromTop="1" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Cart.cs" caret="333" fromTop="7" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="1650" fromTop="7" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="164" fromTop="3" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6233" fromTop="83" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="2981" fromTop="6" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="3342" fromTop="11" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="4385" fromTop="13" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5553" fromTop="14" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5852" fromTop="7" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6747" fromTop="13" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6899" fromTop="8" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="162" fromTop="7" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="7830" fromTop="12" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="8370" fromTop="19" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="8200" fromTop="14" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5041" fromTop="20" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="4631" fromTop="6" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5043" fromTop="14" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="242" fromTop="10" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Cart.cs" caret="1151" fromTop="12" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Cart.cs" caret="1151" fromTop="6" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Cart.cs" caret="1163" fromTop="3" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="2376" fromTop="11" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="2711" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="2964" fromTop="15" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3415" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3434" fromTop="13" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3162" fromTop="15" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="2243" fromTop="19" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="4205" fromTop="19" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="212" fromTop="4" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6434" fromTop="12" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="125" fromTop="2" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="942" fromTop="12" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="109" />
+      <Item value="int" priority="48" />
+      <Item value="string" priority="28" />
+      <Item value="bool" priority="25" />
+      <Item value="return" priority="53" />
+      <Item value="false" priority="25" />
+      <Item value="CIngridient`0" priority="2" />
+      <Item value="null" priority="28" />
+      <Item value="float" priority="5" />
+      <Item value="decimal" priority="4" />
+      <Item value="ItemInSklad`0" priority="5" />
+      <Item value="class" priority="3" />
+      <Item value="HashSet" priority="0" />
+      <Item value="ReceptIngridient`0" priority="1" />
+      <Item value="Dictionary" priority="0" />
+      <Item value="Ingridient`0" priority="11" />
+      <Item value="List" priority="8" />
+      <Item value="Recept`0" priority="15" />
+      <Item value="Category`0" priority="21" />
+      <Item value="static" priority="6" />
+      <Item value="ModelBinderAttribute`0" priority="0" />
+      <Item value="Models" priority="5" />
+      <Item value="ConnectionDb`0" priority="12" />
+      <Item value="new" priority="52" />
+      <Item value="SqlConnection" priority="1" />
+      <Item value="if" priority="24" />
+      <Item value="var" priority="13" />
+      <Item value="t" priority="2" />
+      <Item value="Model" priority="14" />
+      <Item value="ViewBag" priority="2" />
+      <Item value="else" priority="2" />
+      <Item value="Language`0" priority="3" />
+      <Item value="IngridientInRecept`0" priority="1" />
+      <Item value="private" priority="6" />
+      <Item value="Recept" priority="6" />
+      <Item value="IQueryable`0" priority="0" />
+      <Item value="fakeRecept" priority="0" />
+      <Item value="ReceptController`0" priority="1" />
+      <Item value="using" priority="4" />
+      <Item value="ShopModel" priority="4" />
+      <Item value="Abstract" priority="0" />
+      <Item value="receptRepository" priority="2" />
+      <Item value="foreach" priority="13" />
+      <Item value="in" priority="0" />
+      <Item value="recept" priority="21" />
+      <Item value="Id" priority="9" />
+      <Item value="NameRecept" priority="4" />
+      <Item value="Description" priority="3" />
+      <Item value="Entities" priority="3" />
+      <Item value="System" priority="2" />
+      <Item value="Configuration" priority="2" />
+      <Item value="Configuration`0" priority="0" />
+      <Item value="Web" priority="0" />
+      <Item value="WebConfigurationManager`0" priority="0" />
+      <Item value="object" priority="3" />
+      <Item value="HtmlHelpers" priority="0" />
+      <Item value="StringBuilder" priority="0" />
+      <Item value="for" priority="2" />
+      <Item value="totalPage" priority="0" />
+      <Item value="TagBuilder`0" priority="0" />
+      <Item value="TagBuilder" priority="0" />
+      <Item value="tag" priority="3" />
+      <Item value="pageUrl" priority="0" />
+      <Item value="i" priority="5" />
+      <Item value="currentPage" priority="0" />
+      <Item value="sb" priority="1" />
+      <Item value="_receptRepository" priority="7" />
+      <Item value="ViewData" priority="10" />
+      <Item value="double" priority="0" />
+      <Item value="numRecept" priority="2" />
+      <Item value="page" priority="5" />
+      <Item value="const" priority="0" />
+      <Item value="PageSize" priority="4" />
+      <Item value="count" priority="3" />
+      <Item value="Page" priority="0" />
+      <Item value="Html" priority="13" />
+      <Item value="Url" priority="1" />
+      <Item value="x" priority="1" />
+      <Item value="Category" priority="1" />
+      <Item value="CategoryName" priority="4" />
+      <Item value="category" priority="27" />
+      <Item value="routes" priority="0" />
+      <Item value="ViewResult`0" priority="3" />
+      <Item value="MultiSelectList`0" priority="5" />
+      <Item value="navigationLinks" priority="4" />
+      <Item value="List&lt;NavigationLink&gt;" priority="0" />
+      <Item value="NavigationLink`0" priority="1" />
+      <Item value="CategotyLink`0" priority="0" />
+      <Item value="Text" priority="3" />
+      <Item value="CategoryLink`0" priority="0" />
+      <Item value="RouteValues" priority="0" />
+      <Item value="RouteValueDictionary" priority="0" />
+      <Item value="Dictionary&lt;string,object&gt;" priority="0" />
+      <Item value="IEnumerable" priority="0" />
+      <Item value="categories" priority="0" />
+      <Item value="View`0" priority="7" />
+      <Item value="cat" priority="0" />
+      <Item value="link" priority="3" />
+      <Item value="FakeCategoriesRepository`0" priority="0" />
+      <Item value="_categoryRepository" priority="3" />
+      <Item value="NavigationLink" priority="0" />
+      <Item value="IsSelected" priority="1" />
+      <Item value="idSelectedCategory" priority="1" />
+      <Item value="CartLine`0" priority="0" />
+      <Item value="List&lt;CartLine&gt;" priority="0" />
+      <Item value="void" priority="16" />
+      <Item value="Lines" priority="2" />
+      <Item value="cartLine" priority="11" />
+      <Item value="sum" priority="1" />
+      <Item value="isPresent" priority="1" />
+      <Item value="true" priority="4" />
+      <Item value="quantity" priority="1" />
+      <Item value="CartLine" priority="0" />
+      <Item value="Quantity" priority="1" />
+      <Item value="l" priority="0" />
+      <Item value="ViewContext" priority="1" />
+      <Item value="CartController`0" priority="2" />
+      <Item value="RedirectToRouteResult`0" priority="1" />
+      <Item value="RedirectToAction`0" priority="1" />
+      <Item value="returnUrl" priority="1" />
+      <Item value="Session" priority="6" />
+      <Item value="Cart`0" priority="7" />
+      <Item value="try" priority="8" />
+      <Item value="cart" priority="17" />
+      <Item value="Cart" priority="4" />
+      <Item value="r" priority="2" />
+      <Item value="Price" priority="10" />
+      <Item value="Request" priority="0" />
+      <Item value="is" priority="0" />
+      <Item value="MvcShop" priority="0" />
+      <Item value="Controllers" priority="0" />
+      <Item value="columnName" priority="0" />
+      <Item value="NumberPhone" priority="0" />
+      <Item value="Address" priority="1" />
+      <Item value="ShippingDetails`0" priority="0" />
+      <Item value="AcceptVerbs" priority="1" />
+      <Item value="HttpVerbs`0" priority="1" />
+      <Item value="GetUserCart`0" priority="5" />
+      <Item value="FormCollection`0" priority="0" />
+      <Item value="formCollection" priority="0" />
+      <Item value="ShippingDetails" priority="5" />
+      <Item value="OpenDb`0" priority="0" />
+      <Item value="SortedSet" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="throw" priority="3" />
+      <Item value="ArgumentException" priority="3" />
+      <Item value="command" priority="10" />
+      <Item value="SqlCommand" priority="1" />
+      <Item value="String`0" priority="5" />
+      <Item value="_tableName" priority="0" />
+      <Item value="TableName" priority="9" />
+      <Item value="id" priority="3" />
+      <Item value="ds" priority="1" />
+      <Item value="Load`0" priority="0" />
+      <Item value="listCategory" priority="0" />
+      <Item value="ServiceShop" priority="3" />
+      <Item value="ss" priority="4" />
+      <Item value="ToList`1" priority="5" />
+      <Item value="ICategoriesRepository`0" priority="0" />
+      <Item value="cr" priority="3" />
+      <Item value="Length" priority="0" />
+      <Item value="ingridient" priority="7" />
+      <Item value="Ingridient" priority="5" />
+      <Item value="IdRecept" priority="2" />
+      <Item value="idIngridient" priority="1" />
+      <Item value="ingridientInRecept" priority="7" />
+      <Item value="idRecept" priority="2" />
+      <Item value="dr" priority="11" />
+      <Item value="MinQuantity" priority="1" />
+      <Item value="PriceByKgOrOne" priority="0" />
+      <Item value="itemInSklad" priority="5" />
+      <Item value="PathToImage" priority="0" />
+      <Item value="transaction" priority="26" />
+      <Item value="SqlTransaction`0" priority="5" />
+      <Item value="idCategory" priority="3" />
+      <Item value="e" priority="0" />
+      <Item value="List&lt;Category&gt;" priority="0" />
+      <Item value="List&lt;Ingridient&gt;" priority="0" />
+      <Item value="List&lt;IngridientInRecept&gt;" priority="1" />
+      <Item value="List&lt;ItemInSklad&gt;" priority="0" />
+      <Item value="List&lt;Recept&gt;" priority="1" />
+      <Item value="IdCategory" priority="0" />
+      <Item value="ReceptInCategory`0" priority="2" />
+      <Item value="receptInCategory" priority="9" />
+      <Item value="ReceptInCategory" priority="0" />
+      <Item value="ReceptsController`0" priority="0" />
+      <Item value="rIc" priority="0" />
+      <Item value="SelectListItem`0" priority="0" />
+      <Item value="Linq" priority="0" />
+      <Item value="set" priority="0" />
+      <Item value="enum" priority="0" />
+      <Item value="OrderStatus`0" priority="2" />
+      <Item value="DateTime`0" priority="3" />
+      <Item value="Phone" priority="1" />
+      <Item value="IdOrder" priority="1" />
+      <Item value="OrderLine`0" priority="8" />
+      <Item value="orderLine" priority="18" />
+      <Item value="orderId" priority="0" />
+      <Item value="listOrderLine" priority="1" />
+      <Item value="OrderLines" priority="4" />
+      <Item value="OrderStatus" priority="0" />
+      <Item value="Start" priority="1" />
+      <Item value="Finish" priority="0" />
+      <Item value="Order`0" priority="6" />
+      <Item value="order" priority="29" />
+      <Item value="orderStatus" priority="3" />
+      <Item value="OrderedEnumerableRowCollection" priority="0" />
+      <Item value="Order" priority="0" />
+      <Item value="List&lt;OrderLine&gt;" priority="0" />
+      <Item value="OrderLine" priority="0" />
+      <Item value="ServiceShopClient`0" priority="0" />
+      <Item value="ServiceShopClient" priority="0" />
+      <Item value="sc" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MvcShop.Models.ConnectionDb">
+      <Item value="Connection" priority="0" />
+      <Item value="Open`0" priority="1" />
+      <Item value="IsOpened" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MvcShop.Models.Category">
+      <Item value="LoadAll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="7" />
+      <Item value="Message" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Count" priority="5" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="AsQueryable`0" priority="0" />
+      <Item value="GetRange`0" priority="0" />
+      <Item value="Add`0" priority="6" />
+      <Item value="Clear`0" priority="0" />
+      <Item value="RemoveAll`0" priority="0" />
+      <Item value="Find`0" priority="1" />
+      <Item value="Sum`1" priority="0" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="Skip`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Abstract.IReceptRepository">
+      <Item value="Recepts" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.Recept">
+      <Item value="NameRecept" priority="1" />
+      <Item value="Description" priority="1" />
+      <Item value="PathToImage" priority="1" />
+      <Item value="Id" priority="10" />
+      <Item value="Price" priority="4" />
+      <Item value="Ingridients" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Configuration.WebConfigurationManager">
+      <Item value="OpenWebConfiguration`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopModel.Entities.ConnectionDb">
+      <Item value="Connection" priority="5" />
+      <Item value="Open`0" priority="0" />
+      <Item value="IsOpened" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Configuration.Configuration">
+      <Item value="ConnectionStrings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Configuration.ConnectionStringsSection">
+      <Item value="ConnectionStrings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Configuration.ConnectionStringSettings">
+      <Item value="ConnectionString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.TagBuilder">
+      <Item value="MergeAttribute`0" priority="0" />
+      <Item value="InnerHtml" priority="0" />
+      <Item value="AddCssClass`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="AppendLine`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Math">
+      <Item value="Ceiling`0" priority="1" />
+      <Item value="Round`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="PageLinks`0" priority="0" />
+      <Item value="RenderPartial`0" priority="0" />
+      <Item value="Encode`0" priority="1" />
+      <Item value="RenderAction`0" priority="1" />
+      <Item value="BeginForm`0" priority="2" />
+      <Item value="Hidden`0" priority="3" />
+      <Item value="ActionLink`0" priority="1" />
+      <Item value="TextBox`0" priority="0" />
+      <Item value="ValidationSummary`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.UrlHelper">
+      <Item value="Action`0" priority="0" />
+      <Item value="RouteUrl`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopModel.Entities.Recept">
+      <Item value="LoadAll`0" priority="0" />
+      <Item value="Load`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="4" />
+      <Item value="Format`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Routing.RouteCollection">
+      <Item value="MapRoute`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.Category">
+      <Item value="CategoryName" priority="3" />
+      <Item value="Id" priority="4" />
+      <Item value="Create`0" priority="0" />
+      <Item value="Update`0" priority="0" />
+      <Item value="Delete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MvcShop.Controllers.NavigationLink">
+      <Item value="Text" priority="0" />
+      <Item value="RouteValues" priority="0" />
+      <Item value="IsSelected" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Abstract.ICategoriesRepository">
+      <Item value="Categories" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.CartLine">
+      <Item value="Recept" priority="10" />
+      <Item value="Quantity" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ViewContext">
+      <Item value="HttpContext" priority="0" />
+      <Item value="Controller" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContextBase">
+      <Item value="Request" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequestBase">
+      <Item value="Url" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Uri">
+      <Item value="PathAndQuery" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.Cart">
+      <Item value="Lines" priority="3" />
+      <Item value="ComputeTotalValue`0" priority="1" />
+      <Item value="AddItem`0" priority="0" />
+      <Item value="RemoveItem`0" priority="0" />
+      <Item value="ShippingDetails" priority="3" />
+      <Item value="SubmitOrder`0" priority="0" />
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Decimal">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequest">
+      <Item value="Url" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.HttpVerbs">
+      <Item value="Get" priority="1" />
+      <Item value="Post" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelStateDictionary">
+      <Item value="AddModelError`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.FormCollection">
+      <Item value="ToValueProvider`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopModel.Entities.Category">
+      <Item value="Load`0" priority="0" />
+      <Item value="LoadAll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlCommand">
+      <Item value="ExecuteNonQuery`0" priority="1" />
+      <Item value="Transaction" priority="3" />
+      <Item value="ExecuteScalar`0" priority="0" />
+      <Item value="Parameters" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataSet">
+      <Item value="Tables" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTable">
+      <Item value="Rows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRowCollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MvcShop.ServiceShop.ServiceShopClient">
+      <Item value="LoadAllCategory`0" priority="0" />
+      <Item value="LoadAllRecept`0" priority="1" />
+      <Item value="LoadReceptInCategoryByCategory`0" priority="0" />
+      <Item value="LoadReceptByCategory`0" priority="0" />
+      <Item value="CreateOrder`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.SqlDbType">
+      <Item value="Int" priority="7" />
+      <Item value="Real" priority="1" />
+      <Item value="Decimal" priority="0" />
+      <Item value="VarChar" priority="1" />
+      <Item value="Variant" priority="0" />
+      <Item value="Money" priority="1" />
+      <Item value="DateTime" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.Ingridient">
+      <Item value="Id" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.IngridientInRecept">
+      <Item value="IdRecept" priority="1" />
+      <Item value="Ingridient" priority="0" />
+      <Item value="Quantity" priority="0" />
+      <Item value="Create`0" priority="1" />
+      <Item value="Delete`0" priority="0" />
+      <Item value="Update`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopModel.Entities.Ingridient">
+      <Item value="Load`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.ItemInSklad">
+      <Item value="Ingridient" priority="0" />
+      <Item value="MinQuantity" priority="0" />
+      <Item value="PriceByKgOrOne" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlTransaction">
+      <Item value="Rollback`0" priority="2" />
+      <Item value="Commit`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopModel.Entities.IngridientInRecept">
+      <Item value="LoadAll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.ReceptInCategory">
+      <Item value="IdCategory" priority="0" />
+      <Item value="IdRecept" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.OrderLine">
+      <Item value="IdOrder" priority="1" />
+      <Item value="Recept" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlParameter">
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.Order">
+      <Item value="Name" priority="1" />
+      <Item value="Phone" priority="1" />
+      <Item value="OrderStatus" priority="1" />
+      <Item value="Start" priority="2" />
+      <Item value="Finish" priority="1" />
+      <Item value="OrderLines" priority="2" />
+      <Item value="Address" priority="1" />
+      <Item value="Create`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopModel.Entities.OrderLine">
+      <Item value="LoadByOrderId`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopModel.Entities.ShippingDetails">
+      <Item value="Name" priority="0" />
+      <Item value="NumberPhone" priority="0" />
+      <Item value="Address" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

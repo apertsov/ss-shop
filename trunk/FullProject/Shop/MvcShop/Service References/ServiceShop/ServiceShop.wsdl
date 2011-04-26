@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceShop" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49101/ServiceShop.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49101/ServiceShop.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49101/ServiceShop.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ShopModel.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceShop_UpdateRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadReceptInCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadReceptInCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadReceptInCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadReceptInCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadReceptInCategoryByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadReceptInCategoryByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadReceptInCategoryByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadReceptInCategoryByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateReceptInCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReceptInCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateReceptInCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReceptInCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateReceptInCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReceptInCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateReceptInCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReceptInCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteReceptInCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReceptInCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteReceptInCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReceptInCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadOrder" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadOrderByStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadOrderByStatus" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadOrderByStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadOrderByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllOrder" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadIngridient_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIngridient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadIngridient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIngridientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllIngridients_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllIngridients" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllIngridients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllIngridientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateIngridient_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIngridient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateIngridient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIngridientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateIngridient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIngridient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateIngridient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIngridientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteIngridient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteIngridient" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteIngridient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteIngridientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadIngridientInReceptById_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIngridientInReceptById" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadIngridientInReceptById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIngridientInReceptByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadIngridientInRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIngridientInRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadIngridientInRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIngridientInReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllIngridientsInRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllIngridientsInRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllIngridientsInRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllIngridientsInReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateIngridientInRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIngridientInRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateIngridientInRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIngridientInReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateIngridientInRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIngridientInRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateIngridientInRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIngridientInReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteIngridientInRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteIngridientInRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteIngridientInRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteIngridientInReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadItemInSklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadItemInSklad" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadItemInSklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadItemInSkladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllItemInSklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllItemInSklad" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllItemInSklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllItemInSkladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateItemInSklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateItemInSklad" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateItemInSklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateItemInSkladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateItemInSklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItemInSklad" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_UpdateItemInSklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItemInSkladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteItemInSklad_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemInSklad" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_DeleteItemInSklad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemInSkladResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadReceptByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadReceptByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadReceptByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadReceptByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_LoadAllRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAllReceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReceptResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceShop">
+    <wsdl:operation name="UpdateRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/UpdateRecept" message="tns:IServiceShop_UpdateRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/UpdateReceptResponse" message="tns:IServiceShop_UpdateRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/DeleteRecept" message="tns:IServiceShop_DeleteRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/DeleteReceptResponse" message="tns:IServiceShop_DeleteRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadReceptInCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadReceptInCategory" message="tns:IServiceShop_LoadReceptInCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadReceptInCategoryResponse" message="tns:IServiceShop_LoadReceptInCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadReceptInCategoryByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadReceptInCategoryByCategory" message="tns:IServiceShop_LoadReceptInCategoryByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadReceptInCategoryByCategoryResponse" message="tns:IServiceShop_LoadReceptInCategoryByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceptInCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateReceptInCategory" message="tns:IServiceShop_CreateReceptInCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateReceptInCategoryResponse" message="tns:IServiceShop_CreateReceptInCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceptInCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/UpdateReceptInCategory" message="tns:IServiceShop_UpdateReceptInCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/UpdateReceptInCategoryResponse" message="tns:IServiceShop_UpdateReceptInCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReceptInCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/DeleteReceptInCategory" message="tns:IServiceShop_DeleteReceptInCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/DeleteReceptInCategoryResponse" message="tns:IServiceShop_DeleteReceptInCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadOrder" message="tns:IServiceShop_LoadOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadOrderResponse" message="tns:IServiceShop_LoadOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadOrderByStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadOrderByStatus" message="tns:IServiceShop_LoadOrderByStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadOrderByStatusResponse" message="tns:IServiceShop_LoadOrderByStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadAllOrder" message="tns:IServiceShop_LoadAllOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadAllOrderResponse" message="tns:IServiceShop_LoadAllOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateOrder" message="tns:IServiceShop_CreateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateOrderResponse" message="tns:IServiceShop_CreateOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/UpdateOrder" message="tns:IServiceShop_UpdateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/UpdateOrderResponse" message="tns:IServiceShop_UpdateOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/DeleteOrder" message="tns:IServiceShop_DeleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/DeleteOrderResponse" message="tns:IServiceShop_DeleteOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadCategory" message="tns:IServiceShop_LoadCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadCategoryResponse" message="tns:IServiceShop_LoadCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadAllCategory" message="tns:IServiceShop_LoadAllCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadAllCategoryResponse" message="tns:IServiceShop_LoadAllCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateCategory" message="tns:IServiceShop_CreateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateCategoryResponse" message="tns:IServiceShop_CreateCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/UpdateCategory" message="tns:IServiceShop_UpdateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/UpdateCategoryResponse" message="tns:IServiceShop_UpdateCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/DeleteCategory" message="tns:IServiceShop_DeleteCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/DeleteCategoryResponse" message="tns:IServiceShop_DeleteCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadIngridient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadIngridient" message="tns:IServiceShop_LoadIngridient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadIngridientResponse" message="tns:IServiceShop_LoadIngridient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllIngridients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadAllIngridients" message="tns:IServiceShop_LoadAllIngridients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadAllIngridientsResponse" message="tns:IServiceShop_LoadAllIngridients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIngridient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateIngridient" message="tns:IServiceShop_CreateIngridient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateIngridientResponse" message="tns:IServiceShop_CreateIngridient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIngridient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/UpdateIngridient" message="tns:IServiceShop_UpdateIngridient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/UpdateIngridientResponse" message="tns:IServiceShop_UpdateIngridient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIngridient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/DeleteIngridient" message="tns:IServiceShop_DeleteIngridient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/DeleteIngridientResponse" message="tns:IServiceShop_DeleteIngridient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadIngridientInReceptById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadIngridientInReceptById" message="tns:IServiceShop_LoadIngridientInReceptById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadIngridientInReceptByIdResponse" message="tns:IServiceShop_LoadIngridientInReceptById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadIngridientInRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadIngridientInRecept" message="tns:IServiceShop_LoadIngridientInRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadIngridientInReceptResponse" message="tns:IServiceShop_LoadIngridientInRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllIngridientsInRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadAllIngridientsInRecept" message="tns:IServiceShop_LoadAllIngridientsInRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadAllIngridientsInReceptResponse" message="tns:IServiceShop_LoadAllIngridientsInRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIngridientInRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateIngridientInRecept" message="tns:IServiceShop_CreateIngridientInRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateIngridientInReceptResponse" message="tns:IServiceShop_CreateIngridientInRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIngridientInRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/UpdateIngridientInRecept" message="tns:IServiceShop_UpdateIngridientInRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/UpdateIngridientInReceptResponse" message="tns:IServiceShop_UpdateIngridientInRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIngridientInRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/DeleteIngridientInRecept" message="tns:IServiceShop_DeleteIngridientInRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/DeleteIngridientInReceptResponse" message="tns:IServiceShop_DeleteIngridientInRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadItemInSklad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadItemInSklad" message="tns:IServiceShop_LoadItemInSklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadItemInSkladResponse" message="tns:IServiceShop_LoadItemInSklad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllItemInSklad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadAllItemInSklad" message="tns:IServiceShop_LoadAllItemInSklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadAllItemInSkladResponse" message="tns:IServiceShop_LoadAllItemInSklad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateItemInSklad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateItemInSklad" message="tns:IServiceShop_CreateItemInSklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateItemInSkladResponse" message="tns:IServiceShop_CreateItemInSklad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemInSklad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/UpdateItemInSklad" message="tns:IServiceShop_UpdateItemInSklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/UpdateItemInSkladResponse" message="tns:IServiceShop_UpdateItemInSklad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItemInSklad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/DeleteItemInSklad" message="tns:IServiceShop_DeleteItemInSklad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/DeleteItemInSkladResponse" message="tns:IServiceShop_DeleteItemInSklad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadRecept" message="tns:IServiceShop_LoadRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadReceptResponse" message="tns:IServiceShop_LoadRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadReceptByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadReceptByCategory" message="tns:IServiceShop_LoadReceptByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadReceptByCategoryResponse" message="tns:IServiceShop_LoadReceptByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadAllRecept" message="tns:IServiceShop_LoadAllRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadAllReceptResponse" message="tns:IServiceShop_LoadAllRecept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateRecept" message="tns:IServiceShop_CreateRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateReceptResponse" message="tns:IServiceShop_CreateRecept_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceShop" type="tns:IServiceShop">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/UpdateRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/DeleteRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadReceptInCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadReceptInCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadReceptInCategoryByCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadReceptInCategoryByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceptInCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateReceptInCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceptInCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/UpdateReceptInCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReceptInCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/DeleteReceptInCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadOrder">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadOrderByStatus">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadOrderByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllOrder">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadAllOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/UpdateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/DeleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadAllCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/UpdateCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/DeleteCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadIngridient">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadIngridient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllIngridients">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadAllIngridients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIngridient">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateIngridient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIngridient">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/UpdateIngridient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIngridient">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/DeleteIngridient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadIngridientInReceptById">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadIngridientInReceptById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadIngridientInRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadIngridientInRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllIngridientsInRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadAllIngridientsInRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIngridientInRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateIngridientInRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIngridientInRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/UpdateIngridientInRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIngridientInRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/DeleteIngridientInRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadItemInSklad">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadItemInSklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllItemInSklad">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadAllItemInSklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateItemInSklad">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateItemInSklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemInSklad">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/UpdateItemInSklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItemInSklad">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/DeleteItemInSklad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadReceptByCategory">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadReceptByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadAllRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadAllRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceShop">
+    <wsdl:port name="BasicHttpBinding_IServiceShop" binding="tns:BasicHttpBinding_IServiceShop">
+      <soap:address location="http://localhost:49101/ServiceShop.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

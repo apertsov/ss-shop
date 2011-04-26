@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="AF86A87D-4EA5-4C9A-BC3C-045564981E7E" ModuleId="MvcShop" />
+  <Module PersistentId="385D53B3-C7FD-44B3-B396-82246572C195" ModuleId="ShopModel" />
+</Modules>
