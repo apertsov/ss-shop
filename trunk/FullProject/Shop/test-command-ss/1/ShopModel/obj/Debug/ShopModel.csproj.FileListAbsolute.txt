@@ -1,5 +1,0 @@
-D:\Projects\Softserve\Repository\MvcShop\ShopModel\bin\Debug\ShopModel.dll
-D:\Projects\Softserve\Repository\MvcShop\ShopModel\bin\Debug\ShopModel.pdb
-D:\Projects\Softserve\Repository\MvcShop\ShopModel\obj\Debug\ResolveAssemblyReference.cache
-D:\Projects\Softserve\Repository\MvcShop\ShopModel\obj\Debug\ShopModel.dll
-D:\Projects\Softserve\Repository\MvcShop\ShopModel\obj\Debug\ShopModel.pdb
