@@ -1,0 +1,89 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc" caret="78" fromTop="0" />
+      <File id="d:Miscellaneous Files/f:Ingridient.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Ingridient.cs" caret="2503" fromTop="12" />
+      <File id="d:Miscellaneous Files/f:IngridientInRecept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?IngridientInRecept.cs" caret="354" fromTop="10" />
+      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="579" fromTop="10" />
+      <File id="d:Miscellaneous Files/f:Order.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Order.cs" caret="2848" fromTop="16" />
+      <File id="d:Miscellaneous Files/f:ConnectionDb.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?ConnectionDb.cs" caret="455" fromTop="10" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3713" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9539" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="6901" fromTop="6" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="6903" fromTop="14" />
+      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="6901" fromTop="11" />
+      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="6901" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="7229" fromTop="15" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3380" fromTop="20" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2888" fromTop="4" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2982" fromTop="7" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8377" fromTop="16" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8506" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8728" fromTop="11" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8857" fromTop="16" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9079" fromTop="17" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9208" fromTop="15" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="211" fromTop="8" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9434" fromTop="14" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9917" fromTop="20" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9962" fromTop="16" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10269" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10383" fromTop="17" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10576" fromTop="14" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10690" fromTop="10" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10862" fromTop="18" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3876" fromTop="20" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3877" fromTop="19" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9604" fromTop="7" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9756" fromTop="13" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3459" fromTop="3" />
+      <File id="d:Miscellaneous Files/f:Order.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Order.cs" caret="4224" fromTop="22" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10134" fromTop="12" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Ingridient`0" priority="13" />
+      <Item value="ingridient" priority="7" />
+      <Item value="int" priority="3" />
+      <Item value="idIngridient" priority="0" />
+      <Item value="idRecept" priority="0" />
+      <Item value="ItemInSklad`0" priority="8" />
+      <Item value="itemInSklad" priority="8" />
+      <Item value="Recept`0" priority="10" />
+      <Item value="recept" priority="7" />
+      <Item value="idCategory" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="Order`0" priority="12" />
+      <Item value="OrderStatus`0" priority="1" />
+      <Item value="orderStatus" priority="2" />
+      <Item value="order" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopModel.Entities.Recept">
+      <Item value="LoadByCategory`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopModel.Entities.Order">
+      <Item value="LoadAll`0" priority="0" />
+      <Item value="LoadByStatus`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

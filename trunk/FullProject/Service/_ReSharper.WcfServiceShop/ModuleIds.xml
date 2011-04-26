@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="8EF047C0-B895-49D6-9984-B68C4E522596" ModuleId="WcfServiceShop" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="ShopModel" />
+  <Module PersistentId="ShopModel, Version=1.0.0.0, Culture=neutral" ModuleId="ShopModel_1" />
+</Modules>
