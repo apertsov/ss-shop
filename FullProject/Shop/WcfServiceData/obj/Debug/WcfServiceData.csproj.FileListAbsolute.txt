@@ -1,0 +1,7 @@
+D:\Projects\Softserve\Repository\MvcShop\WcfServiceData\bin\WcfServiceData.dll
+D:\Projects\Softserve\Repository\MvcShop\WcfServiceData\bin\WcfServiceData.pdb
+D:\Projects\Softserve\Repository\MvcShop\WcfServiceData\bin\ShopModel.dll
+D:\Projects\Softserve\Repository\MvcShop\WcfServiceData\bin\ShopModel.pdb
+D:\Projects\Softserve\Repository\MvcShop\WcfServiceData\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Softserve\Repository\MvcShop\WcfServiceData\obj\Debug\WcfServiceData.dll
+D:\Projects\Softserve\Repository\MvcShop\WcfServiceData\obj\Debug\WcfServiceData.pdb

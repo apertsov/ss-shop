@@ -1,0 +1,10 @@
+D:\Projects\Softserve\Repository\MvcShop\ShopModel\bin\Debug\ShopModel.dll
+D:\Projects\Softserve\Repository\MvcShop\ShopModel\bin\Debug\ShopModel.pdb
+D:\Projects\Softserve\Repository\MvcShop\ShopModel\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Softserve\Repository\MvcShop\ShopModel\obj\Debug\ShopModel.dll
+D:\Projects\Softserve\Repository\MvcShop\ShopModel\obj\Debug\ShopModel.pdb
+G:\MvcShop\ShopModel\bin\Debug\ShopModel.dll
+G:\MvcShop\ShopModel\bin\Debug\ShopModel.pdb
+G:\MvcShop\ShopModel\obj\Debug\ResolveAssemblyReference.cache
+G:\MvcShop\ShopModel\obj\Debug\ShopModel.dll
+G:\MvcShop\ShopModel\obj\Debug\ShopModel.pdb

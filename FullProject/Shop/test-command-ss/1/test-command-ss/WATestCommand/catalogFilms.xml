@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<films>
+	<film>
+		<name>Прибуття поїзда</name>
+		<country>Франція</country>
+		<yearOfFabricate>1896</yearOfFabricate>
+		<director>Брати Люм'єр</director>
+		<actors>
+			<actor>Поїзд</actor>
+			<actor>Вокзал</actor>
+		</actors>
+	</film>
+	<film>
+		<name>Матриця</name>
+		<country>США</country>
+		<yearOfFabricate>1999</yearOfFabricate>
+		<director>Брати Вачовські</director>
+		<actors>
+			<actor>Кіану Рівз</actor>
+			<actor>Ловренс Фішборн</actor>
+			<actor>Керрі-Енн Мосс</actor>
+			<actor>Г'юго Вівінґ</actor>
+		</actors>
+	</film>
+	<film>
+		<name>День незалежності</name>
+		<country>США</country>
+		<yearOfFabricate>1996</yearOfFabricate>
+		<director>Роланд Еммеріх</director>
+		<actors>
+			<actor>Джеф Голдблюм</actor>
+			<actor>Вілл Сміт</actor>
+			<actor>Роберт Лоджиа</actor>
+			<actor>Джуд Хірш</actor>
+			<actor>Білл Пуллман</actor>
+			<actor>Мері МакДонел</actor>
+			<actor>Маргарет Колін</actor>
+		</actors>
+	</film>
+</films>
