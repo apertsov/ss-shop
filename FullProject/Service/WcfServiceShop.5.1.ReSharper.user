@@ -11,17 +11,14 @@
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc" caret="78" fromTop="0" />
       <File id="d:Miscellaneous Files/f:Ingridient.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Ingridient.cs" caret="2503" fromTop="12" />
       <File id="d:Miscellaneous Files/f:IngridientInRecept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?IngridientInRecept.cs" caret="354" fromTop="10" />
-      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="579" fromTop="10" />
-      <File id="d:Miscellaneous Files/f:Order.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Order.cs" caret="2848" fromTop="16" />
+      <File id="d:Miscellaneous Files/f:Order.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Order.cs" caret="4599" fromTop="16" />
       <File id="d:Miscellaneous Files/f:ConnectionDb.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?ConnectionDb.cs" caret="455" fromTop="10" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3713" fromTop="12" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9539" fromTop="9" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3713" fromTop="12" />
+      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="299" fromTop="11" />
     </RecentFiles>
     <RecentEdits>
-      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="6901" fromTop="6" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="6903" fromTop="14" />
-      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="6901" fromTop="11" />
-      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="6901" fromTop="12" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="7229" fromTop="15" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3380" fromTop="20" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2888" fromTop="4" />
@@ -46,8 +43,10 @@
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9604" fromTop="7" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9756" fromTop="13" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3459" fromTop="3" />
-      <File id="d:Miscellaneous Files/f:Order.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Order.cs" caret="4224" fromTop="22" />
+      <File id="d:Miscellaneous Files/f:Order.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Order.cs" caret="4599" fromTop="22" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10134" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3899" fromTop="12" />
+      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?MvcShop?ShopModel?Entities?Recept.cs" caret="165" fromTop="8" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
