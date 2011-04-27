@@ -7,3 +7,12 @@ D:\Projects\Softserve\Repository\MvcShop\MvcShop\obj\Debug\MvcShop.dll
 D:\Projects\Softserve\Repository\MvcShop\MvcShop\obj\Debug\MvcShop.pdb
 D:\Projects\Softserve\Repository\MvcShop\MvcShop\bin\ShopModel.dll
 D:\Projects\Softserve\Repository\MvcShop\MvcShop\bin\ShopModel.pdb
+D:\проект\FullProject\Shop\MvcShop\bin\MvcShop.dll
+D:\проект\FullProject\Shop\MvcShop\bin\MvcShop.pdb
+D:\проект\FullProject\Shop\MvcShop\bin\EntityFramework.dll
+D:\проект\FullProject\Shop\MvcShop\bin\ShopModel.dll
+D:\проект\FullProject\Shop\MvcShop\bin\ShopModel.pdb
+D:\проект\FullProject\Shop\MvcShop\bin\EntityFramework.xml
+D:\проект\FullProject\Shop\MvcShop\obj\Debug\ResolveAssemblyReference.cache
+D:\проект\FullProject\Shop\MvcShop\obj\Debug\MvcShop.dll
+D:\проект\FullProject\Shop\MvcShop\obj\Debug\MvcShop.pdb
