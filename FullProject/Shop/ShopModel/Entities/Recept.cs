@@ -12,6 +12,7 @@ namespace ShopModel.Entities
         public string Description { get; set; }
         public string PathToImage { get; set; }
         public decimal Price { get; set; }
+        public int TimeCooking { get; set; }
         public List<IngridientInRecept> Ingridients { get; set; }
 
         private const string TableName = "tRecept";
@@ -23,14 +24,16 @@ namespace ShopModel.Entities
             var transaction = ConnectionDb.Connection.BeginTransaction();
             try
             {
-                var command = new SqlCommand(String.Format("INSERT INTO {0} (nameRecept,description,pathToImage,price) VALUES (@nameRecept,@description,@pathToImage,@price)", TableName), ConnectionDb.Connection, transaction);
+                var command = new SqlCommand(String.Format("INSERT INTO {0} (nameRecept,description,pathToImage,price,timeCooking) VALUES (@nameRecept,@description,@pathToImage,@price,@timeCooking)", TableName), ConnectionDb.Connection, transaction);
                 command.Parameters.Add("@nameRecept", SqlDbType.VarChar);
                 command.Parameters.Add("@description", SqlDbType.VarChar);
                 command.Parameters.Add("@pathToImage", SqlDbType.VarChar);
+                command.Parameters.Add("@timeCooking", SqlDbType.Int);
                 command.Parameters.Add("@price", SqlDbType.Money);
                 command.Parameters["@nameRecept"].Value = NameRecept;
                 command.Parameters["@description"].Value = Description;
                 command.Parameters["@pathToImage"].Value = PathToImage;
+                command.Parameters["@timeCooking"].Value = TimeCooking;
                 command.Parameters["@price"].Value = Price;
                 command.ExecuteNonQuery();
 
@@ -57,14 +60,16 @@ namespace ShopModel.Entities
             var transaction = ConnectionDb.Connection.BeginTransaction();
             try
             {
-                var command = new SqlCommand(String.Format("UPDATE {0} SET nameRecept=@nameRecept, description=@description, pathToImage=@pathToImage, price=@price WHERE id={1}", TableName, Id), ConnectionDb.Connection, transaction);
+                var command = new SqlCommand(String.Format("UPDATE {0} SET nameRecept=@nameRecept, description=@description, pathToImage=@pathToImage, timeCooking=@timeCooking, price=@price WHERE id={1}", TableName, Id), ConnectionDb.Connection, transaction);
                 command.Parameters.Add("@nameRecept", SqlDbType.VarChar);
                 command.Parameters.Add("@description", SqlDbType.VarChar);
                 command.Parameters.Add("@pathToImage", SqlDbType.VarChar);
+                command.Parameters.Add("@timeCooking", SqlDbType.Int);
                 command.Parameters.Add("@price", SqlDbType.Money);
                 command.Parameters["@nameRecept"].Value = NameRecept;
                 command.Parameters["@description"].Value = Description;
                 command.Parameters["@pathToImage"].Value = PathToImage;
+                command.Parameters["@timeCooking"].Value = TimeCooking;
                 command.Parameters["@price"].Value = Price;
                 command.ExecuteNonQuery();
                 foreach (var ingridientInRecept in Ingridients)
@@ -102,7 +107,7 @@ namespace ShopModel.Entities
         public static Recept Load(int id)
         {
             Recept recept = null;
-            var adapter = new SqlDataAdapter(String.Format("SELECT id,nameRecept,description,pathToImage,price FROM {0} WHERE id={1}", TableName, id), ConnectionDb.Connection);
+            var adapter = new SqlDataAdapter(String.Format("SELECT id,nameRecept,description,pathToImage, timeCooking, price FROM {0} WHERE id={1}", TableName, id), ConnectionDb.Connection);
             var ds = new DataSet();
             adapter.Fill(ds, TableName);
             if (ds.Tables[TableName].Rows.Count > 0)
@@ -113,6 +118,7 @@ namespace ShopModel.Entities
                 recept.NameRecept = dr["nameRecept"].ToString();
                 recept.Description = dr["description"].ToString();
                 recept.PathToImage = dr["pathToImage"].ToString();
+                recept.TimeCooking = (int)dr["timeCooking"];
                 recept.Price = (decimal) dr["price"];
                 recept.Ingridients = IngridientInRecept.LoadAll(recept.Id);
             }
