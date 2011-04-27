@@ -141,6 +141,7 @@
     <Content Include="Views\Cart\Summary.ascx" />
     <Content Include="Views\Navigation\Menu.ascx" />
     <Content Include="Views\Recepts\List.aspx" />
+    <Content Include="Views\Shared\Ingridients.ascx" />
     <Content Include="Views\Shared\ReceptSummary.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
