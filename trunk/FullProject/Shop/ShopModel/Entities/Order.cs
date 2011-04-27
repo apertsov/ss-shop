@@ -21,8 +21,8 @@ namespace ShopModel.Entities
         public OrderStatus OrderStatus { get; set; }
         public DateTime Start { get; set; }
         public DateTime Finish { get; set; }
+        public DateTime OnDateTime { get; set; }
         public List<OrderLine> OrderLines { get; set; }
-
         private const string TableName = "tOrder";
         
         public void Create()
@@ -34,20 +34,21 @@ namespace ShopModel.Entities
             var transaction = ConnectionDb.Connection.BeginTransaction();
             try
             {
-                var command = new SqlCommand(String.Format("INSERT INTO {0} (nname,phone,address,status,startOrder,finishOrder) VALUES (@nName,@phone,@address,@status,@startOrder,@finishOrder)", TableName), ConnectionDb.Connection, transaction);
+                var command = new SqlCommand(String.Format("INSERT INTO {0} (nname,phone,address,status,startOrder,finishOrder,onDateTime) VALUES (@nName,@phone,@address,@status,@startOrder,@finishOrder,@onDateTime)", TableName), ConnectionDb.Connection, transaction);
                 command.Parameters.Add("@nname", SqlDbType.VarChar);
                 command.Parameters.Add("@phone", SqlDbType.VarChar);
                 command.Parameters.Add("@address", SqlDbType.VarChar);
                 command.Parameters.Add("@status", SqlDbType.Int);
                 command.Parameters.Add("@startOrder", SqlDbType.DateTime);
                 command.Parameters.Add("@finishOrder", SqlDbType.DateTime);
-
+                command.Parameters.Add("@onDateTime", SqlDbType.DateTime);
                 command.Parameters["@nname"].Value = Name;
                 command.Parameters["@phone"].Value = Phone;
                 command.Parameters["@address"].Value = Address;
                 command.Parameters["@status"].Value = (int)OrderStatus;
                 command.Parameters["@startOrder"].Value = Start;
                 command.Parameters["@finishOrder"].Value = Finish;
+                command.Parameters["@onDateTime"].Value = OnDateTime;
                 command.ExecuteNonQuery();
 
                 command = new SqlCommand("SELECT MAX(id) FROM "+TableName, ConnectionDb.Connection,transaction);
@@ -81,6 +82,7 @@ namespace ShopModel.Entities
                 command.Parameters.Add("@status", SqlDbType.Int);
                 command.Parameters.Add("@startOrder", SqlDbType.DateTime);
                 command.Parameters.Add("@finishOrder", SqlDbType.DateTime);
+                command.Parameters.Add("@onDateTime", SqlDbType.DateTime);
 
                 command.Parameters["@nname"].Value = Name;
                 command.Parameters["@phone"].Value = Phone;
@@ -88,6 +90,7 @@ namespace ShopModel.Entities
                 command.Parameters["@status"].Value = OrderStatus;
                 command.Parameters["@startOrder"].Value = Start;
                 command.Parameters["@finishOrder"].Value = Finish;
+                command.Parameters["@onDateTime"].Value = OnDateTime;
                 command.ExecuteNonQuery();
 
                 foreach (var orderLine in OrderLines)

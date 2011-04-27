@@ -24,7 +24,6 @@
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:ReceptInCategory.cs" caret="2618" fromTop="11" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:NavigationController.cs" caret="35" fromTop="1" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:ReceptsController.cs" caret="564" fromTop="7" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="524" fromTop="15" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:CartLine.cs" caret="159" fromTop="6" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:ItemInSklad.cs" caret="4583" fromTop="17" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:IngridientInRecept.cs" caret="5410" fromTop="85" />
@@ -38,23 +37,11 @@
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Cart.cs" caret="333" fromTop="7" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="1650" fromTop="7" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="164" fromTop="3" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6233" fromTop="83" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="348" fromTop="12" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5497" fromTop="14" />
     </RecentFiles>
     <RecentEdits>
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="2981" fromTop="6" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="3342" fromTop="11" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="4385" fromTop="13" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5553" fromTop="14" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5852" fromTop="7" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6747" fromTop="13" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6899" fromTop="8" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="162" fromTop="7" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="7830" fromTop="12" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="8370" fromTop="19" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="8200" fromTop="14" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5041" fromTop="20" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="4631" fromTop="6" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5043" fromTop="14" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5406" fromTop="14" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="242" fromTop="10" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Cart.cs" caret="1151" fromTop="12" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Cart.cs" caret="1151" fromTop="6" />
@@ -65,12 +52,25 @@
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3415" fromTop="10" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3434" fromTop="13" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3162" fromTop="15" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="2243" fromTop="19" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="4205" fromTop="19" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="212" fromTop="4" />
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6434" fromTop="12" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="6797" fromTop="12" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="125" fromTop="2" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="942" fromTop="12" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="1819" fromTop="19" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="1108" fromTop="10" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="3707" fromTop="18" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="2969" fromTop="5" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="5106" fromTop="3" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="412" fromTop="14" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="1459" fromTop="10" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="3348" fromTop="13" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="5699" fromTop="16" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="622" fromTop="16" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="2024" fromTop="17" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="2487" fromTop="20" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="1462" fromTop="6" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="4113" fromTop="12" />
+      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="4596" fromTop="19" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -85,8 +85,8 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="109" />
-      <Item value="int" priority="48" />
+      <Item value="public" priority="110" />
+      <Item value="int" priority="49" />
       <Item value="string" priority="28" />
       <Item value="bool" priority="25" />
       <Item value="return" priority="53" />
@@ -231,7 +231,7 @@
       <Item value="ToString`0" priority="0" />
       <Item value="throw" priority="3" />
       <Item value="ArgumentException" priority="3" />
-      <Item value="command" priority="10" />
+      <Item value="command" priority="11" />
       <Item value="SqlCommand" priority="1" />
       <Item value="String`0" priority="5" />
       <Item value="_tableName" priority="0" />
@@ -298,6 +298,10 @@
       <Item value="ServiceShopClient`0" priority="0" />
       <Item value="ServiceShopClient" priority="0" />
       <Item value="sc" priority="0" />
+      <Item value="TimeSpan`0" priority="1" />
+      <Item value="TimeCooking" priority="1" />
+      <Item value="BigInt" priority="0" />
+      <Item value="OnDateTime" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@MvcShop.Models.ConnectionDb">
       <Item value="Connection" priority="0" />
@@ -335,6 +339,7 @@
       <Item value="Id" priority="10" />
       <Item value="Price" priority="4" />
       <Item value="Ingridients" priority="0" />
+      <Item value="TimeCooking" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Web.Configuration.WebConfigurationManager">
       <Item value="OpenWebConfiguration`0" priority="0" />
@@ -464,7 +469,7 @@
       <Item value="ExecuteNonQuery`0" priority="1" />
       <Item value="Transaction" priority="3" />
       <Item value="ExecuteScalar`0" priority="0" />
-      <Item value="Parameters" priority="1" />
+      <Item value="Parameters" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.DataSet">
       <Item value="Tables" priority="0" />
@@ -483,13 +488,14 @@
       <Item value="CreateOrder`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Data.SqlDbType">
-      <Item value="Int" priority="7" />
+      <Item value="Int" priority="9" />
       <Item value="Real" priority="1" />
       <Item value="Decimal" priority="0" />
       <Item value="VarChar" priority="1" />
       <Item value="Variant" priority="0" />
       <Item value="Money" priority="1" />
-      <Item value="DateTime" priority="1" />
+      <Item value="DateTime" priority="2" />
+      <Item value="Timestamp" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:ShopModel.Entities.Ingridient">
       <Item value="Id" priority="3" />
@@ -548,6 +554,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.DateTime">
       <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlParameterCollection">
+      <Item value="Add`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
