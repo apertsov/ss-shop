@@ -8,3 +8,8 @@ D:\проект\FullProject\Shop\ShopModel\bin\Debug\ShopModel.pdb
 D:\проект\FullProject\Shop\ShopModel\obj\Debug\ResolveAssemblyReference.cache
 D:\проект\FullProject\Shop\ShopModel\obj\Debug\ShopModel.dll
 D:\проект\FullProject\Shop\ShopModel\obj\Debug\ShopModel.pdb
+D:\Applications\SS_Shop2\FullProject\Shop\ShopModel\bin\Debug\ShopModel.dll
+D:\Applications\SS_Shop2\FullProject\Shop\ShopModel\bin\Debug\ShopModel.pdb
+D:\Applications\SS_Shop2\FullProject\Shop\ShopModel\obj\Debug\ResolveAssemblyReference.cache
+D:\Applications\SS_Shop2\FullProject\Shop\ShopModel\obj\Debug\ShopModel.dll
+D:\Applications\SS_Shop2\FullProject\Shop\ShopModel\obj\Debug\ShopModel.pdb

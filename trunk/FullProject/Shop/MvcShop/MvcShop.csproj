@@ -67,6 +67,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngridientController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Controllers\ReceptsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -139,6 +140,7 @@
     <Content Include="Views\Cart\Completed.aspx" />
     <Content Include="Views\Cart\Index.aspx" />
     <Content Include="Views\Cart\Summary.ascx" />
+    <Content Include="Views\Ingridient\Index.aspx" />
     <Content Include="Views\Navigation\Menu.ascx" />
     <Content Include="Views\Recepts\List.aspx" />
     <Content Include="Views\Shared\Ingridients.ascx" />
