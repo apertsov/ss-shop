@@ -5,10 +5,21 @@ using System.Data.SqlClient;
 
 namespace ShopModel.Entities
 {
+    /*
+    public enum Mira
+    {
+        kg         = 1,
+        gram       = 2, 
+        liter      = 3,
+        milliliter = 4,
+    }
+    */
+
     public class Ingridient
     {
         public int Id { get; set; }
         public string IngridientName { get; set; }
+        //public int IngridientMira { get; set; }
         private const string TableName = "tIngridient";
 
         public void Create()
@@ -17,6 +28,8 @@ namespace ShopModel.Entities
             var command = new SqlCommand(String.Format("INSERT INTO {0} (ingridientName) VALUES (@ingridientName)", TableName), ConnectionDb.Connection);
             command.Parameters.Add("@ingridientName", SqlDbType.VarChar);
             command.Parameters["@ingridientName"].Value = IngridientName;
+            //command.Parameters.Add("@ingridientMira", SqlDbType.Int);
+            //command.Parameters["@ingridientMira"].Value = IngridientMira;
             command.ExecuteNonQuery();
         }
         
@@ -51,6 +64,7 @@ namespace ShopModel.Entities
                 var dr = ds.Tables[TableName].Rows[0];
                 ingridient.Id = id;
                 ingridient.IngridientName = dr["ingridientName"].ToString();
+                //ingridient.IngridientMira = int.Parse(dr["ingridientMira"].ToString());
             }
             return ingridient;
         }

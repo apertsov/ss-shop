@@ -16,3 +16,12 @@ D:\проект\FullProject\Shop\MvcShop\bin\EntityFramework.xml
 D:\проект\FullProject\Shop\MvcShop\obj\Debug\ResolveAssemblyReference.cache
 D:\проект\FullProject\Shop\MvcShop\obj\Debug\MvcShop.dll
 D:\проект\FullProject\Shop\MvcShop\obj\Debug\MvcShop.pdb
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\bin\MvcShop.dll
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\bin\MvcShop.pdb
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\bin\EntityFramework.dll
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\bin\ShopModel.dll
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\bin\ShopModel.pdb
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\bin\EntityFramework.xml
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\obj\Debug\ResolveAssemblyReference.cache
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\obj\Debug\MvcShop.dll
+D:\Applications\SS_Shop2\FullProject\Shop\MvcShop\obj\Debug\MvcShop.pdb
