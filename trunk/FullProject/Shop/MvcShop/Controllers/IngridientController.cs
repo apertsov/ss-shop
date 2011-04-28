@@ -53,17 +53,5 @@ namespace MvcShop.Controllers
 
             return RedirectToAction("Index", "Ingridient");
         }
-
-        //тестовий контроллер для наповнення тестовми даними.
-        //в майбутньому його варто відключити
-        public ActionResult testAdd()
-        {
-            ServiceShopClient ssc = new ServiceShopClient();
-            ssc.CreateIngridient(new Ingridient { Id = 1, IngridientName = "Salt"} );
-            ssc.CreateIngridient(new Ingridient { Id = 1, IngridientName = "Sugar"});
-            ssc.CreateIngridient(new Ingridient { Id = 1, IngridientName = "Paper"});
-
-            return RedirectToAction("Index", "Ingridient");
-        }
     }
 }
