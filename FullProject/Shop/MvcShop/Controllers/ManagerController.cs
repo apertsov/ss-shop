@@ -4,7 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Web.Profile;
 
+using System.Web.UI;
+using System.Web.UI.WebControls;
 namespace MvcShop.Controllers
 {
     public class ManagerController : Controller
@@ -48,9 +51,75 @@ namespace MvcShop.Controllers
             return RedirectToAction("Role","Manager");
         }
 
-        public ActionResult UserRole()
+
+        public ActionResult AddUser()
         {
             return View();
+        }
+
+
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult AddUser(string login,string password,string first,string last,string address,string phone,FormCollection fc)
+        {
+            
+                MembershipCreateStatus createStatus;
+                Membership.CreateUser(Server.HtmlEncode(fc["login"]),Server.HtmlEncode(fc["password"]), null, null, null, true, null, out createStatus);
+
+                if (createStatus == MembershipCreateStatus.Success)
+                {
+                    FormsAuthentication.SetAuthCookie(Server.HtmlEncode(fc["login"]), false /* createPersistentCookie */);
+                    ProfileBase p = ProfileBase.Create(Server.HtmlEncode(fc["login"]), true);
+                    p.SetPropertyValue("first", Server.HtmlEncode(fc["first"]));
+                    p.SetPropertyValue("last", Server.HtmlEncode(fc["last"]));
+                    p.SetPropertyValue("address", Server.HtmlEncode(fc["address"]));
+                    p.SetPropertyValue("phone", Server.HtmlEncode(fc["phone"]));
+                    p.Save();
+                    foreach (string role in Roles.GetAllRoles())
+                    {
+                       // var r = fc[role];
+                        if (fc[role] != "false")
+                            Roles.AddUserToRole(login, role);
+                    }
+                    return RedirectToAction("Index", "Manager");
+                }
+                     
+            return View();
+        }
+
+
+        public ActionResult ChangeUser()
+        {
+            return View();
+        }
+
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult ChangeUser(FormCollection fc)
+        {
+            if (fc["save"] != null)
+            {
+                foreach (var item in Membership.GetAllUsers())
+                {
+                    MembershipUser user = (MembershipUser)item;
+                    foreach (string name in Roles.GetAllRoles())
+                    {
+                        if (fc[name + user.UserName] != "false")
+                            if (!Roles.IsUserInRole(user.UserName, name))
+                            Roles.AddUserToRole(user.UserName, name);
+                    }
+                }
+            }
+            return RedirectToAction("ChangeUser", "Manager");
+        }
+
+
+        public ActionResult DeleteUser(string user, string x)
+        {
+            if (x != null)
+                Membership.DeleteUser(user);
+            return RedirectToAction("ChangeUser", "Manager");
+          
         }
     }
 }
