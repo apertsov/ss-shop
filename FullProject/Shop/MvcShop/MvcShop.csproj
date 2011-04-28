@@ -68,6 +68,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\ItemInSkladController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Controllers\ReceptsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -146,6 +147,7 @@
     <Content Include="Views\Manager\Index.aspx" />
     <Content Include="Views\Manager\Role.aspx" />
     <Content Include="Views\Manager\UserRole.aspx" />
+    <Content Include="Views\ItemInSklad\Index.aspx" />
     <Content Include="Views\Navigation\Menu.ascx" />
     <Content Include="Views\Recepts\List.aspx" />
     <Content Include="Views\Shared\Ingridients.ascx" />
