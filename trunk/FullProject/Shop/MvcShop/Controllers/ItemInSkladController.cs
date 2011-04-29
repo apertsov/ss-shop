@@ -57,5 +57,12 @@ namespace MvcShop.Controllers
             return RedirectToAction("Index", "ItemInSklad");
         }
 
+        public ActionResult IngredientsEnd()
+        {
+            ServiceShopClient ssc = new ServiceShopClient();
+            ViewData["itemInSklad"] = ssc.LoadAllItemInSklad();
+
+            return View();
+        }
     }
 }
