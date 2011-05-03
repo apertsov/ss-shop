@@ -22,11 +22,11 @@ namespace MvcShop.Controllers
             return cart;
         }
 
-        public RedirectToRouteResult AddToCart(int receptId, string returnUrl, int quantity)
+        public RedirectToRouteResult AddToCart(int receptId, string returnUrl, int? quantity)
         {
             var r = _receptRepository.Find(rf=>rf.Id==receptId);//Recept.Load(Id);
             var cart = GetUserCart();
-            cart.AddItem(r,quantity);
+            cart.AddItem(r,quantity??1);
             Session["Cart"] = cart;
             return RedirectToAction("Index", new {returnUrl});
         }
