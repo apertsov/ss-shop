@@ -379,18 +379,25 @@ namespace WcfServiceShop
             return Order.LoadByStatus(orderStatus);
         }
 
-        public bool CreateOrder(Order order)
+        public List<Order> LoadOrderByUserName(string userName)
         {
+            if (!ConnectionDb.IsOpened) OpenDb();
+            return Order.LoadByUserName(userName);
+        }
+
+        public int CreateOrder(Order order)
+        {
+            int id;
             if (!ConnectionDb.IsOpened) OpenDb();
             try
             {
-                order.Create();
+                id=order.Create();
             }
             catch
             {
-                return false;
+                id = 0;
             }
-            return true;
+            return id;
         }
 
         public bool UpdateOrder(Order order)

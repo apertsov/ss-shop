@@ -124,10 +124,13 @@ namespace WcfServiceShop
         List<Order> LoadOrderByStatus(OrderStatus orderStatus);
 
         [OperationContract]
+        List<Order> LoadOrderByUserName(string userName);
+
+        [OperationContract]
         List<Order> LoadAllOrder();
 
         [OperationContract]
-        bool CreateOrder(Order order);
+        int CreateOrder(Order order);
 
         [OperationContract]
         bool UpdateOrder(Order order);
