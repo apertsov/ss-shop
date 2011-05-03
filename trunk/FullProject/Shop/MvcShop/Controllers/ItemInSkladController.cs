@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using MvcShop.ServiceShop;
 using ShopModel.Entities;
 
@@ -15,7 +11,7 @@ namespace MvcShop.Controllers
 
         public ActionResult Index()
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            var ssc = new ServiceShopClient();
             ViewData["itemInSklad"] = ssc.LoadAllItemInSklad();
             ViewData["IngridientID"] = new SelectList(ssc.LoadAllIngridients(), "Id", "IngridientName");
 
@@ -27,7 +23,7 @@ namespace MvcShop.Controllers
             if (add != null)
             {
                 item.Ingridient = new Ingridient { Id = int.Parse(ing), IngridientName = "" };
-                ServiceShopClient ssc = new ServiceShopClient();
+                var ssc = new ServiceShopClient();
                 ssc.CreateItemInSklad(item);
             }
 
@@ -39,7 +35,7 @@ namespace MvcShop.Controllers
             if (edit != null)
             {
                 item.Ingridient = new Ingridient { Id = int.Parse(ing), IngridientName = "" };
-                ServiceShopClient ssc = new ServiceShopClient();
+                var ssc = new ServiceShopClient();
                 ssc.UpdateItemInSklad(item);
             }
 
@@ -50,7 +46,7 @@ namespace MvcShop.Controllers
         {
             if (delete != null)
             {
-                ServiceShopClient ssc = new ServiceShopClient();
+                var ssc = new ServiceShopClient();
                 ssc.DeleteItemInSklad(item);
             }
 
@@ -59,7 +55,7 @@ namespace MvcShop.Controllers
 
         public ActionResult IngredientsEnd()
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            var ssc = new ServiceShopClient();
             ViewData["itemInSklad"] = ssc.LoadAllItemInSklad();
 
             return View();

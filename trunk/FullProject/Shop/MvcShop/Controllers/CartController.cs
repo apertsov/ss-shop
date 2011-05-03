@@ -74,23 +74,36 @@ namespace MvcShop.Controllers
             {
                 try
                 {
-                    var order = new Order
+                    DateTime dt;
+                    if (!DateTime.TryParse(cart.ShippingDetails.OnDateTime, out dt))
                     {
-                        Name = cart.ShippingDetails.Name,
-                        Phone = cart.ShippingDetails.NumberPhone,
-                        Address = cart.ShippingDetails.Address,
-                        OrderStatus = OrderStatus.Start,
-                        Start = DateTime.Now
-                    };
-                    order.Finish = order.Start;
-                    order.OrderLines = new List<OrderLine>();
+                        dt = DateTime.Now;
+                    }
+                    
+                    var username = User.Identity.Name;
+                    var order = new Order
+                                    {
+                                        Name = cart.ShippingDetails.Name,
+                                        Phone = cart.ShippingDetails.NumberPhone,
+                                        Address = cart.ShippingDetails.Address,
+                                        OrderStatus = OrderStatus.Taken,
+                                        Start = DateTime.Now,
+                                        OnDateTime = dt,
+                                        Finish = DateTime.Now.AddYears(50),
+                                        OrderLines = new List<OrderLine>(),
+                                        UserName = username
+                                    };
                     foreach (var orderLine in cart.Lines.Select(cartLine => new OrderLine { Recept = cartLine.Recept }))
                     {
                         order.OrderLines.Add(orderLine);
                     }
                     var sc = new ServiceShopClient();
-                    sc.CreateOrder(order);
+                    var id = sc.CreateOrder(order);
                     cart.Clear();
+                    if (User.Identity.IsAuthenticated == false)
+                    {
+                        ViewData["idOrder"] = id;
+                    }
                     return View("Completed");
                 }
                 catch

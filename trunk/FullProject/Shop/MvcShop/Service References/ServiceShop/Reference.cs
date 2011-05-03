@@ -15,15 +15,6 @@ namespace MvcShop.ServiceShop {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceShop.IServiceShop")]
     public interface IServiceShop {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/UpdateRecept", ReplyAction="http://tempuri.org/IServiceShop/UpdateReceptResponse")]
-        bool UpdateRecept(ShopModel.Entities.Recept recept);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/DeleteRecept", ReplyAction="http://tempuri.org/IServiceShop/DeleteReceptResponse")]
-        bool DeleteRecept(ShopModel.Entities.Recept recept);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/LoadReceptInCategory", ReplyAction="http://tempuri.org/IServiceShop/LoadReceptInCategoryResponse")]
-        ShopModel.Entities.ReceptInCategory LoadReceptInCategory(int id);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/LoadReceptInCategoryByCategory", ReplyAction="http://tempuri.org/IServiceShop/LoadReceptInCategoryByCategoryResponse")]
         ShopModel.Entities.ReceptInCategory[] LoadReceptInCategoryByCategory(int idCategory);
         
@@ -42,11 +33,14 @@ namespace MvcShop.ServiceShop {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/LoadOrderByStatus", ReplyAction="http://tempuri.org/IServiceShop/LoadOrderByStatusResponse")]
         ShopModel.Entities.Order[] LoadOrderByStatus(ShopModel.Entities.OrderStatus orderStatus);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/LoadOrderByUserName", ReplyAction="http://tempuri.org/IServiceShop/LoadOrderByUserNameResponse")]
+        ShopModel.Entities.Order[] LoadOrderByUserName(string userName);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/LoadAllOrder", ReplyAction="http://tempuri.org/IServiceShop/LoadAllOrderResponse")]
         ShopModel.Entities.Order[] LoadAllOrder();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/CreateOrder", ReplyAction="http://tempuri.org/IServiceShop/CreateOrderResponse")]
-        bool CreateOrder(ShopModel.Entities.Order order);
+        int CreateOrder(ShopModel.Entities.Order order);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/UpdateOrder", ReplyAction="http://tempuri.org/IServiceShop/UpdateOrderResponse")]
         bool UpdateOrder(ShopModel.Entities.Order order);
@@ -128,6 +122,15 @@ namespace MvcShop.ServiceShop {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/CreateRecept", ReplyAction="http://tempuri.org/IServiceShop/CreateReceptResponse")]
         bool CreateRecept(ShopModel.Entities.Recept recept);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/UpdateRecept", ReplyAction="http://tempuri.org/IServiceShop/UpdateReceptResponse")]
+        bool UpdateRecept(ShopModel.Entities.Recept recept);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/DeleteRecept", ReplyAction="http://tempuri.org/IServiceShop/DeleteReceptResponse")]
+        bool DeleteRecept(ShopModel.Entities.Recept recept);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceShop/LoadReceptInCategory", ReplyAction="http://tempuri.org/IServiceShop/LoadReceptInCategoryResponse")]
+        ShopModel.Entities.ReceptInCategory LoadReceptInCategory(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -157,18 +160,6 @@ namespace MvcShop.ServiceShop {
                 base(binding, remoteAddress) {
         }
         
-        public bool UpdateRecept(ShopModel.Entities.Recept recept) {
-            return base.Channel.UpdateRecept(recept);
-        }
-        
-        public bool DeleteRecept(ShopModel.Entities.Recept recept) {
-            return base.Channel.DeleteRecept(recept);
-        }
-        
-        public ShopModel.Entities.ReceptInCategory LoadReceptInCategory(int id) {
-            return base.Channel.LoadReceptInCategory(id);
-        }
-        
         public ShopModel.Entities.ReceptInCategory[] LoadReceptInCategoryByCategory(int idCategory) {
             return base.Channel.LoadReceptInCategoryByCategory(idCategory);
         }
@@ -193,11 +184,15 @@ namespace MvcShop.ServiceShop {
             return base.Channel.LoadOrderByStatus(orderStatus);
         }
         
+        public ShopModel.Entities.Order[] LoadOrderByUserName(string userName) {
+            return base.Channel.LoadOrderByUserName(userName);
+        }
+        
         public ShopModel.Entities.Order[] LoadAllOrder() {
             return base.Channel.LoadAllOrder();
         }
         
-        public bool CreateOrder(ShopModel.Entities.Order order) {
+        public int CreateOrder(ShopModel.Entities.Order order) {
             return base.Channel.CreateOrder(order);
         }
         
@@ -307,6 +302,18 @@ namespace MvcShop.ServiceShop {
         
         public bool CreateRecept(ShopModel.Entities.Recept recept) {
             return base.Channel.CreateRecept(recept);
+        }
+        
+        public bool UpdateRecept(ShopModel.Entities.Recept recept) {
+            return base.Channel.UpdateRecept(recept);
+        }
+        
+        public bool DeleteRecept(ShopModel.Entities.Recept recept) {
+            return base.Channel.DeleteRecept(recept);
+        }
+        
+        public ShopModel.Entities.ReceptInCategory LoadReceptInCategory(int id) {
+            return base.Channel.LoadReceptInCategory(id);
         }
     }
 }

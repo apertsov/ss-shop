@@ -71,6 +71,7 @@
     <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\ItemInSkladController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ReceptsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -119,9 +120,11 @@
     <Content Include="Scripts\jquery-1.5.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery-ui-timepicker-addon.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\JScriptCalendar.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <None Include="Properties\DataSources\ShopModel.Entities.Category.datasource" />
@@ -138,6 +141,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Scripts\ui.datetimepicker.js" />
     <Content Include="Views\Cart\CheckOut.aspx" />
     <Content Include="Views\Cart\Completed.aspx" />
     <Content Include="Views\Cart\Index.aspx" />
@@ -151,9 +155,14 @@
     <Content Include="Views\Manager\UserRole.aspx" />
     <Content Include="Views\ItemInSklad\Index.aspx" />
     <Content Include="Views\Navigation\Menu.ascx" />
+    <Content Include="Views\Orders\Index.aspx" />
+    <Content Include="Views\Orders\SearchById.aspx" />
+    <Content Include="Views\Orders\SearchByUser.aspx" />
     <Content Include="Views\Recepts\List.aspx" />
     <Content Include="Views\Shared\Ingridients.ascx" />
     <Content Include="Views\Shared\ReceptSummary.ascx" />
+    <Content Include="Views\Shared\SearchByIdPartial.ascx" />
+    <Content Include="Views\Shared\SearchByUserName.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
