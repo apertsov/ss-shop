@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace ShopModel.Entities
@@ -33,11 +32,6 @@ namespace ShopModel.Entities
         public decimal ComputeTotalValue()
         {
             return Lines.Sum(cartLine => cartLine.Recept.Price*cartLine.Quantity);
-        }
-
-        public bool SubmitOrder()
-        {
-            return false;
         }
     }
 }

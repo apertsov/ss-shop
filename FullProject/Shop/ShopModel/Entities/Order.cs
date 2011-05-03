@@ -7,7 +7,7 @@ namespace ShopModel.Entities
 {
     public enum OrderStatus
     {
-        Start,
+        Taken,
         Processed,
         End
     } ;
@@ -23,9 +23,12 @@ namespace ShopModel.Entities
         public DateTime Finish { get; set; }
         public DateTime OnDateTime { get; set; }
         public List<OrderLine> OrderLines { get; set; }
+        public string UserName { get; set; }
+
         private const string TableName = "tOrder";
         
-        public void Create()
+        
+        public int Create()
         {
             if (string.IsNullOrEmpty(Name)) throw new ArgumentException("set name ");
             if (string.IsNullOrEmpty(Phone)) throw new ArgumentException("set name ");
@@ -34,7 +37,7 @@ namespace ShopModel.Entities
             var transaction = ConnectionDb.Connection.BeginTransaction();
             try
             {
-                var command = new SqlCommand(String.Format("INSERT INTO {0} (nname,phone,address,status,startOrder,finishOrder,onDateTime) VALUES (@nName,@phone,@address,@status,@startOrder,@finishOrder,@onDateTime)", TableName), ConnectionDb.Connection, transaction);
+                var command = new SqlCommand(String.Format("INSERT INTO {0} (nname,phone,address,status,startOrder,finishOrder,onDateTime,userName) VALUES (@nName,@phone,@address,@status,@startOrder,@finishOrder,@onDateTime,@userName)", TableName), ConnectionDb.Connection, transaction);
                 command.Parameters.Add("@nname", SqlDbType.VarChar);
                 command.Parameters.Add("@phone", SqlDbType.VarChar);
                 command.Parameters.Add("@address", SqlDbType.VarChar);
@@ -42,6 +45,7 @@ namespace ShopModel.Entities
                 command.Parameters.Add("@startOrder", SqlDbType.DateTime);
                 command.Parameters.Add("@finishOrder", SqlDbType.DateTime);
                 command.Parameters.Add("@onDateTime", SqlDbType.DateTime);
+                command.Parameters.Add("@userName", SqlDbType.VarChar);
                 command.Parameters["@nname"].Value = Name;
                 command.Parameters["@phone"].Value = Phone;
                 command.Parameters["@address"].Value = Address;
@@ -49,6 +53,7 @@ namespace ShopModel.Entities
                 command.Parameters["@startOrder"].Value = Start;
                 command.Parameters["@finishOrder"].Value = Finish;
                 command.Parameters["@onDateTime"].Value = OnDateTime;
+                command.Parameters["@userName"].Value = UserName;
                 command.ExecuteNonQuery();
 
                 command = new SqlCommand("SELECT MAX(id) FROM "+TableName, ConnectionDb.Connection,transaction);
@@ -60,12 +65,13 @@ namespace ShopModel.Entities
                     orderLine.Create(transaction);
                 }
                 transaction.Commit();
+                return Id;
             }
             catch
             {
                 transaction.Rollback();
             }
-
+            return 0;
         }
 
         public void Update()
@@ -75,7 +81,7 @@ namespace ShopModel.Entities
             var transaction = ConnectionDb.Connection.BeginTransaction();
             try
             {
-                var command = new SqlCommand(String.Format("UPDATE {0} SET nname=@nname, phone=@phone, address=@address, status=@status, startOrder=@startOrder, finishOrder=@finishOrder WHERE id={1}", TableName, Id), ConnectionDb.Connection, transaction);
+                var command = new SqlCommand(String.Format("UPDATE {0} SET nname=@nname, phone=@phone, address=@address, status=@status, startOrder=@startOrder, finishOrder=@finishOrder, onDateTime=@onDateTime,userName=@userName WHERE id={1}", TableName, Id), ConnectionDb.Connection, transaction);
                 command.Parameters.Add("@nname", SqlDbType.VarChar);
                 command.Parameters.Add("@phone", SqlDbType.VarChar);
                 command.Parameters.Add("@address", SqlDbType.VarChar);
@@ -83,6 +89,7 @@ namespace ShopModel.Entities
                 command.Parameters.Add("@startOrder", SqlDbType.DateTime);
                 command.Parameters.Add("@finishOrder", SqlDbType.DateTime);
                 command.Parameters.Add("@onDateTime", SqlDbType.DateTime);
+                command.Parameters.Add("@userName", SqlDbType.VarChar);
 
                 command.Parameters["@nname"].Value = Name;
                 command.Parameters["@phone"].Value = Phone;
@@ -91,6 +98,7 @@ namespace ShopModel.Entities
                 command.Parameters["@startOrder"].Value = Start;
                 command.Parameters["@finishOrder"].Value = Finish;
                 command.Parameters["@onDateTime"].Value = OnDateTime;
+                command.Parameters["@userName"].Value = UserName;
                 command.ExecuteNonQuery();
 
                 foreach (var orderLine in OrderLines)
@@ -138,7 +146,7 @@ namespace ShopModel.Entities
         public static Order Load(int id)
         {
             Order order = null;
-            var adapter = new SqlDataAdapter(String.Format("SELECT id,nname,phone,address,status,startOrder,finishOrder FROM {0} WHERE id={1}", TableName, id), ConnectionDb.Connection);
+            var adapter = new SqlDataAdapter(String.Format("SELECT id,nname,phone,address,status,startOrder,finishOrder,onDateTime,userName FROM {0} WHERE id={1}", TableName, id), ConnectionDb.Connection);
             var ds = new DataSet();
             adapter.Fill(ds, TableName);
             if (ds.Tables[TableName].Rows.Count > 0)
@@ -152,6 +160,8 @@ namespace ShopModel.Entities
                 order.OrderStatus = (OrderStatus) dr["status"];
                 order.Start = (DateTime) dr["startOrder"];
                 order.Finish = (DateTime) dr["finishOrder"];
+                order.OnDateTime = (DateTime)dr["onDateTime"];
+                order.UserName = dr["userName"].ToString();
                 order.OrderLines = OrderLine.LoadByOrderId(order.Id);
             }
             return order;
@@ -194,5 +204,31 @@ namespace ShopModel.Entities
             }
             return listOrder;
         }
+
+        public static List<Order> LoadByUserName(string userName)
+        {
+            var listOrder = new List<Order>();
+            if (userName == null) return listOrder;
+            var command = new SqlCommand(String.Format("SELECT id FROM {0} WHERE userName=@userName", TableName), ConnectionDb.Connection);
+            command.Parameters.Add("@userName", SqlDbType.VarChar);
+            command.Parameters["@userName"].Value = userName;
+
+            var adapter = new SqlDataAdapter(command);
+            var ds = new DataSet();
+            adapter.Fill(ds, TableName);
+            if (ds.Tables[TableName].Rows.Count > 0)
+            {
+                for (var i = 0; i < ds.Tables[TableName].Rows.Count; i++)
+                {
+                    var dr = ds.Tables[TableName].Rows[i];
+                    var id = (int)dr["id"];
+                    var order = Load(id);
+                    if (order != null) listOrder.Add(order);
+                }
+            }
+            return listOrder;
+        }
+
+        
     }
 }

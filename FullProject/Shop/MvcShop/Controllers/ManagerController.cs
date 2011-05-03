@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Security;
 using System.Web.Profile;
 
-using System.Web.UI;
-using System.Web.UI.WebControls;
 namespace MvcShop.Controllers
 {
     public class ManagerController : Controller
@@ -24,20 +18,16 @@ namespace MvcShop.Controllers
             return View();
         }
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Role(string Name, string a, string delete, string role)
+        public ActionResult Role(string name, string a, string delete, string role)
         {
-            if(Name!=null)
-            if(!Roles.RoleExists(Name))
-            Roles.CreateRole(Name); 
+            if(name!=null)
+            if(!Roles.RoleExists(name))
+            Roles.CreateRole(name); 
             if(delete!=null)
                 Roles.DeleteRole(role);
             return View();
         }
 
-        public ActionResult Index1()
-        {
-            return View();
-        }
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Delete(string role, string delete)
         {
@@ -101,8 +91,8 @@ namespace MvcShop.Controllers
             {
                 foreach (var item in Membership.GetAllUsers())
                 {
-                    MembershipUser user = (MembershipUser)item;
-                    foreach (string name in Roles.GetAllRoles())
+                    var user = (MembershipUser)item;
+                    foreach (var name in Roles.GetAllRoles())
                     {
                         if (fc[name + user.UserName] != "false")
                             if (!Roles.IsUserInRole(user.UserName, name))

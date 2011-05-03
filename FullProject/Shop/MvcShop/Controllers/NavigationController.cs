@@ -44,6 +44,7 @@ namespace MvcShop.Controllers
         {
             var navigationLinks = new List<NavigationLink> {new CategoryLink(null){IsSelected = (idSelectedCategory==null)}};
             navigationLinks.AddRange(_categoryRepository.Select(category => new CategoryLink(category){IsSelected = (idSelectedCategory==category.Id)}));
+            navigationLinks.Add(new NavigationLink { IsSelected = false, RouteValues = new RouteValueDictionary(new { controller = "Orders", action = "Index" }), Text = "Orders"});
             return View(navigationLinks);
         }
 
