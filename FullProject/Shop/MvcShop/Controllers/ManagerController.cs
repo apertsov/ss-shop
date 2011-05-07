@@ -1,7 +1,9 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
 using System.Web.Profile;
-
+using System;
+using MvcShop.ServiceShop;
+using System.Linq;
 namespace MvcShop.Controllers
 {
     public class ManagerController : Controller
@@ -58,6 +60,7 @@ namespace MvcShop.Controllers
 
                 if (createStatus == MembershipCreateStatus.Success)
                 {
+                    
                     FormsAuthentication.SetAuthCookie(Server.HtmlEncode(fc["login"]), false /* createPersistentCookie */);
                     ProfileBase p = ProfileBase.Create(Server.HtmlEncode(fc["login"]), true);
                     p.SetPropertyValue("first", Server.HtmlEncode(fc["first"]));
@@ -76,6 +79,7 @@ namespace MvcShop.Controllers
                      
             return View();
         }
+
 
 
         public ActionResult ChangeUser()
@@ -110,6 +114,30 @@ namespace MvcShop.Controllers
                 Membership.DeleteUser(user);
             return RedirectToAction("ChangeUser", "Manager");
           
+        }
+
+        public ActionResult GetAllOrders(string dtFrom, string dtTo, string getByOrderUser)
+        {
+            ViewData["dtFrom"] = dtFrom;
+            ViewData["dtTo"] = dtTo;
+            if (getByOrderUser != null)
+            {
+                try
+                {
+                    var dFrom = DateTime.Parse(dtFrom);
+                    var dTo = DateTime.Parse(dtTo);
+                    var ssc = new ServiceShopClient();
+                    var lOrder = ssc.LoadAllOrder().ToList();
+                    lOrder = lOrder.Where(lo => lo.Start >= dFrom).Where(lo => lo.Start <= dTo).ToList();
+                    return View("GetAllOrders", lOrder);
+                }
+                catch (Exception)
+                {
+                    return View("GetAllOrders", null);
+                }
+
+            }
+            return View("GetAllOrders", null);
         }
     }
 }

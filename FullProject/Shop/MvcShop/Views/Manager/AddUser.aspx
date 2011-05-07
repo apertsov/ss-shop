@@ -11,6 +11,7 @@
 
 <h2>Add User</h2>
 <table>
+<%=Html.ValidationSummary() %>
 <%using (Html.BeginForm())
   { %>
   <tr>

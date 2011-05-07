@@ -59,5 +59,23 @@ namespace MvcShop.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "First name")]
+        public string Fisrt { get; set; }
+
+        [Required]
+        [Display(Name = "Last name")]
+        public string Last { get; set; }
+
+        [Required]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
+        [Required]
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Phone")]
+        public string Phone { get; set; }
+
     }
 }

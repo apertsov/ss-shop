@@ -64,8 +64,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Resource1.Designer.cs" />
+    <Compile Include="App_GlobalResources\Resource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CookBookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngridientController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
@@ -142,24 +149,25 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Scripts\ui.datetimepicker.js" />
+    <Content Include="Views\Account\UserInfo.aspx" />
     <Content Include="Views\Cart\CheckOut.aspx" />
     <Content Include="Views\Cart\Completed.aspx" />
     <Content Include="Views\Cart\Index.aspx" />
     <Content Include="Views\Cart\Summary.ascx" />
+    <Content Include="Views\CookBook\Edit.aspx" />
     <Content Include="Views\Ingridient\Index.aspx" />
     <Content Include="Views\ItemInSklad\IngredientsEnd.aspx" />
     <Content Include="Views\Manager\AddUser.aspx" />
     <Content Include="Views\Manager\ChangeUser.aspx" />
+    <Content Include="Views\Manager\GetAllOrders.aspx" />
     <Content Include="Views\Manager\Index.aspx" />
     <Content Include="Views\Manager\Role.aspx" />
-    <Content Include="Views\Manager\UserRole.aspx" />
     <Content Include="Views\ItemInSklad\Index.aspx" />
     <Content Include="Views\Navigation\Menu.ascx" />
     <Content Include="Views\Orders\Index.aspx" />
     <Content Include="Views\Orders\SearchById.aspx" />
     <Content Include="Views\Orders\SearchByUser.aspx" />
     <Content Include="Views\Recepts\List.aspx" />
-    <Content Include="Views\Shared\Ingridients.ascx" />
     <Content Include="Views\Shared\ReceptSummary.ascx" />
     <Content Include="Views\Shared\SearchByIdPartial.ascx" />
     <Content Include="Views\Shared\SearchByUserName.ascx" />
@@ -221,6 +229,12 @@
     <None Include="Service References\ServiceShop\ServiceShop.xsd">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -48,9 +48,10 @@
 
 
 <% ShopModel.Entities.ItemInSklad[] list = (ShopModel.Entities.ItemInSklad[])ViewData["itemInSklad"]; %>
-<table>
-<tr>
-<td><b>Id</b></td>
+
+<table border="2">
+<tr bgcolor="#c3fcbf">
+<td><b>№</b></td>
 <td><b>Ingridient</b></td>
 <td><b>PriceByKgOrOne</b></td>
 <td><b>MinQuantity</b></td>
@@ -60,18 +61,26 @@
 </tr>
 <% for (int i = 0; i < list.Length; i++) %>
 <% { %>
-    <tr>
+    <% if (list[i].Quantity <= list[i].MinQuantity) %>
+    <% { %>
+        <tr bgcolor="#f9e9e6">
+    <% } %>
+    <% else %>
+    <% { %>
+        <tr bgcolor="#f4f5fa">
+    <% } %>
+
         <%using (Html.BeginForm("Edit", "ItemInSklad")) %>
         <% { %>
-            <td><%= list[i].Id %>
-                <%= Html.TextBox("Id",             list[i].Id,                        new { @style = "width: 1px; visibility:hidden;" }) %></td>
-            <td><%= list[i].Ingridient.IngridientName %>
-                <%= Html.TextBox("ing",            list[i].Ingridient.Id,             new { @style = "width: 1px; visibility:hidden;" }) %></td>
-            <td><%= Html.TextBox("PriceByKgOrOne", list[i].PriceByKgOrOne,            new { @style = "width: 100px;" }) %></td>
-            <td><%= Html.TextBox("MinQuantity",    list[i].MinQuantity,               new { @style = "width: 100px;" }) %></td>
-            <td><%= Html.TextBox("Quantity",       list[i].Quantity,                  new { @style = "width: 100px;" }) %></td>
+            <td><%= i + 1%>
+                <%= Html.TextBox("Id", list[i].Id, new { @style = "width: 1px; visibility:hidden;" })%></td>
+            <td><%= list[i].Ingridient.IngridientName%></td>
+            <td><%= list[i].PriceByKgOrOne%></td>
+            <td><%= list[i].MinQuantity%></td>
+            <td><%= list[i].Quantity%></td>            
             <td><input type="submit" value="edit" name="edit"/></td>
         <%} %>
+        
         <td><%using (Html.BeginForm("Delete", "ItemInSklad")) %>
             <% { %>
             <%= Html.Hidden("Id", list[i].Id) %>

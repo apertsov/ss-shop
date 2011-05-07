@@ -53,7 +53,38 @@
                     <%: Html.PasswordFor(m => m.ConfirmPassword) %>
                     <%: Html.ValidationMessageFor(m => m.ConfirmPassword) %>
                 </div>
-                
+
+              <div class="editor-label">
+                    <%=Html.LabelFor(m => m.Fisrt)%>
+              </div>
+              <div class="editor-field">
+                    <%: Html.TextBoxFor(m => m.Fisrt)%>
+                    <%: Html.ValidationMessageFor(m => m.Fisrt)%>
+              </div> 
+
+              <div class="editor-label">
+                     <%=Html.LabelFor(m => m.Last)%>
+              </div>
+              <div class="editor-field">
+                    <%: Html.TextBoxFor(m => m.Last)%>
+                    <%: Html.ValidationMessageFor(m => m.Last)%>
+              </div>
+
+              <div class="editor-label">
+                     <%=Html.LabelFor(m => m.Address)%>
+              </div>
+              <div class="editor-field">
+                     <%: Html.TextBoxFor(m => m.Address)%>
+                    <%: Html.ValidationMessageFor(m => m.Address)%>
+              </div>
+
+              <div class="editor-label">
+                      <%=Html.LabelFor(m => m.Phone)%>
+              </div>
+              <div class="editor-field">
+                     <%: Html.TextBoxFor(m => m.Phone)%>
+                    <%: Html.ValidationMessageFor(m => m.Phone)%>
+              </div> 
                 <p>
                     <input type="submit" value="Register" />
                 </p>
