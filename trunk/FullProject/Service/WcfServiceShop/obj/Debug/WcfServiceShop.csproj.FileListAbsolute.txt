@@ -11,3 +11,9 @@ D:\проект\FullProject\Service\WcfServiceShop\bin\ShopModel.pdb
 D:\проект\FullProject\Service\WcfServiceShop\obj\Debug\ResolveAssemblyReference.cache
 D:\проект\FullProject\Service\WcfServiceShop\obj\Debug\WcfServiceShop.dll
 D:\проект\FullProject\Service\WcfServiceShop\obj\Debug\WcfServiceShop.pdb
+G:\aaa\Service\WcfServiceShop\bin\WcfServiceShop.dll
+G:\aaa\Service\WcfServiceShop\bin\WcfServiceShop.pdb
+G:\aaa\Service\WcfServiceShop\bin\ShopModel.pdb
+G:\aaa\Service\WcfServiceShop\obj\Debug\ResolveAssemblyReference.cache
+G:\aaa\Service\WcfServiceShop\obj\Debug\WcfServiceShop.dll
+G:\aaa\Service\WcfServiceShop\obj\Debug\WcfServiceShop.pdb

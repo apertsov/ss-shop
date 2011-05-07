@@ -6,7 +6,12 @@ namespace MvcShop.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "on-line shop";
+            if (User.IsInRole("manager"))
+            {
+                return RedirectToAction("Index", "Manager");
+            }
+
+            ViewBag.Message = Resources.Resource.Home;
             return View();
         }
 

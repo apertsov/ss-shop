@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using MvcShop.Models;
+using System.Web.Profile;
 
 namespace MvcShop.Controllers
 {
@@ -84,6 +85,13 @@ namespace MvcShop.Controllers
                 if (createStatus == MembershipCreateStatus.Success)
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
+                    ProfileBase p = ProfileBase.Create(Server.HtmlEncode(model.UserName), true);
+                    p.SetPropertyValue("first", Server.HtmlEncode(model.Fisrt));
+                    p.SetPropertyValue("last", Server.HtmlEncode(model.Last));
+                    p.SetPropertyValue("address", Server.HtmlEncode(model.Address));
+                    p.SetPropertyValue("phone", Server.HtmlEncode(model.Phone));
+                    p.Save();
+                    Roles.AddUserToRole(model.UserName, "user");
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -146,6 +154,11 @@ namespace MvcShop.Controllers
         // GET: /Account/ChangePasswordSuccess
 
         public ActionResult ChangePasswordSuccess()
+        {
+            return View();
+        }
+
+        public ActionResult UserInfo() 
         {
             return View();
         }
