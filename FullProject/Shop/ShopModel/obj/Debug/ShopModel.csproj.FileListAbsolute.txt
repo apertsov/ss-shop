@@ -18,3 +18,8 @@ G:\aaa\Shop\ShopModel\bin\Debug\ShopModel.pdb
 G:\aaa\Shop\ShopModel\obj\Debug\ResolveAssemblyReference.cache
 G:\aaa\Shop\ShopModel\obj\Debug\ShopModel.dll
 G:\aaa\Shop\ShopModel\obj\Debug\ShopModel.pdb
+D:\Projects\Softserve\Repository\FullProject\Shop\ShopModel\bin\Debug\ShopModel.dll
+D:\Projects\Softserve\Repository\FullProject\Shop\ShopModel\bin\Debug\ShopModel.pdb
+D:\Projects\Softserve\Repository\FullProject\Shop\ShopModel\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Softserve\Repository\FullProject\Shop\ShopModel\obj\Debug\ShopModel.dll
+D:\Projects\Softserve\Repository\FullProject\Shop\ShopModel\obj\Debug\ShopModel.pdb

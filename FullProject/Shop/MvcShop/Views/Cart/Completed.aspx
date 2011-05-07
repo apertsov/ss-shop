@@ -10,7 +10,6 @@
 <h2>Completed</h2>
 <div>thx for your order</div>
 Well ship your goods as soon as possible <br/>
-Your ID order:<b><%=((int) ViewData["idOrder"]).ToString()%></b><br/>
 You can check Your Order at page <%= Html.ActionLink("Orders","Index","Orders") %>
 <% } else { %>
 <h2>Completed</h2>

@@ -36,7 +36,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="ShopModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MvcShop\ShopModel\bin\Debug\ShopModel.dll</HintPath>
+      <HintPath>..\..\Shop\MvcShop\bin\ShopModel.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />

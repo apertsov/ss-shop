@@ -43,6 +43,8 @@ namespace MvcShop
                 new {page = @"\d+"}
                 );
 
+            routes.MapRoute(null, "{controller}/{action}/{id}");
+
             routes.MapRoute(null, "{controller}/{action}");
         }
 
