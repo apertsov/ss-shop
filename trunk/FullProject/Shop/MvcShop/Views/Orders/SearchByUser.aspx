@@ -6,7 +6,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 <h2>SearchByUser</h2>
-<% Html.RenderPartial("SearchByIdPartial"); %>
 <div> Search From <%= Html.Encode(ViewData["dtFrom"].ToString())%> To <%= Html.Encode(ViewData["dtTo"].ToString())%> </div>
 <% if (User.Identity.IsAuthenticated) Html.RenderPartial("SearchByUserName");%>
 <% if (Model == null) { %>

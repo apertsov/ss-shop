@@ -17,3 +17,10 @@ G:\aaa\Service\WcfServiceShop\bin\ShopModel.pdb
 G:\aaa\Service\WcfServiceShop\obj\Debug\ResolveAssemblyReference.cache
 G:\aaa\Service\WcfServiceShop\obj\Debug\WcfServiceShop.dll
 G:\aaa\Service\WcfServiceShop\obj\Debug\WcfServiceShop.pdb
+D:\Projects\Softserve\Repository\FullProject\Service\WcfServiceShop\bin\WcfServiceShop.dll
+D:\Projects\Softserve\Repository\FullProject\Service\WcfServiceShop\bin\WcfServiceShop.pdb
+D:\Projects\Softserve\Repository\FullProject\Service\WcfServiceShop\bin\ShopModel.dll
+D:\Projects\Softserve\Repository\FullProject\Service\WcfServiceShop\bin\ShopModel.pdb
+D:\Projects\Softserve\Repository\FullProject\Service\WcfServiceShop\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Softserve\Repository\FullProject\Service\WcfServiceShop\obj\Debug\WcfServiceShop.dll
+D:\Projects\Softserve\Repository\FullProject\Service\WcfServiceShop\obj\Debug\WcfServiceShop.pdb

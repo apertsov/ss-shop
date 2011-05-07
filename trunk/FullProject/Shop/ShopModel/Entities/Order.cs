@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace ShopModel.Entities
 {
@@ -26,8 +27,12 @@ namespace ShopModel.Entities
         public string UserName { get; set; }
 
         private const string TableName = "tOrder";
-        
-        
+
+        public decimal ComputeTotalValue()
+        {
+            return OrderLines.Sum(orderLine => orderLine.Recept.Price * orderLine.Quantity);
+        }
+    
         public int Create()
         {
             if (string.IsNullOrEmpty(Name)) throw new ArgumentException("set name ");

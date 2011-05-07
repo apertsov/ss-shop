@@ -34,3 +34,12 @@ G:\aaa\Shop\MvcShop\bin\EntityFramework.xml
 G:\aaa\Shop\MvcShop\obj\Debug\ResolveAssemblyReference.cache
 G:\aaa\Shop\MvcShop\obj\Debug\MvcShop.dll
 G:\aaa\Shop\MvcShop\obj\Debug\MvcShop.pdb
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\obj\Debug\MvcShop.dll
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\bin\MvcShop.dll
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\bin\MvcShop.pdb
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\bin\EntityFramework.dll
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\bin\ShopModel.dll
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\bin\ShopModel.pdb
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\bin\EntityFramework.xml
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\obj\Debug\MvcShop.pdb

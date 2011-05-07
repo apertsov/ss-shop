@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using MvcShop.ServiceShop;
@@ -14,22 +13,37 @@ namespace MvcShop.Controllers
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult GetById(string orderId, string getByOrderId)
-        {
-            ViewData["sId"] = orderId;
-            if (getByOrderId != null)
+            var cookie = Request.Cookies["mvcShop"];
+            Order order = null;
+            if (cookie!=null)
             {
                 int id;
-                if (int.TryParse(orderId,out id))
+                if (int.TryParse(cookie.Value,out id))
                 {
                     var ssc = new ServiceShopClient();
-                    return View("SearchById", ssc.LoadOrder(id));
+                    order = ssc.LoadOrder(id);
                 }
             }
-            return View("SearchById",null);
+            return View(order);
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public string GetStatusById(string id)
+        {
+            var s = id;
+            int idI;
+            if (int.TryParse(id,out idI))
+            {
+                var ssc = new ServiceShopClient();
+                var order = ssc.LoadOrder(idI);
+                s = order == null ? "<b>undefined status order</b> " : string.Format("<b>{0}</b> ", order.OrderStatus);
+            }
+            else
+            {
+                s = "<b>undefined status order</b> ";
+            }
+            s += String.Format("<br/>last query:{0}",DateTime.Now);
+            return s;
         }
 
         public ActionResult GetByUser(string dtFrom, string dtTo,string getByOrderUser)

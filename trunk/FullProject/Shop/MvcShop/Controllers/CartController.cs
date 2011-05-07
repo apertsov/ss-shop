@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web;
 using System.Web.Mvc;
 using System.Linq;
 using MvcShop.ServiceShop;
@@ -67,7 +68,7 @@ namespace MvcShop.Controllers
             var cart = GetUserCart();
             if (cart.Lines.Count==0)
             {
-                ModelState.AddModelError("Cart","Sorry your cart is empty");
+                ModelState.AddModelError("Cart",@"Sorry your cart is empty");
                 return View();
             }
             if (TryUpdateModel(cart.ShippingDetails,formCollection.ToValueProvider()))
@@ -75,25 +76,28 @@ namespace MvcShop.Controllers
                 try
                 {
                     DateTime dt;
-                    if (!DateTime.TryParse(cart.ShippingDetails.OnDateTime, out dt))
-                    {
-                        dt = DateTime.Now;
-                    }
-                    
-                    var username = User.Identity.Name;
                     var order = new Order
                                     {
                                         Name = cart.ShippingDetails.Name,
                                         Phone = cart.ShippingDetails.NumberPhone,
                                         Address = cart.ShippingDetails.Address,
                                         OrderStatus = OrderStatus.Taken,
-                                        Start = DateTime.Now,
-                                        OnDateTime = dt,
                                         Finish = DateTime.Now.AddYears(50),
                                         OrderLines = new List<OrderLine>(),
-                                        UserName = username
+                                        UserName = User.Identity.Name??""
                                     };
-                    foreach (var orderLine in cart.Lines.Select(cartLine => new OrderLine { Recept = cartLine.Recept }))
+                    if (!DateTime.TryParse(cart.ShippingDetails.OnDateTime, out dt))
+                    {
+                        dt = DateTime.Now;
+                        order.Start = dt;
+                        order.OnDateTime = dt;
+                    }
+                    else
+                    {
+                        order.OnDateTime = dt;
+                        order.Start = DateTime.Now;
+                    }
+                    foreach (var orderLine in cart.Lines.Select(cartLine => new OrderLine { Recept = cartLine.Recept, Quantity = cartLine.Quantity}))
                     {
                         order.OrderLines.Add(orderLine);
                     }
@@ -104,6 +108,8 @@ namespace MvcShop.Controllers
                     {
                         ViewData["idOrder"] = id;
                     }
+                    var cookie = new HttpCookie("mvcShop") {Value = id.ToString(), Expires = DateTime.Now.AddYears(1)};
+                    Response.Cookies.Add(cookie);
                     return View("Completed");
                 }
                 catch
