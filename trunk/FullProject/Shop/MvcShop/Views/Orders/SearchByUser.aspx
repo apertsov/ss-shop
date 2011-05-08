@@ -12,10 +12,19 @@
 <div>no search result</div>
 <% } else { %>
 <table>
+<tr>
+<td>
+<table>
 <tr><th>OrderDate</th><th>OnDateTime</th><th>Status</th></tr>
 <% foreach (var order in Model) { %>
-<tr><td><%= order.Start.ToString() %></td><td><%= order.OnDateTime == order.Start ? "fastest" : order.OnDateTime.ToString()%></td><td><%= order.OrderStatus%></td></tr>
+<tr class="order-det"><td><a href="#" id="<%= order.Id %>" class="orderDetailsClick"><%= order.Start.ToString() %></a></td><td><%= order.OnDateTime == order.Start ? "fastest" : order.OnDateTime.ToString()%></td><td><%= order.OrderStatus%></td></tr>
 <% } %>
+</table>
+</td>
+<td>
+<div id="detailsOrder"></div>
+</td>
+</tr>
 </table>
 <% } %>
 </asp:Content>
