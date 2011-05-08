@@ -32,6 +32,18 @@ namespace MvcShop.Controllers
             return RedirectToAction("Index", new {returnUrl});
         }
 
+        public string AddToCartAsync(string receptId, string quantity)
+        {
+            var r = _receptRepository.Find(rf => rf.Id == int.Parse(receptId));//Recept.Load(Id);
+            var cart = GetUserCart();
+            cart.AddItem(r, int.Parse(quantity));
+            Session["Cart"] = cart;
+            var s="<table id=\"tableCart\" align=\"center\"><tr><th colspan=\"2\">Cart</th></tr>";
+            s += string.Format("<tr><td>Items</td><td>{0}</td></tr>", cart.Lines.Sum(x => x.Quantity));
+            s += string.Format("<tr><td>Total</td><td>{0}</td></tr></table>", cart.ComputeTotalValue());
+            return s;
+        }
+
         public RedirectToRouteResult RemoveFromCart(int receptId,string returnUrl)
         {
             var r = _receptRepository.Find(rf => rf.Id == receptId);//Recept.Load(Id);
