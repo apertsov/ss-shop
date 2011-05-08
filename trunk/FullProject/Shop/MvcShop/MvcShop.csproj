@@ -128,6 +128,8 @@
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
     <Content Include="Scripts\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\jquery.jqEasyPanel.min.js" />
+    <Content Include="Scripts\jquery.slidePanel.min.js" />
     <Content Include="Scripts\jquery.timers.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />

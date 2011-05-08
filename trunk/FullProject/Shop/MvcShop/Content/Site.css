@@ -3,6 +3,61 @@ The base color for this template is #5c87b2. If you'd like
 to use a different color start by replacing all instances of
 #5c87b2 with your new color.
 ----------------------------------------------------------*/
+/* for shopping cart on page catalog */
+a.trigger:focus { outline: none; }
+
+a.trigger{
+	position: absolute;
+	background:#88bbd4 url(images/plus.png) 6% 55% no-repeat;
+	text-decoration: none;
+	font-size: 16px;
+	letter-spacing:-1px;
+	font-family: verdana, helvetica, arial, sans-serif;
+	color:#fff;
+	padding:4px 12px 6px 24px;
+	font-weight: bold;
+	
+	z-index:2;
+}
+
+a.trigger.cart {
+	right: 0;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+}
+a.trigger:hover {
+	background-color:#59B;
+}
+a.active.trigger {
+	background:#666 url(images/minus.png) 6% 55% no-repeat;
+}
+
+.panel {
+	color:#CCC;
+	position: absolute;
+	display: none;
+	background: #000000;
+	width: 300px;
+	height: auto;
+	z-index:1;
+}
+
+.panel.cart {
+	right: 0;
+	padding: 20px 100px 20px 30px;
+	border-bottom-left-radius: 15px;
+	border-top-left-radius: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	-moz-border-radius-topleft: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-webkit-border-top-left-radius: 15px;
+}
+/* end for shopping cart */
+
 .activeOrder {
   border: 1px dashed red;
   background-color: rgb(255, 255, 187);
