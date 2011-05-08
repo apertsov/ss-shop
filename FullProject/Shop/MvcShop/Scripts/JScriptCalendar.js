@@ -37,21 +37,14 @@
         });
     });
 
-    $(document).ready(function () {
-        $(".topMenuAction").click(function () {
-            if ($("#openCloseIdentifier").is(":hidden")) {
-                $("#slider").animate({
-                    marginTop: "-141px"
-                }, 500);
-                $("#topMenuImage").html('Open Cart');
-                $("#openCloseIdentifier").show();
-            } else {
-                $("#slider").animate({
-                    marginTop: "0px"
-                }, 500);
-                $("#topMenuImage").html('CloseCart');
-                $("#openCloseIdentifier").hide();
-            }
-        });
-    });
+    $('#jCartPanel').slidePanel({
+        triggerName: '#triggerCart',
+        position: 'fixed',
+        triggerTopPos: '40px',
+        panelTopPos: '30px',
+        ajax: false,
+        ajaxSource: 'ajax.html'
+    });
+
+
 });

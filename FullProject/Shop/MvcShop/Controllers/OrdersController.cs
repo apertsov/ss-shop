@@ -22,6 +22,7 @@ namespace MvcShop.Controllers
                 {
                     var ssc = new ServiceShopClient();
                     order = ssc.LoadOrder(id);
+                    ssc.Close();
                 }
             }
             return View(order);
@@ -36,6 +37,7 @@ namespace MvcShop.Controllers
             {
                 var ssc = new ServiceShopClient();
                 var order = ssc.LoadOrder(idI);
+                ssc.Close();
                 s = order == null ? "<b>undefined status order</b> " : string.Format("<b>{0}</b> ", order.OrderStatus);
             }
             else
@@ -55,6 +57,7 @@ namespace MvcShop.Controllers
             {
                 var ssc = new ServiceShopClient();
                 var order = ssc.LoadOrder(idI);
+                ssc.Close();
                 if (order != null)
                 {
                     s = "<table>";
@@ -89,6 +92,7 @@ namespace MvcShop.Controllers
                     var dTo = DateTime.Parse(dtTo);
                     var ssc = new ServiceShopClient();
                     var lOrder = ssc.LoadOrderByUserName(User.Identity.Name??"").ToList();
+                    ssc.Close();
                     lOrder = lOrder.Where(lo => lo.Start >= dFrom).Where(lo => lo.Start <= dTo).ToList();
                     return View("SearchByUser", lOrder);
                 }
