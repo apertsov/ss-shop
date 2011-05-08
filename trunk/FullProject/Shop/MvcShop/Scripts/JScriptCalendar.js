@@ -22,8 +22,36 @@
     });
 
     $('tr.order-det').click(function () {
-            $('tr.order-det').removeClass("activeOrder"); 
-            $(this).addClass("activeOrder"); 
-        });
+        $('tr.order-det').removeClass("activeOrder");
+        $(this).addClass("activeOrder");
+    });
 
+    $('.receptToCart').click(function () {
+        var idI = $(this).attr("id");
+        $.ajax({
+            type: "POST",
+            url: '/Cart/AddToCartAsync/' + idI + '/' + $('#receptQuantity' + idI).attr("value"),
+            success: function (data) { $('#tableCart').html(data); },
+            error: function () { alert('error Add to Cart'); },
+            completed: function () { alert('completed Add to Cart'); }
+        });
+    });
+
+    $(document).ready(function () {
+        $(".topMenuAction").click(function () {
+            if ($("#openCloseIdentifier").is(":hidden")) {
+                $("#slider").animate({
+                    marginTop: "-141px"
+                }, 500);
+                $("#topMenuImage").html('Open Cart');
+                $("#openCloseIdentifier").show();
+            } else {
+                $("#slider").animate({
+                    marginTop: "0px"
+                }, 500);
+                $("#topMenuImage").html('CloseCart');
+                $("#openCloseIdentifier").hide();
+            }
+        });
+    });
 });

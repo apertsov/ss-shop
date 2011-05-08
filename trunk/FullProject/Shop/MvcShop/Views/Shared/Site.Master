@@ -19,7 +19,7 @@
                 <h1>Shop Application</h1>
             </div>
             <div id="cart">
-                <% if (!(ViewContext.Controller is MvcShop.Controllers.CartController)) Html.RenderAction("Summary","Cart"); %>
+                 <% if (!(ViewContext.Controller is MvcShop.Controllers.CartController)) Html.RenderAction("Summary","Cart"); %>
             </div>
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
