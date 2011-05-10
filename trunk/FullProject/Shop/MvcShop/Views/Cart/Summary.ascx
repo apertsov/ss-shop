@@ -11,12 +11,16 @@
         <tbody>
         <% foreach (var cartLine in Model.Lines) { %>
         <tr>
-            <td> <%=cartLine.Quantity%></td>
+            <td> 
+                <a href="#" id="<%= cartLine.Recept.Id %>" class="addItemCart"><img src="../../images/plus.png" alt="add"/></a>
+                 <%=cartLine.Quantity%>
+                 <a href="#" id="<%= cartLine.Recept.Id %>" class="minusItemCart"><img src="../../images/minus.png" alt="minus"/></a>
+            </td>
             <td> <%=cartLine.Recept.NameRecept%></td>
             <td> <%=cartLine.Recept.Price.ToString("N")%></td>
             <td> <%=(cartLine.Recept.Price * cartLine.Quantity).ToString("N")%></td>
             <td>
-                <button type='button' id='<%= cartLine.Recept.Id %>' class='removeItemCart'>remove</button>
+                <a href="#" id="<%= cartLine.Recept.Id %>" class="removeItemCart"><img src="../../images/remove.png" alt="remove"/></a>
             </td>
         </tr>
         <% } %>
