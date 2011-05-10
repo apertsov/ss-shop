@@ -6,6 +6,8 @@
 
 <asp:Content ID="errorContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        Sorry, an error occurred while processing your request.
+     <%=HttpContext.GetLocalResourceObject("Shared","Sorry")
+     %>
+        //Sorry, an error occurred while processing your request.
     </h2>
 </asp:Content>

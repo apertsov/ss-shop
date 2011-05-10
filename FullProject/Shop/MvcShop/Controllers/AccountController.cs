@@ -7,6 +7,8 @@ using System.Web.Routing;
 using System.Web.Security;
 using MvcShop.Models;
 using System.Web.Profile;
+using System.Globalization;
+using MvcShop.ServiceShop;
 
 namespace MvcShop.Controllers
 {
@@ -44,7 +46,7 @@ namespace MvcShop.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                    ModelState.AddModelError("", Resources.Global.CorrectUser);
                 }
             }
 
@@ -142,7 +144,7 @@ namespace MvcShop.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The current password is incorrect or the new password is invalid.");
+                    ModelState.AddModelError("", Resources.Global.InvalidPass);
                 }
             }
 
@@ -171,36 +173,49 @@ namespace MvcShop.Controllers
             switch (createStatus)
             {
                 case MembershipCreateStatus.DuplicateUserName:
-                    return "User name already exists. Please enter a different user name.";
+                    return Resources.Global.NameExist;
 
                 case MembershipCreateStatus.DuplicateEmail:
-                    return "A user name for that e-mail address already exists. Please enter a different e-mail address.";
+                    return Resources.Global.EmailAddress;
 
                 case MembershipCreateStatus.InvalidPassword:
-                    return "The password provided is invalid. Please enter a valid password value.";
+                    return Resources.Global.PassError;
 
                 case MembershipCreateStatus.InvalidEmail:
-                    return "The e-mail address provided is invalid. Please check the value and try again.";
+                    return Resources.Global.EmailInvalid;
 
                 case MembershipCreateStatus.InvalidAnswer:
-                    return "The password retrieval answer provided is invalid. Please check the value and try again.";
+                    return Resources.Global.PassInvalid;
 
                 case MembershipCreateStatus.InvalidQuestion:
-                    return "The password retrieval question provided is invalid. Please check the value and try again.";
+                    return Resources.Global.PassInvalid1;
 
                 case MembershipCreateStatus.InvalidUserName:
-                    return "The user name provided is invalid. Please check the value and try again.";
+                    return Resources.Global.UserInvalid;
 
                 case MembershipCreateStatus.ProviderError:
-                    return "The authentication provider returned an error. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
+                    return Resources.Global.AuthenError;
 
                 case MembershipCreateStatus.UserRejected:
-                    return "The user creation request has been canceled. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
+                    return Resources.Global.CreateCan;
 
                 default:
-                    return "An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
+                    return Resources.Global.UnknownError;
             }
         }
+
         #endregion
+        public ActionResult ChangeCulture(string lang, string returnUrl)
+        {
+            Session["Culture"] = new CultureInfo(lang);
+            var ssc = new ServiceShopClient();
+            if (lang == "ru")
+                ssc.SetShop("shop.mdf");
+            else
+                ssc.SetShop("shop_en.mdf");
+            
+            return Redirect(returnUrl);
+        }
+
     }
 }

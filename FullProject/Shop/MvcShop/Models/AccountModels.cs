@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
-
+using Resources;
 namespace MvcShop.Models
 {
 
@@ -78,4 +78,79 @@ namespace MvcShop.Models
         public string Phone { get; set; }
 
     }
+    /*
+    public class ChangePasswordModel
+    {
+        [Required]
+        [DataType(DataType.Password)]
+        [Display(Name =string.Format(Resources.Global.CurrentPassword))]
+        public string OldPassword { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessageResourceName = "PassL", ErrorMessageResourceType = typeof(Global), MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = Resources.Global.NewPass)]
+        public string NewPassword { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = Resources.Global.NewPassC)]
+        [Compare("NewPassword", ErrorMessage = Resources.Global.PassC)]
+        public string ConfirmPassword { get; set; }
+    }
+
+    public class LogOnModel
+    {
+        [Required]
+        [Display(Name = Resources.Global.UserName)]
+        public string UserName { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        [Display(Name = Resources.Global.Pass)]
+        public string Password { get; set; }
+
+        [Display(Name = Resources.Global.Remem)]
+        public bool RememberMe { get; set; }
+    }
+
+    public class RegisterModel
+    {
+        [Required]
+        [Display(Name = Resources.Global.UserName)]
+        public string UserName { get; set; }
+
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = Resources.Global.Email)]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = Resources.Global.PassL, MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = Resources.Global.Pass)]
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = Resources.Global.NewPassC)]
+        [Compare("Password", ErrorMessage = Resources.Global.PassC)]
+        public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = Resources.Global.FirstName)]
+        public string Fisrt { get; set; }
+
+        [Required]
+        [Display(Name = Resources.Global.LastName)]
+        public string Last { get; set; }
+
+        [Required]
+        [Display(Name = Resources.Global.Address)]
+        public string Address { get; set; }
+
+        [Required]
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = Resources.Global.Phone)]
+        public string Phone { get; set; }
+
+    }*/
 }
