@@ -32,16 +32,58 @@ namespace MvcShop.Controllers
             return RedirectToAction("Index", new {returnUrl});
         }
 
+        private static string FormResponseTable(Cart cart)
+        {
+            var s = "<table width=\"90%\" id=\"tableCart\"><tr><td>Your cart is empty</td></tr></table>";
+            if (cart.Lines.Count > 0)
+            {
+                s = "<table height=\"100px\" width=\"90%\" id=\"tableCart\"><thead><tr><td><b>Quantity</b></td><td><b>Item<b></td><td><b>Price<b></td><td><b>SubTotal</b></td><td></td></tr></thead><tbody>";
+                foreach (var cartLine in cart.Lines)
+                {
+                    s += string.Format("<tr><td>{0}</td>", cartLine.Quantity);
+                    s += string.Format("<td>{0}</td>", cartLine.Recept.NameRecept);
+                    s += string.Format("<td>{0}</td>", cartLine.Recept.Price.ToString("N"));
+                    s += string.Format("<td>{0}</td>", (cartLine.Recept.Price * cartLine.Quantity).ToString("N"));
+                    s += string.Format("<td><button type='button' id='{0}' class='removeItemCart'>remove</button></td></tr>", cartLine.Recept.Id);
+                }
+                s += "</tbody><tfoot><tr><td colspan=\"3\" align=\"right\">Total</td>";
+                s += string.Format("<td>{0}</td><td></td></tr></tfoot></table>", cart.ComputeTotalValue().ToString("N"));
+            }
+            return s;
+        }
+
         public string AddToCartAsync(string receptId, string quantity)
         {
             var r = _receptRepository.Find(rf => rf.Id == int.Parse(receptId));//Recept.Load(Id);
             var cart = GetUserCart();
             cart.AddItem(r, int.Parse(quantity));
             Session["Cart"] = cart;
-            var s="<table id=\"tableCart\" align=\"center\"><tr><th colspan=\"2\">Cart</th></tr>";
-            s += string.Format("<tr><td>Items</td><td>{0}</td></tr>", cart.Lines.Sum(x => x.Quantity));
-            s += string.Format("<tr><td>Total</td><td>{0}</td></tr></table>", cart.ComputeTotalValue());
+            return FormResponseTable(cart);
+        }
+
+        public string RemoveFromCartRecept(int receptId)
+        {
+            var r = _receptRepository.Find(rf => rf.Id == receptId);//Recept.Load(Id);
+            var cart = GetUserCart();
+            cart.RemoveItem(r);
+            Session["Cart"] = cart;
+            return FormResponseTable(cart);
+        }
+
+        public string GetInfoAboutCartAsync()
+        {
+            var cart = GetUserCart();
+            var s = "Shopping cart<br/>";
+            s += string.Format("Items:{0}<br/>", cart.Lines.Sum(x => x.Quantity));
+            s += string.Format("Total:{0}", cart.ComputeTotalValue().ToString("N"));
             return s;
+        }
+
+        public string ClearCart()
+        {
+            var cart = GetUserCart();
+            cart.Lines.Clear();
+            return FormResponseTable(cart);
         }
 
         public RedirectToRouteResult RemoveFromCart(int receptId,string returnUrl)

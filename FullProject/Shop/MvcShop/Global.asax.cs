@@ -36,18 +36,22 @@ namespace MvcShop
 
             routes.MapRoute(
                 null, // Route name
-                "", // URL with parameters
-                new {controller = "Recepts", action = "List", category = 1, page = 1} // Parameter defaults
-                );
-
-            routes.MapRoute(
-                null, // Route name
                 "Page{page}", // URL with parameters
                 new {controller = "Recepts", action = "List", category = 1}, // Parameter defaults
                 new {page = @"\d+"}
                 );
 
+            routes.MapRoute(
+                null, // Route name
+                "", // URL with parameters
+                new { controller = "Home", action = "Index" } // Parameter defaults
+                );
+
             routes.MapRoute(null, "{controller}/{action}");
+
+            routes.MapRoute(null, "{controller}/{action}/{id}");
+
+            routes.MapRoute(null, "{controller}/{action}/{receptId}/{quantity}");
         }
 
         
