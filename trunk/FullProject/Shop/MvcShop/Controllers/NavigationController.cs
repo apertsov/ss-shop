@@ -20,7 +20,7 @@ namespace MvcShop.Controllers
         {
             if (category==null)
             {
-                Text = "Home";
+                Text = Resources.Global.Home;;
                 RouteValues = new RouteValueDictionary(new { controller = "Home", action = "Index" });
             }
             else

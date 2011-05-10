@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using MvcShop.ServiceShop;
 
 namespace MvcShop.Controllers
 {
@@ -10,8 +11,12 @@ namespace MvcShop.Controllers
             {
                 return RedirectToAction("Index", "Manager");
             }
-
-            ViewBag.Message = Resources.Resource.Home;
+            if (Session["Culture"] == null)
+            {
+                var ssc = new ServiceShopClient();
+                ssc.SetShop("shop.mdf");
+            }
+            ViewBag.Message = Resources.Global.Home;
             return View();
         }
 
