@@ -9,8 +9,6 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:ShippingDetails.cs" caret="124" fromTop="6" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/f:Web.config" caret="3281" fromTop="10" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:ConnectionDb.cs" caret="376" fromTop="12" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Home/f:Index.aspx" caret="408" fromTop="13" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Category.cs" caret="3074" fromTop="17" />
@@ -26,51 +24,52 @@
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Cart.cs" caret="333" fromTop="7" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Recept.cs" caret="348" fromTop="12" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:Order.cs" caret="5497" fromTop="14" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Index.aspx" caret="684" fromTop="1" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Orders/f:Index.aspx" caret="331" fromTop="0" />
       <File id="385D53B3-C7FD-44B3-B396-82246572C195/d:Entities/f:OrderLine.cs" caret="1287" fromTop="20" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Orders/f:SearchByUser.aspx" caret="659" fromTop="13" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Recepts/f:List.aspx" caret="0" fromTop="0" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/f:Global.asax.cs" caret="1632" fromTop="15" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="1563" fromTop="15" />
       <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:OrdersController.cs" caret="614" fromTop="14" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="0" fromTop="0" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="225" fromTop="4" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="0" fromTop="0" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:Site.Master" caret="851" fromTop="12" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1665" fromTop="15" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/f:Global.asax.cs" caret="1778" fromTop="16" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Recepts/f:List.aspx" caret="0" fromTop="0" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:AccountController.cs" caret="6908" fromTop="158" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="475" fromTop="13" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:Site.Master" caret="233" fromTop="6" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="2794" fromTop="9" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Index.aspx" caret="1704" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="1083" fromTop="9" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1342" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="1490" fromTop="5" />
     </RecentFiles>
     <RecentEdits>
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="933" fromTop="13" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:ReceptSummary.ascx" caret="670" fromTop="9" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1534" fromTop="22" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1534" fromTop="17" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="604" fromTop="19" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="604" fromTop="8" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="604" fromTop="17" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="604" fromTop="13" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:Site.Master" caret="1033" fromTop="2" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="1488" fromTop="22" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="429" fromTop="10" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="653" fromTop="5" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="1037" fromTop="7" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="1171" fromTop="2" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="0" fromTop="0" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1765" fromTop="22" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="99" fromTop="2" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="326" fromTop="6" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="276" fromTop="5" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:Site.Master" caret="1364" fromTop="9" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="614" fromTop="11" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:OrdersController.cs" caret="1073" fromTop="11" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:OrdersController.cs" caret="1786" fromTop="9" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:OrdersController.cs" caret="3910" fromTop="13" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:OrdersController.cs" caret="661" fromTop="15" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="614" fromTop="11" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1718" fromTop="19" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="166" fromTop="2" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Shared/f:Site.Master" caret="851" fromTop="12" />
-      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1665" fromTop="15" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="2689" fromTop="15" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="1425" fromTop="9" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="1380" fromTop="19" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Index.aspx" caret="1516" fromTop="15" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="1430" fromTop="8" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="1003" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="419" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Index.aspx" caret="1704" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="1604" fromTop="15" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3577" fromTop="20" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="2353" fromTop="18" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="1085" fromTop="9" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1859" fromTop="19" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Content/f:Site.css" caret="2794" fromTop="9" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="2534" fromTop="9" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3535" fromTop="14" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="314" fromTop="3" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="694" fromTop="11" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="2047" fromTop="22" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="2790" fromTop="13" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="3042" fromTop="19" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="2047" fromTop="16" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="2047" fromTop="13" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="2047" fromTop="15" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1552" fromTop="15" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1574" fromTop="12" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Views/d:Cart/f:Summary.ascx" caret="1083" fromTop="9" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Scripts/f:JScriptCalendar.js" caret="1342" fromTop="10" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="2084" fromTop="12" />
+      <File id="AF86A87D-4EA5-4C9A-BC3C-045564981E7E/d:Controllers/f:CartController.cs" caret="1506" fromTop="5" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -86,10 +85,10 @@
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
       <Item value="public" priority="110" />
-      <Item value="int" priority="51" />
-      <Item value="string" priority="37" />
+      <Item value="int" priority="52" />
+      <Item value="string" priority="44" />
       <Item value="bool" priority="25" />
-      <Item value="return" priority="53" />
+      <Item value="return" priority="54" />
       <Item value="false" priority="25" />
       <Item value="CIngridient`0" priority="2" />
       <Item value="null" priority="28" />
@@ -110,15 +109,15 @@
       <Item value="ConnectionDb`0" priority="12" />
       <Item value="new" priority="52" />
       <Item value="SqlConnection" priority="1" />
-      <Item value="if" priority="27" />
+      <Item value="if" priority="30" />
       <Item value="var" priority="14" />
       <Item value="t" priority="2" />
-      <Item value="Model" priority="15" />
+      <Item value="Model" priority="19" />
       <Item value="ViewBag" priority="2" />
       <Item value="else" priority="5" />
       <Item value="Language`0" priority="3" />
       <Item value="IngridientInRecept`0" priority="1" />
-      <Item value="private" priority="6" />
+      <Item value="private" priority="7" />
       <Item value="Recept" priority="6" />
       <Item value="IQueryable`0" priority="0" />
       <Item value="fakeRecept" priority="0" />
@@ -148,7 +147,7 @@
       <Item value="TagBuilder" priority="0" />
       <Item value="tag" priority="3" />
       <Item value="pageUrl" priority="0" />
-      <Item value="i" priority="5" />
+      <Item value="i" priority="7" />
       <Item value="currentPage" priority="0" />
       <Item value="sb" priority="1" />
       <Item value="_receptRepository" priority="7" />
@@ -192,7 +191,7 @@
       <Item value="List&lt;CartLine&gt;" priority="0" />
       <Item value="void" priority="16" />
       <Item value="Lines" priority="2" />
-      <Item value="cartLine" priority="11" />
+      <Item value="cartLine" priority="15" />
       <Item value="sum" priority="1" />
       <Item value="isPresent" priority="1" />
       <Item value="true" priority="4" />
@@ -201,21 +200,21 @@
       <Item value="Quantity" priority="1" />
       <Item value="l" priority="0" />
       <Item value="ViewContext" priority="1" />
-      <Item value="CartController`0" priority="2" />
+      <Item value="CartController`0" priority="3" />
       <Item value="RedirectToRouteResult`0" priority="1" />
       <Item value="RedirectToAction`0" priority="1" />
       <Item value="returnUrl" priority="1" />
       <Item value="Session" priority="6" />
-      <Item value="Cart`0" priority="7" />
+      <Item value="Cart`0" priority="8" />
       <Item value="try" priority="8" />
-      <Item value="cart" priority="19" />
+      <Item value="cart" priority="26" />
       <Item value="Cart" priority="4" />
       <Item value="r" priority="2" />
       <Item value="Price" priority="10" />
       <Item value="Request" priority="0" />
       <Item value="is" priority="0" />
-      <Item value="MvcShop" priority="0" />
-      <Item value="Controllers" priority="0" />
+      <Item value="MvcShop" priority="1" />
+      <Item value="Controllers" priority="1" />
       <Item value="columnName" priority="0" />
       <Item value="NumberPhone" priority="0" />
       <Item value="Address" priority="1" />
@@ -233,7 +232,7 @@
       <Item value="ArgumentException" priority="3" />
       <Item value="command" priority="11" />
       <Item value="SqlCommand" priority="1" />
-      <Item value="String`0" priority="9" />
+      <Item value="String`0" priority="10" />
       <Item value="_tableName" priority="0" />
       <Item value="TableName" priority="9" />
       <Item value="id" priority="3" />
@@ -302,8 +301,10 @@
       <Item value="TimeCooking" priority="1" />
       <Item value="BigInt" priority="0" />
       <Item value="OnDateTime" priority="1" />
-      <Item value="s" priority="19" />
+      <Item value="s" priority="29" />
       <Item value="ssc" priority="3" />
+      <Item value="FormResponseTable`0" priority="2" />
+      <Item value="break" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@MvcShop.Models.ConnectionDb">
       <Item value="Connection" priority="0" />
@@ -319,12 +320,12 @@
       <Item value="Message" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Count" priority="5" />
+      <Item value="Count" priority="8" />
       <Item value="ToString`0" priority="0" />
       <Item value="AsQueryable`0" priority="0" />
       <Item value="GetRange`0" priority="0" />
       <Item value="Add`0" priority="6" />
-      <Item value="Clear`0" priority="0" />
+      <Item value="Clear`0" priority="1" />
       <Item value="RemoveAll`0" priority="0" />
       <Item value="Find`0" priority="1" />
       <Item value="Sum`1" priority="0" />
@@ -335,11 +336,11 @@
       <Item value="Recepts" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:ShopModel.Entities.Recept">
-      <Item value="NameRecept" priority="2" />
+      <Item value="NameRecept" priority="4" />
       <Item value="Description" priority="1" />
       <Item value="PathToImage" priority="1" />
-      <Item value="Id" priority="12" />
-      <Item value="Price" priority="5" />
+      <Item value="Id" priority="15" />
+      <Item value="Price" priority="6" />
       <Item value="Ingridients" priority="0" />
       <Item value="TimeCooking" priority="0" />
     </ItemStatistics>
@@ -398,7 +399,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="IsNullOrEmpty`0" priority="4" />
-      <Item value="Format`0" priority="17" />
+      <Item value="Format`0" priority="23" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Routing.RouteCollection">
       <Item value="MapRoute`0" priority="0" />
@@ -422,8 +423,8 @@
       <Item value="Categories" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:ShopModel.Entities.CartLine">
-      <Item value="Recept" priority="10" />
-      <Item value="Quantity" priority="4" />
+      <Item value="Recept" priority="13" />
+      <Item value="Quantity" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Mvc.ViewContext">
       <Item value="HttpContext" priority="0" />
@@ -439,8 +440,8 @@
       <Item value="PathAndQuery" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:ShopModel.Entities.Cart">
-      <Item value="Lines" priority="3" />
-      <Item value="ComputeTotalValue`0" priority="2" />
+      <Item value="Lines" priority="7" />
+      <Item value="ComputeTotalValue`0" priority="3" />
       <Item value="AddItem`0" priority="0" />
       <Item value="RemoveItem`0" priority="0" />
       <Item value="ShippingDetails" priority="3" />
@@ -448,7 +449,7 @@
       <Item value="Clear`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Decimal">
-      <Item value="ToString`0" priority="0" />
+      <Item value="ToString`0" priority="9" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.HttpRequest">
       <Item value="Url" priority="0" />

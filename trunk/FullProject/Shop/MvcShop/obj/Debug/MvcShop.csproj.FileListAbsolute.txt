@@ -44,3 +44,4 @@ G:\aaa\Shop\MvcShop\obj\Debug\ResolveAssemblyReference.cache
 G:\aaa\Shop\MvcShop\obj\Debug\MvcShop.dll
 G:\aaa\Shop\MvcShop\obj\Debug\MvcShop.pdb
 G:\aaa\Shop\MvcShop\bin\Views\Shared\App_LocalResources\Shared1.resx
+D:\Projects\Softserve\Repository\FullProject\Shop\MvcShop\bin\Views\Shared\App_LocalResources\Shared1.resx

@@ -6,7 +6,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 <h2>cart</h2>
-<% if ((Model != null) && (Model.Lines.Count>0)) { %>
+<% if ((Model != null) && (Model.Lines.Count > 0))
+   { %>
 <table width="90%">
 <thead><tr>
             <th>Quantity</th>
@@ -24,11 +25,12 @@
             <td> <%=cartLine.Quantity%></td>
             <td> <%=cartLine.Recept.NameRecept%></td>
             <td> <%=cartLine.Recept.Price%></td>
-            <td> <%=cartLine.Recept.Price*cartLine.Quantity%></td>
+            <td> <%=cartLine.Recept.Price * cartLine.Quantity%></td>
             <td>
-            <% using (Html.BeginForm("RemoveFromCart", "Cart")) { %>
-            <%= Html.Hidden("receptId",cartLine.Recept.Id) %>
-            <%= Html.Hidden("returnUrl",ViewData["returnUrl"]) %>
+            <% using (Html.BeginForm("RemoveFromCart", "Cart"))
+               { %>
+            <%= Html.Hidden("receptId", cartLine.Recept.Id)%>
+            <%= Html.Hidden("returnUrl", ViewData["returnUrl"])%>
             <input type="submit" value="remove" />
             <% } %>
             </td>
@@ -44,6 +46,8 @@
 </tr>
 </tfoot>
 </table>
+<% } else {%>
+<table width="90%" id="tableCart"><tr><td>Your cart is empty</td></tr></table>
 <% } %>
 <div class="actionButtons">
     <a href="<%= Html.Encode(ViewData["returnUrl"])%>">Continue shopping</a>
