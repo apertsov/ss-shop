@@ -24,6 +24,15 @@ namespace ShopModel.Entities
                 Lines.Add(new CartLine{Recept = recept,Quantity = quantity});
             }
         }
+        public void MinusItem(Recept recept, int quantity)
+        {
+            foreach (var cartLine in
+                Lines.Where(cartLine => recept.Id == cartLine.Recept.Id).Where(cartLine => cartLine.Quantity - quantity > 0))
+            {
+                cartLine.Quantity -= quantity;
+            }
+        }
+
         public void RemoveItem(Recept recept)
         {
             Lines.RemoveAll(l => l.Recept.Id == recept.Id);

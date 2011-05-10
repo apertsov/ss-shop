@@ -40,11 +40,12 @@ namespace MvcShop.Controllers
                 s = "<table height=\"100px\" width=\"90%\" id=\"tableCart\"><thead><tr><td><b>Quantity</b></td><td><b>Item<b></td><td><b>Price<b></td><td><b>SubTotal</b></td><td></td></tr></thead><tbody>";
                 foreach (var cartLine in cart.Lines)
                 {
-                    s += string.Format("<tr><td>{0}</td>", cartLine.Quantity);
+                    s += string.Format("<tr><td><a href=\"#\" id=\"{1}\" class=\"addItemCart\"><img src=\"../../images/plus.png\" alt=\"add\"/></a>{0}", cartLine.Quantity, cartLine.Recept.Id);
+                    s += string.Format("<a href=\"#\" id=\"{0}\" class=\"minusItemCart\"><img src=\"../../images/minus.png\" alt=\"minus\"/></a></td>", cartLine.Recept.Id);
                     s += string.Format("<td>{0}</td>", cartLine.Recept.NameRecept);
                     s += string.Format("<td>{0}</td>", cartLine.Recept.Price.ToString("N"));
                     s += string.Format("<td>{0}</td>", (cartLine.Recept.Price * cartLine.Quantity).ToString("N"));
-                    s += string.Format("<td><button type='button' id='{0}' class='removeItemCart'>remove</button></td></tr>", cartLine.Recept.Id);
+                    s += string.Format("<td><a href=\"#\" id=\"{0}\" class=\"removeItemCart\"><img src=\"../../images/remove.png\" alt=\"remove\"/></a></td></tr>", cartLine.Recept.Id);
                 }
                 s += "</tbody><tfoot><tr><td colspan=\"3\" align=\"right\">Total</td>";
                 s += string.Format("<td>{0}</td><td></td></tr></tfoot></table>", cart.ComputeTotalValue().ToString("N"));
@@ -61,9 +62,18 @@ namespace MvcShop.Controllers
             return FormResponseTable(cart);
         }
 
-        public string RemoveFromCartRecept(int receptId)
+        public string RemoveFromCartAsync(string receptId, string quantity)
         {
-            var r = _receptRepository.Find(rf => rf.Id == receptId);//Recept.Load(Id);
+            var r = _receptRepository.Find(rf => rf.Id == int.Parse(receptId));//Recept.Load(Id);
+            var cart = GetUserCart();
+            cart.MinusItem(r, int.Parse(quantity));
+            Session["Cart"] = cart;
+            return FormResponseTable(cart);
+        }
+
+        public string RemoveFromCartRecept(int id)
+        {
+            var r = _receptRepository.Find(rf => rf.Id == id);//Recept.Load(Id);
             var cart = GetUserCart();
             cart.RemoveItem(r);
             Session["Cart"] = cart;

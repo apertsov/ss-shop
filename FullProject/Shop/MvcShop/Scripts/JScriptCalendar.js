@@ -35,12 +35,42 @@
             error: function () { alert('error Add to Cart'); },
             completed: function () { alert('completed Add to Cart'); }
         });
-
     });
 
-    $('.removeItemCart').click(function () {
+    $('.removeItemCart').live("click", function () {
         var idI = $(this).attr("id");
-        alert(idI);
+        $.ajax({
+            type: "POST",
+            url: '/Cart/RemoveFromCartRecept/' + idI ,
+            success: function (data) { $('#tableCart').html(data); UpdateCart(); },
+            error: function () { alert('error Delete from Cart'); },
+            completed: function () { alert('completed Delete from Cart'); }
+        });
+        return false;
+    });
+
+    $('.addItemCart').live("click", function () {
+        var idI = $(this).attr("id");
+        $.ajax({
+            type: "POST",
+            url: '/Cart/AddToCartAsync/' + idI + '/1',
+            success: function (data) { $('#tableCart').html(data); UpdateCart(); },
+            error: function () { alert('error Delete from Cart'); },
+            completed: function () { alert('completed Delete from Cart'); }
+        });
+        return false;
+    });
+
+    $('.minusItemCart').live("click", function () {
+        var idI = $(this).attr("id");
+        $.ajax({
+            type: "POST",
+            url: '/Cart/RemoveFromCartAsync/' + idI + '/1',
+            success: function (data) { $('#tableCart').html(data); UpdateCart(); },
+            error: function () { alert('error Minus from Cart'); },
+            completed: function () { alert('completed Minus from Cart'); }
+        });
+        return false;
     });
 
     $('#clearCart').click(function () {
