@@ -57,7 +57,7 @@ namespace MvcShop.Controllers
         {
             var r = _receptRepository.Find(rf => rf.Id == int.Parse(receptId));//Recept.Load(Id);
             var cart = GetUserCart();
-            int c = 0;
+            int c;
             if (int.TryParse(quantity, out c))
             {
                 cart.AddItem(r, int.Parse(quantity));
