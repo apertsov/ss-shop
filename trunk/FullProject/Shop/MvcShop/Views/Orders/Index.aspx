@@ -24,13 +24,13 @@
                                 </thead>
                                 <tbody>
                                 <% foreach (var orderLine in Model.OrderLines) { %>
-                                    <tr><td><%= orderLine.Recept.NameRecept %></td><td><%=orderLine.Quantity %></td><td><%= (orderLine.Recept.Price*orderLine.Quantity).ToString() %></td> </tr>
+                                    <tr><td><%= orderLine.Recept.NameRecept %></td><td><%=orderLine.Quantity %></td><td><%= (orderLine.Recept.Price*orderLine.Quantity).ToString("N") %></td> </tr>
                                 <% } %>
                                 </tbody>
                                 <tfoot>
                                 <tr>
                                     <td colspan="2" align="right">Total</td>
-                                    <td><%=Model.ComputeTotalValue().ToString()%></td>
+                                    <td><%=Model.ComputeTotalValue().ToString("N")%></td>
                                 </tr>
                                 </tfoot>
                             </table>
