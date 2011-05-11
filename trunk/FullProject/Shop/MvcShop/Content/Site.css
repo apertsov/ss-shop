@@ -64,12 +64,19 @@ a.active.trigger {
 }
 
 body {
+    background-image: url('images/pizzaFON.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment:fixed;
+    
     background-color: #5c87b2;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
-    color: #696969;
+    color:#000000;
+	text-shadow: 0.1em 0.1em 0.7em #f8ffaf;
+	text-align: justify;
 }
 
 a:link {
@@ -97,7 +104,7 @@ a:active {
 
 p, ul {
     margin-bottom: 20px;
-    line-height: 1.6em;
+    line-height: 1.6em;	
 }
 
 header,
@@ -110,8 +117,6 @@ section {
 /* HEADINGS   
 ----------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
-    font-size: 1.5em;
-    color: #000;
 }
 
 h1 {
@@ -129,7 +134,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 
 h5, h6 {
@@ -165,17 +170,16 @@ header h1, #header h1 {
     text-shadow: 1px 1px 2px #111;
 }
 
-#main {
+#main  {   
+    background-image: url('images/mainFON04.png');
     padding: 30px 30px 15px 30px;
-    background-color: #fff;
-    border-radius: 4px 0 0 0;
-    -webkit-border-radius: 4px 0 0 0;
-    -moz-border-radius: 4px 0 0 0;
+    border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
 }
 
 footer, 
 #footer {
-    background-color: #fff;
     color: #999;
     padding: 10px 0;
     text-align: center;
@@ -185,56 +189,6 @@ footer,
     border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
-}
-
-/* TAB MENU   
-----------------------------------------------------------*/
-ul#menu {
-    border-bottom: 1px #5C87B2 solid;
-    padding: 0 0 2px;
-    position: relative;
-    margin: 0;
-    text-align: right;
-}
-
-ul#menu li {
-    display: inline;
-    list-style: none;
-}
-
-ul#menu li#greeting {
-    padding: 10px 20px;
-    font-weight: bold;
-    text-decoration: none;
-    line-height: 2.8em;
-    color: #fff;
-}
-
-ul#menu li a {
-    padding: 10px 20px;
-    font-weight: bold;
-    text-decoration: none;
-    line-height: 2.8em;
-    background-color: #e8eef4;
-    color: #034af3;
-    border-radius: 4px 4px 0 0;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-}
-
-ul#menu li a:hover {
-    background-color: #fff;
-    text-decoration: none;
-}
-
-ul#menu li a:active {
-    background-color: #a6e2a6;
-    text-decoration: none;
-}
-
-ul#menu li.selected a {
-    background-color: #fff;
-    color: #000;
 }
 
 /* FORM LAYOUT ELEMENTS   
@@ -255,15 +209,6 @@ textarea {
     min-height: 75px;
 }
 
-input[type="text"], 
-input[type="password"] {
-    border: 1px solid #ccc;
-    padding: 2px;
-    font-size: 1.2em;
-    color: #444;
-    width: 200px;
-}
-
 select {
     border: 1px solid #ccc;
     padding: 2px;
@@ -271,29 +216,24 @@ select {
     color: #444;
 }
 
-input[type="submit"] {
-    font-size: 1.2em;
-    padding: 5px;
-}
-
 /* TABLE
 ----------------------------------------------------------*/
 
 table {
-    border: solid 1px #e8eef4;
+    border: solid 0px #e8eef4;
     border-collapse: collapse;
 }
 
 table td {
     padding: 5px;
-    border: solid 1px #e8eef4;
+    border: solid 0px #e8eef4;
 }
 
 table th {
     padding: 6px 5px;
     text-align: left;
     background-color: #e8eef4;
-    border: solid 1px #e8eef4;
+    border: solid 0px #e8eef4;
 }
 
 /* MISC  
@@ -396,3 +336,38 @@ div#title {
 .tri-state {
     width: 6em;
 }
+
+/* MENU edited by Roman 
+-----------------------------------------*/
+#iconbar li {
+  float:right;
+  position:relative;
+  overflow: hidden;
+  margin-right:10px;
+  background:#f3f3f3;
+  border: 2px groove #ec9205;
+  
+  border-radius: 20px 20px 20px 20px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  }
+  #iconbar a {
+  text-decoration: none;
+  outline: none;
+  color:#d00000;
+  display: block;
+  padding: 10px;
+  cursor:pointer;
+  }
+  #iconbar span {
+  width: 100px;
+  height: 124px;
+  position: absolute;
+  display: none;
+  line-height:110%;
+  
+  color:#000000;
+  padding-left: 10px;
+  text-shadow: 0.1em 0.1em 0.7em #409bed;
+  text-align: justify;
+  }
