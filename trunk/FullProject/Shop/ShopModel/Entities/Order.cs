@@ -8,9 +8,11 @@ namespace ShopModel.Entities
 {
     public enum OrderStatus
     {
-        Taken,
-        Processed,
-        End
+        Taken,    //прийнято до касира
+        Processed,//готується
+        Sending,  //доставляється
+        End,      //готово
+        Canseled  //відхилeно
     } ;
 
     public class Order
