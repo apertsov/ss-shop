@@ -12,13 +12,13 @@
 <% { %>
     <table>
        <tr>
-        <td>Ingridient<br/>                                                                                                     
-        <%=Html.DropDownList("ing", (SelectList)ViewData["IngridientID"])%> (<%= Html.ActionLink("new Indradient", "Index", "Ingridient") %>)<br/>
+        <td>Ingridient<br/>
+        <%=Html.DropDownList("ing", (SelectList)ViewData["IngridientID"])%> (<%= Html.ActionLink("new Indradient", "Index", "Ingridient") %>)
         </td>
 
         <td>
-        PriceByKgOrOne<br/>
-        <%= Html.TextBox("PriceByKgOrOne")%><br/>
+            PriceByKgOrOne<br/>
+            <%= Html.TextBox("PriceByKgOrOne")%>
         </td>
         <td>
         </td>
@@ -28,12 +28,12 @@
 
        <tr>
         <td>
-        MinQuantity<br/>
-        <%= Html.TextBox("MinQuantity")%><br/>
+            MinQuantity<br/>
+            <%= Html.TextBox("MinQuantity")%>
         </td>
-        <td>
-        Quantity<br/>
-        <%= Html.TextBox("Quantity")%><br/>
+       <td>
+            Quantity<br/>
+            <%= Html.TextBox("Quantity")%>
         </td>
         <td>
         <input type="submit" value="  Add  " name="add"/>
