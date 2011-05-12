@@ -175,9 +175,9 @@ namespace MvcShop.Controllers
                     if (User.Identity.IsAuthenticated == false)
                     {
                         ViewData["idOrder"] = id;
+                        var cookie = new HttpCookie("mvcShop") { Value = id.ToString(), Expires = DateTime.Now.AddYears(1) };
+                        Response.Cookies.Add(cookie);
                     }
-                    var cookie = new HttpCookie("mvcShop") {Value = id.ToString(), Expires = DateTime.Now.AddYears(1)};
-                    Response.Cookies.Add(cookie);
                     return View("Completed");
                 }
                 catch
