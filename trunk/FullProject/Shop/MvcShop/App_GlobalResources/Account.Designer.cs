@@ -185,5 +185,14 @@ namespace Resources {
                 return ResourceManager.GetString("UseForm", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Your password has been changed successfully..
+        /// </summary>
+        internal static string YP {
+            get {
+                return ResourceManager.GetString("YP", resourceCulture);
+            }
+        }
     }
 }
