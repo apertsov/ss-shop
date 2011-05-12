@@ -10,6 +10,7 @@ namespace MvcShop.Controllers
     public class NavigationLink
     {
         public string Text { get; set; }
+        public string Id { get; set; }
         public RouteValueDictionary RouteValues { get; set; }
         public bool IsSelected { get; set; }
     }
@@ -20,12 +21,14 @@ namespace MvcShop.Controllers
         {
             if (category == null)
             {
-                Text = "h";
+                Text = "Home";
+                Id = "0";
                 RouteValues = new RouteValueDictionary(new { controller = "Home", action = "Index" });
             }
             else
             {
-                Text = category.Id.ToString();
+                Text = category.CategoryName;//category.Id.ToString();
+                Id = category.Id.ToString();
                 RouteValues = new RouteValueDictionary(new { controller = "Recepts", action = "List", category = category.Id, page = 1 });
             }
         }
@@ -44,7 +47,8 @@ namespace MvcShop.Controllers
         {
             var navigationLinks = new List<NavigationLink> { new CategoryLink(null) { IsSelected = (idSelectedCategory == null) } };
             navigationLinks.AddRange(_categoryRepository.Select(category => new CategoryLink(category) { IsSelected = (idSelectedCategory == category.Id) }));
-            navigationLinks.Add(new NavigationLink { IsSelected = false, RouteValues = new RouteValueDictionary(new { controller = "Orders", action = "Index" }), Text = "or" });
+            navigationLinks.Add(new NavigationLink { IsSelected = false, RouteValues = new RouteValueDictionary(new { controller = "Orders", action = "Index" }), Text = "Order" });
+            navigationLinks.Reverse();
             return View(navigationLinks);
         }
 
