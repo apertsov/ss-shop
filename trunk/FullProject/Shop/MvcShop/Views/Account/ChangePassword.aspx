@@ -7,20 +7,20 @@
 <asp:Content ID="changePasswordContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Change Password</h2>
     <p>
-        Use the form below to change your password. 
+        <%=Resources.Account.Ch %> 
     </p>
     <p>
-        New passwords are required to be a minimum of <%: Membership.MinRequiredPasswordLength %> characters in length.
+        <%=Resources.Account.NewMin %>  <%: Membership.MinRequiredPasswordLength %> <%=Resources.Account.Len %> .
     </p>
 
     <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
     <% using (Html.BeginForm()) { %>
-        <%: Html.ValidationSummary(true, "Password change was unsuccessful. Please correct the errors and try again.") %>
+        <%: Html.ValidationSummary(true, Resources.Account.ChU)%>
         <div>
             <fieldset>
-                <legend>Account Information</legend>
+                <legend><%=Resources.Account.AInfo %> </legend>
                 
                 <div class="editor-label">
                     <%: Html.LabelFor(m => m.OldPassword) %>
@@ -47,7 +47,7 @@
                 </div>
                 
                 <p>
-                    <input type="submit" value="Change Password" />
+                    <input type="submit" value="<%=Resources.Account.Ch%>" />
                 </p>
             </fieldset>
         </div>

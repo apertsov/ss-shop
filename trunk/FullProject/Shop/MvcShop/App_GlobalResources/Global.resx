@@ -211,7 +211,7 @@
     <value>Password</value>
   </data>
   <data name="PassC" xml:space="preserve">
-    <value>"The password and confirmation password do not match."</value>
+    <value>The password and confirmation password do not match.</value>
   </data>
   <data name="PassError" xml:space="preserve">
     <value>The password provided is invalid. Please enter a valid password value.</value>
