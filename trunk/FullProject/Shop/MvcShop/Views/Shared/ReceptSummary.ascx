@@ -12,6 +12,9 @@
    <tr>
    <td><%=Resources.Global.Price %><%= Model.Price.ToString("N") %></td>
    <td align="right"><%=Resources.Global.Quantity %><input type="text" name="quantity" value="1" id="receptQuantity<%= Model.Id %>"/>
-   <input class="receptToCart" id="<%= Model.Id %>" type="submit" value="Add" /></td></tr> 
+     
+   <img src="../../Content/images/shopcartadd_128x128.png" width="80" height="80" class="receptToCart" id="<%= Model.Id %>"/>
+   
+   </td></tr> 
     </table>
 </div>
