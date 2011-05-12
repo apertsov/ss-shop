@@ -5,17 +5,17 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<h2>SearchByUser</h2>
-<div> Search From <%= Html.Encode(ViewData["dtFrom"].ToString())%> To <%= Html.Encode(ViewData["dtTo"].ToString())%> </div>
+<h2><%=Resources.Global.SearchByUser%></h2>
+<div> <%=Resources.Global.Search1%>  <%= Html.Encode(ViewData["dtFrom"].ToString())%> <%=Resources.Global.Search2%>  <%= Html.Encode(ViewData["dtTo"].ToString())%> </div>
 <% if (User.Identity.IsAuthenticated) Html.RenderPartial("SearchByUserName");%>
 <% if (Model == null) { %>
-<div>no search result</div>
+<div><%=Resources.Global.NoSearch%></div>
 <% } else { %>
 <table>
 <tr>
 <td>
 <table>
-<tr><th>OrderDate</th><th>OnDateTime</th><th>Status</th></tr>
+<tr><th><%=Resources.Global.OrderDateTime %></th><th><%=Resources.Global.OrderDateTime1%></th><th><%=Resources.Global.OrderStatus%></th></tr>
 <% foreach (var order in Model) { %>
 <tr class="order-det"><td><a href="#" id="<%= order.Id %>" class="orderDetailsClick"><%= order.Start.ToString() %></a></td><td><%= order.OnDateTime == order.Start ? "fastest" : order.OnDateTime.ToString()%></td><td><%= order.OrderStatus%></td></tr>
 <% } %>

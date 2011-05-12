@@ -38,11 +38,11 @@ namespace MvcShop.Controllers
                 var ssc = new ServiceShopClient();
                 var order = ssc.LoadOrder(idI);
                 ssc.Close();
-                s = order == null ? "<b>undefined status order</b> " : string.Format("<b>{0}</b> ", order.OrderStatus);
+                s = order == null ?Resources.Global.UOrder : string.Format("<b>{0}</b> ", order.OrderStatus);
             }
             else
             {
-                s = "<b>undefined status order</b> ";
+                s = Resources.Global.UOrder;
             }
             s += String.Format("<br/>last query:{0}",DateTime.Now);
             return s;
@@ -51,7 +51,7 @@ namespace MvcShop.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public string GetOrderDataById(string id)
         {
-            string s="<b>undefined status order</b> ";
+            string s = Resources.Global.UOrder;
             int idI;
             if (int.TryParse(id, out idI))
             {
@@ -61,19 +61,19 @@ namespace MvcShop.Controllers
                 if (order != null)
                 {
                     s = "<table>";
-                    s += string.Format("<tr><th>Name:</th><td>{0}</td></tr>", order.Name);
-                    s += string.Format("<tr><th>Phone:</th><td>{0}</td></tr>", order.Phone);
-                    s += string.Format("<tr><th>Address:</th><td>{0}</td></tr>", order.Address);
-                    s+="<tr><th>Items:</th><td>";
+                    s += string.Format("<tr><th>{1}:</th><td>{0}</td></tr>", order.Name, Resources.Global.FirstName);
+                    s += string.Format("<tr><th>{1}:</th><td>{0}</td></tr>", order.Phone,Resources.Global.Phone);
+                    s += string.Format("<tr><th>{1}:</th><td>{0}</td></tr>", order.Address, Resources.Global.Address);
+                    s+="<tr><th>"+Resources.Global.Item+":</th><td>";
                     if (order.OrderLines.Count > 0) {
-                        s+="<table><thead><tr><th>Name</th><th>Quantity</th><th>Price</th></tr></thead><tbody>";
-                        s = order.OrderLines.Aggregate(s, (current, orderLine) => current + string.Format("<tr><td>{0}</td><td>{1}</td><td>{2}</td> </tr>", orderLine.Recept.NameRecept, orderLine.Quantity, orderLine.Quantity*orderLine.Recept.Price));
-                        s+="</tbody><tfoot><tr><td colspan=\"2\" align=\"right\">Total</td>";
+                        s += "<table><thead><tr><th>" + Resources.Global.FirstName + "</th><th>" + Resources.Global.Quantity + "</th><th>" + Resources.Global.Price + "</th></tr></thead><tbody>";
+                        s = order.OrderLines.Aggregate(s, (current, orderLine) => current + string.Format("<tr><td><%=GetGlobalResourceObject('Recept', 'r'+{0})%></td><td>{1}</td><td>{2}</td> </tr>", orderLine.Recept.Id, orderLine.Quantity, orderLine.Quantity*orderLine.Recept.Price));
+                        s += "</tbody><tfoot><tr><td colspan=\"2\" align=\"right\">" + Resources.Global.Total + "</td>";
                         s+=string.Format("<td>{0}</td></tr></tfoot></table>",order.ComputeTotalValue());
                     }
-                    s+=string.Format("</td></tr><tr><th>Order DateTime:</th><td>{0}</td></tr>",order.Start);
-                    s+=string.Format("<tr><th>Order on DateTime:</th><td>{0}</td></tr>",(order.Start==order.OnDateTime)?"fastest":order.OnDateTime.ToString());
-                    s += string.Format("<tr><th>Order Status:</th><td>{0}</td></tr>", order.OrderStatus);
+                    s += string.Format("</td></tr><tr><th>{1}:</th><td>{0}</td></tr>", order.Start, Resources.Global.OrderDateTime);
+                    s += string.Format("<tr><th>{1}:</th><td>{0}</td></tr>", (order.Start == order.OnDateTime) ? "fastest" : order.OnDateTime.ToString(), Resources.Global.OrderDateTime);
+                    s += string.Format("<tr><th>{1}:</th><td>{0}</td></tr>", order.OrderStatus, Resources.Global.OrderStatus);
                     s += "</table>";
                 }
             }

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="d10" xml:space="preserve">
+    <value>Пицца, соус, сыр "Моцарелла", сыр "Пармезан", ветчина, помидоры, шампиньоны и зелень</value>
+  </data>
+  <data name="d11" xml:space="preserve">
+    <value>Пицца, соус, сыры "Эменталь", "Чедер", "Дор-блю" и "Пармезан"</value>
+  </data>
+  <data name="d12" xml:space="preserve">
+    <value>Пицца «Кватро-стаджиони» никого не оставит  равнодушным. Разнообразие ингредиентов удовлетворит потребителей с разными вкусовыми пристрастиями. 1 / 4 пиццы "Моника", 1 / 4 пиццы "Франческа", 1 / 4 пиццы "Адриано" и 1 / 4 - лук, оливки, помидоры и шампиньоны</value>
+  </data>
+  <data name="d13" xml:space="preserve">
+    <value>descr10</value>
+  </data>
+  <data name="d14" xml:space="preserve">
+    <value>descr11</value>
+  </data>
+  <data name="d15" xml:space="preserve">
+    <value>descr12</value>
+  </data>
+  <data name="d16" xml:space="preserve">
+    <value>Coca-cola безалкогольный газированный напиток</value>
+  </data>
+  <data name="d17" xml:space="preserve">
+    <value>BonAqua – это образец кристальной чистоты и неповторимой свежести. Сильногазированная</value>
+  </data>
+  <data name="d18" xml:space="preserve">
+    <value>Sprite представляет собой со вкусом лимон-лайм, без кофеина напиток</value>
+  </data>
+  <data name="d19" xml:space="preserve">
+    <value>Coca-cola безалкогольный газированный напиток</value>
+  </data>
+  <data name="d20" xml:space="preserve">
+    <value>BonAqua – это образец кристальной чистоты и неповторимой свежести. Сильногазированная</value>
+  </data>
+  <data name="d21" xml:space="preserve">
+    <value>Sprite представляет собой со вкусом лимон-лайм, без кофеина напиток</value>
+  </data>
+  <data name="d22" xml:space="preserve">
+    <value>Ананасы, персики, мандарины (или апельсины), бананы, яблоки нарезаются крупными кубиками. Заправляются муссом из киви, сливками, посыпаются грецкими орехами. В комплект идет стикер с карамелью, которой Вы можете полить салат по собственному желанию</value>
+  </data>
+  <data name="d4" xml:space="preserve">
+    <value>Пицца, соус, сыр "Моцарелла", помидоры, базилик и орегано</value>
+  </data>
+  <data name="d5" xml:space="preserve">
+    <value>Пицца, соус, сыр "Моцарелла", шампиньоны, сладкий перец, брокколи, каперсы, помидоры, маслины, лук, кукуруза и зелень</value>
+  </data>
+  <data name="d6" xml:space="preserve">
+    <value>Пицца, соус, сыр "Моцарелла", ананасы, ветчина, помидоры и зелень</value>
+  </data>
+  <data name="d7" xml:space="preserve">
+    <value>Пицца, соус, сыр "Моцарелла", колбаски охотничьи двойные, болгарский перец, халапеньо и соус BBQ</value>
+  </data>
+  <data name="d8" xml:space="preserve">
+    <value>Пицца, соус, сыр "Моцарелла", куриная грудка, ананас, халапеньо</value>
+  </data>
+  <data name="d9" xml:space="preserve">
+    <value>Пицца, соус, сыр "Моцарелла", ветчина, салями, помидоры, шампиньоны</value>
+  </data>
+  <data name="r10" xml:space="preserve">
+    <value>Daniela</value>
+  </data>
+  <data name="r11" xml:space="preserve">
+    <value>Кватро формаджи</value>
+  </data>
+  <data name="r12" xml:space="preserve">
+    <value>Кватро стаджиони</value>
+  </data>
+  <data name="r13" xml:space="preserve">
+    <value>recept10</value>
+  </data>
+  <data name="r14" xml:space="preserve">
+    <value>recept11</value>
+  </data>
+  <data name="r15" xml:space="preserve">
+    <value>recept12</value>
+  </data>
+  <data name="r16" xml:space="preserve">
+    <value>Coca-cola</value>
+  </data>
+  <data name="r17" xml:space="preserve">
+    <value>Bonaqua</value>
+  </data>
+  <data name="r18" xml:space="preserve">
+    <value>Sprite</value>
+  </data>
+  <data name="r19" xml:space="preserve">
+    <value>Coca-cola</value>
+  </data>
+  <data name="r20" xml:space="preserve">
+    <value>Bonaqua</value>
+  </data>
+  <data name="r21" xml:space="preserve">
+    <value>Sprite</value>
+  </data>
+  <data name="r22" xml:space="preserve">
+    <value>Фруктовая фантазия</value>
+  </data>
+  <data name="r4" xml:space="preserve">
+    <value>Маргарита</value>
+  </data>
+  <data name="r5" xml:space="preserve">
+    <value>Завтрак Лауры</value>
+  </data>
+  <data name="r6" xml:space="preserve">
+    <value>Моника</value>
+  </data>
+  <data name="r7" xml:space="preserve">
+    <value>Серджио</value>
+  </data>
+  <data name="r8" xml:space="preserve">
+    <value>Доменика</value>
+  </data>
+  <data name="r9" xml:space="preserve">
+    <value>Франческа</value>
+  </data>
+</root>

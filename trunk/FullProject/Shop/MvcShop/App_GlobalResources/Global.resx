@@ -123,8 +123,23 @@
   <data name="AuthenError" xml:space="preserve">
     <value>The authentication provider returned an error. Please verify your entry and try again. If the problem persists, please contact your system administrator.</value>
   </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Cart</value>
+  </data>
   <data name="ChangePassword" xml:space="preserve">
     <value>Change Password</value>
+  </data>
+  <data name="CheckOut" xml:space="preserve">
+    <value>Check Out</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Complete order</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue shopping</value>
   </data>
   <data name="CorrectUser" xml:space="preserve">
     <value>The user name or password provided is incorrect.</value>
@@ -134,6 +149,9 @@
   </data>
   <data name="CurrentPassword" xml:space="preserve">
     <value>Current password</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Date &amp; Time</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email address</value>
@@ -156,8 +174,14 @@
   <data name="InvalidPass" xml:space="preserve">
     <value>The current password is incorrect or the new password is invalid.</value>
   </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
   <data name="LastName" xml:space="preserve">
     <value>Last name</value>
+  </data>
+  <data name="LastOrder" xml:space="preserve">
+    <value>Your last order</value>
   </data>
   <data name="NameExist" xml:space="preserve">
     <value>User name already exists. Please enter a different user name.</value>
@@ -167,6 +191,21 @@
   </data>
   <data name="NewPassC" xml:space="preserve">
     <value>Confirm new password</value>
+  </data>
+  <data name="NotOrder" xml:space="preserve">
+    <value>You did not order, or an error identification</value>
+  </data>
+  <data name="OrderDateTime" xml:space="preserve">
+    <value>Order DateTime</value>
+  </data>
+  <data name="OrderDateTime1" xml:space="preserve">
+    <value>Order on DateTime</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Order Status</value>
   </data>
   <data name="Pass" xml:space="preserve">
     <value>Password</value>
@@ -189,8 +228,41 @@
   <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
+  <data name="PleaseDate" xml:space="preserve">
+    <value>If you want order by date and/or time please input data</value>
+  </data>
+  <data name="PleaseEnter" xml:space="preserve">
+    <value>Please enter your details</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
   <data name="Remem" xml:space="preserve">
     <value>Remember me?</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="ShipTo" xml:space="preserve">
+    <value>Ship to</value>
+  </data>
+  <data name="SubTotal" xml:space="preserve">
+    <value>SubTotal</value>
+  </data>
+  <data name="Thx" xml:space="preserve">
+    <value>&lt;div&gt;thx for your order&lt;/div&gt;
+Well ship your goods as soon as possible &lt;br/&gt;
+You can check Your Order at page</value>
+  </data>
+  <data name="Thx1" xml:space="preserve">
+    <value>&lt;div&gt;thx for your order&lt;/div&gt;
+You can check Your Order &amp; History at page</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
   </data>
   <data name="UnknownError" xml:space="preserve">
     <value>An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact your system administrator.</value>
@@ -200,5 +272,50 @@
   </data>
   <data name="UserName" xml:space="preserve">
     <value>User name</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>Date From</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>Date To</value>
+  </data>
+  <data name="GetPeriod" xml:space="preserve">
+    <value>Get by Period</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log Off</value>
+  </data>
+  <data name="LogOn" xml:space="preserve">
+    <value>Log On</value>
+  </data>
+  <data name="NoSearch" xml:space="preserve">
+    <value>No search result</value>
+  </data>
+  <data name="OrderId" xml:space="preserve">
+    <value>Order Id</value>
+  </data>
+  <data name="SearchByUser" xml:space="preserve">
+    <value>Search by user</value>
+  </data>
+  <data name="ClearCart" xml:space="preserve">
+    <value>Clear cart</value>
+  </data>
+  <data name="Search1" xml:space="preserve">
+    <value>Search From</value>
+  </data>
+  <data name="Search2" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="ShoppingCart" xml:space="preserve">
+    <value>Shopping cart</value>
+  </data>
+  <data name="ShoppingCartY" xml:space="preserve">
+    <value>Your shopping cart</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UOrder" xml:space="preserve">
+    <value>&lt;b&gt;undefined status order&lt;/b&gt;</value>
   </data>
 </root>

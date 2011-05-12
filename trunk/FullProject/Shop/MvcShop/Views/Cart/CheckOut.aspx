@@ -1,31 +1,31 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ShopModel.Entities.ShippingDetails>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    CheckOut   
+    <%=Resources.Global.CheckOut %>   
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<h2>Check Out Now</h2>
-Please enter your details
+<h2><%=Resources.Global.CheckOut %></h2>
+<%=Resources.Global.PleaseEnter %>
 
 <%= Html.ValidationSummary() %>
 <% using (Html.BeginForm()) { %>
 <table>
 <tr>
-<td colspan="2">Ship to </td>
+<td colspan="2"><%=Resources.Global.ShipTo%> </td>
 </tr>
 <tr>
-<td>Name</td>
+<td><%=Resources.Global.FirstName%></td>
 <td> <%= Html.TextBox("Name","") %> </td>
 </tr>
 <tr>
-<td>Number phone</td><td><%= Html.TextBox("NumberPhone","") %></td>
+<td><%=Resources.Global.Phone%></td><td><%= Html.TextBox("NumberPhone","") %></td>
 </tr>
-<tr><td>Address</td><td><%= Html.TextBox("Address","") %></td>
+<tr><td><%=Resources.Global.Address%></td><td><%= Html.TextBox("Address","") %></td>
 </tr>
-<tr><td colspan="2"> If you want order by date and/or time please input data</td></tr>
-<tr><td>Date & Time</td> <td><%= Html.TextBox("OnDateTime", "",new { @class = "datepicker"} ) %></td></tr>
-<tr><td colspan="2"><input type="submit" value="Complete order" /></td></tr>
+<tr><td colspan="2"> <%=Resources.Global.PleaseDate%></td></tr>
+<tr><td><%=Resources.Global.DateTime %></td> <td><%= Html.TextBox("OnDateTime", "",new { @class = "datepicker"} ) %></td></tr>
+<tr><td colspan="2"><input type="submit" value="<%=Resources.Global.Complete%>" /></td></tr>
 </table>
 <% } %>
 

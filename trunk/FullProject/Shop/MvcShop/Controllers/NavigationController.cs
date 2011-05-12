@@ -18,14 +18,14 @@ namespace MvcShop.Controllers
     {
         public CategoryLink(Category category)
         {
-            if (category==null)
+            if (category == null)
             {
-                Text = Resources.Global.Home;;
+                Text = "h";
                 RouteValues = new RouteValueDictionary(new { controller = "Home", action = "Index" });
             }
             else
             {
-                Text = category.CategoryName;
+                Text = category.Id.ToString();
                 RouteValues = new RouteValueDictionary(new { controller = "Recepts", action = "List", category = category.Id, page = 1 });
             }
         }
@@ -42,9 +42,9 @@ namespace MvcShop.Controllers
 
         public ViewResult Menu(int? idSelectedCategory)
         {
-            var navigationLinks = new List<NavigationLink> {new CategoryLink(null){IsSelected = (idSelectedCategory==null)}};
-            navigationLinks.AddRange(_categoryRepository.Select(category => new CategoryLink(category){IsSelected = (idSelectedCategory==category.Id)}));
-            navigationLinks.Add(new NavigationLink { IsSelected = false, RouteValues = new RouteValueDictionary(new { controller = "Orders", action = "Index" }), Text = "Orders"});
+            var navigationLinks = new List<NavigationLink> { new CategoryLink(null) { IsSelected = (idSelectedCategory == null) } };
+            navigationLinks.AddRange(_categoryRepository.Select(category => new CategoryLink(category) { IsSelected = (idSelectedCategory == category.Id) }));
+            navigationLinks.Add(new NavigationLink { IsSelected = false, RouteValues = new RouteValueDictionary(new { controller = "Orders", action = "Index" }), Text = "or" });
             return View(navigationLinks);
         }
 
