@@ -17,7 +17,8 @@ namespace MvcShop.Controllers
         {
             ServiceShopClient ssc = new ServiceShopClient();
             ViewData["ingradients"] = ssc.LoadAllIngridients();
-            
+            ssc.Close();
+
             return View();
         }
 
@@ -27,6 +28,7 @@ namespace MvcShop.Controllers
             {
                 ServiceShopClient ssc = new ServiceShopClient();
                 ssc.CreateIngridient(ing);
+                ssc.Close();
             }
 
             return RedirectToAction("Index", "Ingridient");
@@ -38,6 +40,7 @@ namespace MvcShop.Controllers
             {
                 ServiceShopClient ssc = new ServiceShopClient();
                 ssc.UpdateIngridient(ing);
+                ssc.Close();
             }
 
             return RedirectToAction("Index", "Ingridient");
@@ -49,6 +52,7 @@ namespace MvcShop.Controllers
             {
                 ServiceShopClient ssc = new ServiceShopClient();
                 ssc.DeleteIngridient(ing);
+                ssc.Close();
             }
 
             return RedirectToAction("Index", "Ingridient");

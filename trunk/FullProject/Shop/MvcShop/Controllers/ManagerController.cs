@@ -116,28 +116,13 @@ namespace MvcShop.Controllers
           
         }
 
-        public ActionResult GetAllOrders(string dtFrom, string dtTo, string getByOrderUser)
+        public ActionResult GetAllOrders()
         {
-            ViewData["dtFrom"] = dtFrom;
-            ViewData["dtTo"] = dtTo;
-            if (getByOrderUser != null)
-            {
-                try
-                {
-                    var dFrom = DateTime.Parse(dtFrom);
-                    var dTo = DateTime.Parse(dtTo);
-                    var ssc = new ServiceShopClient();
-                    var lOrder = ssc.LoadAllOrder().ToList();
-                    lOrder = lOrder.Where(lo => lo.Start >= dFrom).Where(lo => lo.Start <= dTo).ToList();
-                    return View("GetAllOrders", lOrder);
-                }
-                catch (Exception)
-                {
-                    return View("GetAllOrders", null);
-                }
+            ServiceShopClient ssc = new ServiceShopClient();
+            ViewData["orders"] = ssc.LoadAllOrder();
+            ssc.Close();
 
-            }
-            return View("GetAllOrders", null);
-        }
+            return View();
+        }   
     }
 }

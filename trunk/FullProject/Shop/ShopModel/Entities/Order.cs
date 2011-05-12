@@ -10,7 +10,8 @@ namespace ShopModel.Entities
     {
         Taken,    //прийнято до касира
         Processed,//готується
-        Sending,  //доставляється
+        Prepared, //приготовано
+        Sending,  //доставляється - ???
         End,      //готово
         Canseled  //відхилeно
     } ;

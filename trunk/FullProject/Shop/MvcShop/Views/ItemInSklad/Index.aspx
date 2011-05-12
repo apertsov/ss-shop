@@ -74,7 +74,7 @@
         <% { %>
             <td><%= i + 1%>
                 <%= Html.TextBox("Id", list[i].Id, new { @style = "width: 1px; visibility:hidden;" })%></td>
-            <td><%= list[i].Ingridient.IngridientName%></td>
+            <td><%= list[i].Ingridient.IngridientName %></td>
             <td><%= list[i].PriceByKgOrOne%></td>
             <td><%= list[i].MinQuantity%></td>
             <td><%= list[i].Quantity%></td>            

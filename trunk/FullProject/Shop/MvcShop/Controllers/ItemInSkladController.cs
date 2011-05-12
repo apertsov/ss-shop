@@ -30,6 +30,7 @@ namespace MvcShop.Controllers
                 ServiceShopClient ssc = new ServiceShopClient();
 
                 ssc.CreateItemInSklad(item);
+                ssc.Close();
             }
 
             return RedirectToAction("Index", "ItemInSklad");
@@ -43,12 +44,13 @@ namespace MvcShop.Controllers
                 ItemInSklad it = ssc.LoadItemInSklad(item.Id);
                 it.Quantity += item.Quantity;
                 ssc.UpdateItemInSklad(it);
+                ssc.Close();
             }
 
             return RedirectToAction("Index", "ItemInSklad");
         }
 
-        public ActionResult Edit(ItemInSklad item, string edit, string ledit, string Id, string add, string countAdd)
+        public ActionResult Edit(ItemInSklad item, string edit, string ledit, string Id, string add, string countAdd, string ing)
         {
             if (add != null)
             {
@@ -58,18 +60,21 @@ namespace MvcShop.Controllers
                 if (int.TryParse(countAdd, out i))
                     it.Quantity += i;
                 ssc.UpdateItemInSklad(it);
+                ssc.Close();
                 return RedirectToAction("Index", "ItemInSklad");
             }
             if (ledit != null)
             {
-                item.Ingridient = new Ingridient { Id = int.Parse(Id), IngridientName = "" };
+                item.Ingridient = new Ingridient { Id = int.Parse(ing), IngridientName = "" };
                 ServiceShopClient ssc = new ServiceShopClient();
                 ssc.UpdateItemInSklad(item);
+                ssc.Close();
                 return RedirectToAction("Index", "ItemInSklad");
             }
 
             ServiceShopClient ssc_ = new ServiceShopClient();
             ViewData["itemInSklad"] = ssc_.LoadItemInSklad(int.Parse(Id));
+            ssc_.Close();
             return View();
         }
 
@@ -79,6 +84,7 @@ namespace MvcShop.Controllers
             {
                 ServiceShopClient ssc = new ServiceShopClient();
                 ssc.DeleteItemInSklad(item);
+                ssc.Close();
             }
 
             return RedirectToAction("Index", "ItemInSklad");
@@ -88,6 +94,7 @@ namespace MvcShop.Controllers
         {
             ServiceShopClient ssc = new ServiceShopClient();
             ViewData["itemInSklad"] = ssc.LoadAllItemInSklad();
+            ssc.Close();
 
             return View();
         }

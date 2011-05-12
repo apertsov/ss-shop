@@ -6,12 +6,33 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
-<%= Html.ActionLink("Role","Role") %><br />
-<%= Html.ActionLink("Change role user","ChangeUser") %><br />
-<%= Html.ActionLink("Add user","AddUser") %><br />
-<%= Html.ActionLink("Ingridients end in sklad","ingredientsEnd","ItemInSklad")%><br />
-<%= Html.ActionLink("Item in sklad","index","ItemInSklad")%><br />
-<%= Html.ActionLink("Ingridient", "index", "Ingridient")%><br />
-<%= Html.ActionLink("All Order", "GetAllOrders", "Manager")%><br />
+<h2>Manager</h2>
+
+<%using (Html.BeginForm("Role", "Manager")) { %>
+<input type="submit" value="Role" name="Role" style="width:200px;" /><%} %>
+
+<%using (Html.BeginForm("ChangeUser", "Manager")) { %>
+<input type="submit" value="ChangeRoleUser" name="ChangeRoleUser" style="width:200px;" /><%} %>
+
+<%using (Html.BeginForm("AddUser", "Manager")) { %>
+<input type="submit" value="AddUser" name="AddUser" style="width:200px;" /><%} %>
+
+<br/>
+<br/>
+
+<%using (Html.BeginForm("index","ItemInSklad")) { %>
+<input type="submit" value="ItemInSklad" name="ItemInSklad" style="width:200px;" /><% } %>
+
+<%using (Html.BeginForm("ingredientsEnd","ItemInSklad")) { %>
+<input type="submit" value="IngredientsEndInSklad" name="IngredientsEndInSklad" style="width:200px;" /><% } %>
+
+<%using (Html.BeginForm("index", "Ingridient")) { %>
+<input type="submit" value="Ingridient" name="Ingridient" style="width:200px;" /><% } %>
+
+<br/>
+<br/>
+
+<%using (Html.BeginForm("GetAllOrders", "Manager")) { %>
+<input type="submit" value="AllOrder" name="AllOrder" style="width:200px;" /><% } %>
+
 </asp:Content>

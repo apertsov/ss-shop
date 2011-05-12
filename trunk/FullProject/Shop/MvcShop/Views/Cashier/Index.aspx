@@ -8,9 +8,37 @@
 
 <h2>Order</h2>
 
+<% ShopModel.Entities.Order[] list = (ShopModel.Entities.Order[])ViewData["ordersPrepared"]; %>
+<h3>Prepared</h3>
+<table>
+<tr bgcolor="fbd9d9">
+<td><b>#</b></td>
+<td><b>Name</b></td>
+<td><b>Phone</b></td>
+<td><b>Address</b></td>
+<td></td>
+</tr>
+<% for (int i = 0; i < list.Length; i++) %>
+<% { %>
+    <% string color = ""; %>
+    <% if (i % 2 == 0) color = "ebe6fd"; else color = "f0fdec"; %>
+    <tr bgcolor="<%= color %>">
+        <%using (Html.BeginForm("Confirm", "Cashier")) %>
+        <% { %>
+            <td><%= list[i].Id %>
+                <%= Html.TextBox("Id", list[i].Id, new { @style = "width: 1px; visibility:hidden;" })%></td>
+            <td><%= list[i].Name       %></td>
+            <td><%= list[i].Phone      %></td>
+            <td><%= list[i].Address    %></td>
+            <td><input type="submit" value="send" name="send" style="width: 200px;"/></td>
+        <%} %>
+    </tr>
+<% } %>
+</table>
 
-<% ShopModel.Entities.Order[] list = (ShopModel.Entities.Order[]) ViewData["orders"]; %>
 
+<% list = (ShopModel.Entities.Order[])ViewData["ordersTaken"]; %>
+<h3>Taken</h3>
 <table>
 <tr bgcolor="fbd9d9">
 <td><b>#</b></td>
