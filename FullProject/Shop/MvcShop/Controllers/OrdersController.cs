@@ -13,19 +13,29 @@ namespace MvcShop.Controllers
 
         public ActionResult Index()
         {
-            var cookie = Request.Cookies["mvcShop"];
-            Order order = null;
-            if (cookie!=null)
+            if (User.Identity.IsAuthenticated)
             {
-                int id;
-                if (int.TryParse(cookie.Value,out id))
-                {
-                    var ssc = new ServiceShopClient();
-                    order = ssc.LoadOrder(id);
-                    ssc.Close();
-                }
+                var ssc = new ServiceShopClient();
+                var order = ssc.LoadOrderByUserName(User.Identity.Name).Last();
+                ssc.Close();
+                return View(order);    
             }
-            return View(order);
+            else
+            {
+                var cookie = Request.Cookies["mvcShop"];
+                Order order = null;
+                if (cookie != null)
+                {
+                    int id;
+                    if (int.TryParse(cookie.Value, out id))
+                    {
+                        var ssc = new ServiceShopClient();
+                        order = ssc.LoadOrder(id);
+                        ssc.Close();
+                    }
+                }
+                return View(order);    
+            }
         }
 
         [AcceptVerbs(HttpVerbs.Post)]

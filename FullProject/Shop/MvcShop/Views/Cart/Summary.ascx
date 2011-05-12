@@ -8,6 +8,7 @@
         <%=Resources.Global.ShoppingCartY %>:</center>
     <br />
     <br />
+    <div class="spisok">
     <table width="90%" id="tableCart">
         <% if ((Model != null) && (Model.Lines.Count > 0))
            { %>
@@ -82,6 +83,7 @@
         </tr>
         <% } %>
     </table>
+    </div>
     <% string check = Resources.Global.CheckOut.ToString(); %>
     <%= Html.ActionLink(check,"Index","Cart", new {returnUrl=Request.Url.PathAndQuery}, null) %>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id="clearCart" href="#">
