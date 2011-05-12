@@ -208,12 +208,7 @@ namespace MvcShop.Controllers
         public ActionResult ChangeCulture(string lang, string returnUrl)
         {
             Session["Culture"] = new CultureInfo(lang);
-            var ssc = new ServiceShopClient();
-            if (lang == "ru")
-                ssc.SetShop("shop.mdf");
-            else
-                ssc.SetShop("shop_en.mdf");
-            
+
             return Redirect(returnUrl);
         }
 

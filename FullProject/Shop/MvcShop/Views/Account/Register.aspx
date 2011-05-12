@@ -5,22 +5,23 @@
 </asp:Content>
 
 <asp:Content ID="registerContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Create a New Account</h2>
+    <h2><%=Resources.Account.CreateNew %></h2>
     <p>
-        Use the form below to create a new account. 
+        <%=Resources.Account.UseForm %> 
     </p>
     <p>
-        Passwords are required to be a minimum of <%: Membership.MinRequiredPasswordLength %> characters in length.
+         <%=Resources.Account.Min %><%: Membership.MinRequiredPasswordLength %> <%=Resources.Account.Len %>.
     </p>
 
     <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
     <% using (Html.BeginForm()) { %>
-        <%: Html.ValidationSummary(true, "Account creation was unsuccessful. Please correct the errors and try again.") %>
+
+        <%: Html.ValidationSummary(true, Resources.Account.Cor) %>
         <div>
             <fieldset>
-                <legend>Account Information</legend>
+                <legend><%=Resources.Account.AInfo %></legend>
                 
                 <div class="editor-label">
                     <%: Html.LabelFor(m => m.UserName) %>
@@ -86,7 +87,7 @@
                     <%: Html.ValidationMessageFor(m => m.Phone)%>
               </div> 
                 <p>
-                    <input type="submit" value="Register" />
+                    <input type="submit" value="<%=Resources.Account.Register %>" />
                 </p>
             </fieldset>
         </div>

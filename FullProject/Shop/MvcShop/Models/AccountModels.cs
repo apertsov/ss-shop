@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using Resources;
+using MvcShop.Code;
 namespace MvcShop.Models
 {
 
@@ -8,18 +9,19 @@ namespace MvcShop.Models
     {
         [Required]
         [DataType(DataType.Password)]
+        [LocalizedDisplayName("CurrentPassword", NameResourceType = typeof(Global))]
         [Display(Name = "Current password")]
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessageResourceType = typeof(Global), ErrorMessageResourceName = "PassL", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "New password")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        [Compare("NewPassword", ErrorMessageResourceType = typeof(Global), ErrorMessageResourceName = "PassC")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -50,14 +52,14 @@ namespace MvcShop.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100,ErrorMessageResourceType = typeof(Global), ErrorMessageResourceName = "PassL", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password",ErrorMessageResourceType = typeof(Global), ErrorMessageResourceName = "PassC")]
         public string ConfirmPassword { get; set; }
 
         [Required]

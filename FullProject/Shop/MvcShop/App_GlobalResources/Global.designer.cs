@@ -412,7 +412,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, такую же, как &quot;The password and confirmation password do not match.&quot;.
+        ///   Ищет локализованную строку, такую же, как The password and confirmation password do not match..
         /// </summary>
         internal static string PassC {
             get {

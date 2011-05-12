@@ -5,19 +5,19 @@
 </asp:Content>
 
 <asp:Content ID="loginContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Log On</h2>
+    <h2><%=Resources.Global.LogOn %></h2>
     <p>
-        Please enter your user name and password. <%: Html.ActionLink("Register", "Register") %> if you don't have an account.
+        <%=Resources.Account.UP%> <%: Html.ActionLink(Resources.Account.Register, "Register")%> <%=Resources.Account.IAc %>.
     </p>
 
     <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
     <% using (Html.BeginForm()) { %>
-        <%: Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.") %>
+        <%: Html.ValidationSummary(true, Resources.Account.LogU) %>
         <div>
             <fieldset>
-                <legend>Account Information</legend>
+                <legend><%=Resources.Account.AInfo%></legend>
                 
                 <div class="editor-label">
                     <%: Html.LabelFor(m => m.UserName) %>
@@ -41,7 +41,7 @@
                 </div>
                 
                 <p>
-                    <input type="submit" value="Log On" />
+                    <input type="submit" value="<%=Resources.Global.LogOn%>" />
                 </p>
             </fieldset>
         </div>
