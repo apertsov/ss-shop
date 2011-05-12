@@ -123,8 +123,23 @@
   <data name="AuthenError" xml:space="preserve">
     <value>Ошибка аутентификации. Пожалуйста, проверьте ваш ввод и попробуйте еще раз. Если проблема не устраняется, обратитесь к системному администратору.</value>
   </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Корзина</value>
+  </data>
   <data name="ChangePassword" xml:space="preserve">
     <value>Изменение пароля</value>
+  </data>
+  <data name="CheckOut" xml:space="preserve">
+    <value>Check Out</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Сформировать заказ</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Завершено</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Продолжыть покупки</value>
   </data>
   <data name="CorrectUser" xml:space="preserve">
     <value>Имя пользователя или пароль, является неправильным.</value>
@@ -134,6 +149,9 @@
   </data>
   <data name="CurrentPassword" xml:space="preserve">
     <value>Текущий пароль</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Дата и время</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email адрес</value>
@@ -156,8 +174,14 @@
   <data name="InvalidPass" xml:space="preserve">
     <value>Текущий пароль неверен или новый пароль неверный.</value>
   </data>
+  <data name="Item" xml:space="preserve">
+    <value>Товар</value>
+  </data>
   <data name="LastName" xml:space="preserve">
     <value>Фамилия</value>
+  </data>
+  <data name="LastOrder" xml:space="preserve">
+    <value>Ваш последний заказ</value>
   </data>
   <data name="NameExist" xml:space="preserve">
     <value>Имя пользователя уже существует. Пожалуйста, введите другое имя пользователя.</value>
@@ -167,6 +191,21 @@
   </data>
   <data name="NewPassC" xml:space="preserve">
     <value>Повторити пароль</value>
+  </data>
+  <data name="NotOrder" xml:space="preserve">
+    <value>Вы не заказывали, или неизвесная ошибока</value>
+  </data>
+  <data name="OrderDateTime" xml:space="preserve">
+    <value>Дата заказа</value>
+  </data>
+  <data name="OrderDateTime1" xml:space="preserve">
+    <value>Заказ на дату</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Статус заказа</value>
   </data>
   <data name="Pass" xml:space="preserve">
     <value>Пароль</value>
@@ -189,8 +228,40 @@
   <data name="Phone" xml:space="preserve">
     <value>Телефон</value>
   </data>
+  <data name="PleaseDate" xml:space="preserve">
+    <value>Если вы хотите зделать заказ на дату или время, пожалуйста, введите дату</value>
+  </data>
+  <data name="PleaseEnter" xml:space="preserve">
+    <value>Заполните, пожалуйста, форму</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Количество</value>
+  </data>
   <data name="Remem" xml:space="preserve">
     <value>Запомнить меня?</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="ShipTo" xml:space="preserve">
+    <value>Доставить к</value>
+  </data>
+  <data name="SubTotal" xml:space="preserve">
+    <value>Общая стоимость</value>
+  </data>
+  <data name="Thx" xml:space="preserve">
+    <value>&lt;div&gt;Спасибо за ваш заказ&lt;/div&gt;
+Ми доставим товар как можно скорее&lt;br/&gt;
+Вы можете проверить состояние вашего заказа на странице</value>
+  </data>
+  <data name="Thx1" xml:space="preserve">
+    <value>&lt;div&gt;Спасибо за ваш заказ&lt;/div&gt;Вы можете проверить состояние вашего заказа  и историю заказов на странице</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Вместе</value>
   </data>
   <data name="UnknownError" xml:space="preserve">
     <value>Неизвестная ошибка. Пожалуйста, проверьте ваш ввод и попробуйте еще раз. Если проблема не устраняется, обратитесь к системному администратору.</value>
@@ -200,5 +271,47 @@
   </data>
   <data name="UserName" xml:space="preserve">
     <value>Имя пользователя</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>С даты</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>По дату</value>
+  </data>
+  <data name="GetPeriod" xml:space="preserve">
+    <value>Получить на период</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="LogOn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="NoSearch" xml:space="preserve">
+    <value> Поиск результата не дал</value>
+  </data>
+  <data name="OrderId" xml:space="preserve">
+    <value>Номер заказа</value>
+  </data>
+  <data name="SearchByUser" xml:space="preserve">
+    <value>Поиск по пользователю</value>
+  </data>
+  <data name="ClearCart" xml:space="preserve">
+    <value>Очистить корзину</value>
+  </data>
+  <data name="Search1" xml:space="preserve">
+    <value>Поиск с</value>
+  </data>
+  <data name="Search2" xml:space="preserve">
+    <value>по</value>
+  </data>
+  <data name="ShoppingCart" xml:space="preserve">
+    <value>Корзина</value>
+  </data>
+  <data name="ShoppingCartY" xml:space="preserve">
+    <value>Ваша корзина</value>
+  </data>
+  <data name="UOrder" xml:space="preserve">
+    <value>&lt;b&gt;неопределен статус заказа&lt;/b&gt;</value>
   </data>
 </root>

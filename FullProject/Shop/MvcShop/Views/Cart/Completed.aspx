@@ -5,16 +5,13 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+<% string Link = GetGlobalResourceObject("Global","Orders").ToString(); %>
 <% if (User.Identity.IsAuthenticated == false) { %>
-<h2>Completed</h2>
-<div>thx for your order</div>
-Well ship your goods as soon as possible <br/>
-You can check Your Order at page <%= Html.ActionLink("Orders","Index","Orders") %>
+<h2><%=Resources.Global.Completed%></h2>
+<%=Resources.Global.Thx %> <%= Html.ActionLink(Link,"Index","Orders") %>
 <% } else { %>
-<h2>Completed</h2>
-<div>thx for your order</div>
-You can check Your Order & History at page <%= Html.ActionLink("Orders","Index","Orders") %>
+<h2><%=Resources.Global.Completed%></h2>
+<%=Resources.Global.Thx1 %><%= Html.ActionLink(Link,"Index","Orders") %>
 <% }%> 
    
 </asp:Content>

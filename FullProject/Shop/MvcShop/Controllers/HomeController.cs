@@ -11,11 +11,6 @@ namespace MvcShop.Controllers
             {
                 return RedirectToAction("Index", "Manager");
             }
-            if (Session["Culture"] == null)
-            {
-                var ssc = new ServiceShopClient();
-                ssc.SetShop("shop.mdf");
-            }
             ViewBag.Message = Resources.Global.Home;
             return View();
         }

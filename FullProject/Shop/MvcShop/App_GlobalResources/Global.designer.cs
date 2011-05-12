@@ -79,11 +79,65 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Cart.
+        /// </summary>
+        internal static string Cart {
+            get {
+                return ResourceManager.GetString("Cart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Change Password.
         /// </summary>
         internal static string ChangePassword {
             get {
                 return ResourceManager.GetString("ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Check Out.
+        /// </summary>
+        internal static string CheckOut {
+            get {
+                return ResourceManager.GetString("CheckOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Clear cart.
+        /// </summary>
+        internal static string ClearCart {
+            get {
+                return ResourceManager.GetString("ClearCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Complete order.
+        /// </summary>
+        internal static string Complete {
+            get {
+                return ResourceManager.GetString("Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Completed.
+        /// </summary>
+        internal static string Completed {
+            get {
+                return ResourceManager.GetString("Completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Continue shopping.
+        /// </summary>
+        internal static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
             }
         }
         
@@ -111,6 +165,33 @@ namespace Resources {
         internal static string CurrentPassword {
             get {
                 return ResourceManager.GetString("CurrentPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Date From.
+        /// </summary>
+        internal static string DateFrom {
+            get {
+                return ResourceManager.GetString("DateFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Date &amp; Time.
+        /// </summary>
+        internal static string DateTime {
+            get {
+                return ResourceManager.GetString("DateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Date To.
+        /// </summary>
+        internal static string DateTo {
+            get {
+                return ResourceManager.GetString("DateTo", resourceCulture);
             }
         }
         
@@ -160,6 +241,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Get by Period.
+        /// </summary>
+        internal static string GetPeriod {
+            get {
+                return ResourceManager.GetString("GetPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Home.
         /// </summary>
         internal static string Home {
@@ -178,11 +268,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как Item.
+        /// </summary>
+        internal static string Item {
+            get {
+                return ResourceManager.GetString("Item", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Last name.
         /// </summary>
         internal static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Your last order.
+        /// </summary>
+        internal static string LastOrder {
+            get {
+                return ResourceManager.GetString("LastOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Log Off.
+        /// </summary>
+        internal static string LogOff {
+            get {
+                return ResourceManager.GetString("LogOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Log On.
+        /// </summary>
+        internal static string LogOn {
+            get {
+                return ResourceManager.GetString("LogOn", resourceCulture);
             }
         }
         
@@ -210,6 +336,69 @@ namespace Resources {
         internal static string NewPassC {
             get {
                 return ResourceManager.GetString("NewPassC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как No search result.
+        /// </summary>
+        internal static string NoSearch {
+            get {
+                return ResourceManager.GetString("NoSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как You did not order, or an error identification.
+        /// </summary>
+        internal static string NotOrder {
+            get {
+                return ResourceManager.GetString("NotOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Order DateTime.
+        /// </summary>
+        internal static string OrderDateTime {
+            get {
+                return ResourceManager.GetString("OrderDateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Order on DateTime.
+        /// </summary>
+        internal static string OrderDateTime1 {
+            get {
+                return ResourceManager.GetString("OrderDateTime1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Order Id.
+        /// </summary>
+        internal static string OrderId {
+            get {
+                return ResourceManager.GetString("OrderId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Orders.
+        /// </summary>
+        internal static string Orders {
+            get {
+                return ResourceManager.GetString("Orders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Order Status.
+        /// </summary>
+        internal static string OrderStatus {
+            get {
+                return ResourceManager.GetString("OrderStatus", resourceCulture);
             }
         }
         
@@ -277,6 +466,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как If you want order by date and/or time please input data.
+        /// </summary>
+        internal static string PleaseDate {
+            get {
+                return ResourceManager.GetString("PleaseDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Please enter your details.
+        /// </summary>
+        internal static string PleaseEnter {
+            get {
+                return ResourceManager.GetString("PleaseEnter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Price.
+        /// </summary>
+        internal static string Price {
+            get {
+                return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Quantity.
+        /// </summary>
+        internal static string Quantity {
+            get {
+                return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как Remember me?.
         /// </summary>
         internal static string Remem {
@@ -286,11 +511,131 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, такую же, как remove.
+        /// </summary>
+        internal static string Remove {
+            get {
+                return ResourceManager.GetString("Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Search From.
+        /// </summary>
+        internal static string Search1 {
+            get {
+                return ResourceManager.GetString("Search1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как To.
+        /// </summary>
+        internal static string Search2 {
+            get {
+                return ResourceManager.GetString("Search2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Search by user.
+        /// </summary>
+        internal static string SearchByUser {
+            get {
+                return ResourceManager.GetString("SearchByUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Ship to.
+        /// </summary>
+        internal static string ShipTo {
+            get {
+                return ResourceManager.GetString("ShipTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Shopping cart.
+        /// </summary>
+        internal static string ShoppingCart {
+            get {
+                return ResourceManager.GetString("ShoppingCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Your shopping cart.
+        /// </summary>
+        internal static string ShoppingCartY {
+            get {
+                return ResourceManager.GetString("ShoppingCartY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как .
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как SubTotal.
+        /// </summary>
+        internal static string SubTotal {
+            get {
+                return ResourceManager.GetString("SubTotal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как &lt;div&gt;thx for your order&lt;/div&gt;
+        ///Well ship your goods as soon as possible &lt;br/&gt;
+        ///You can check Your Order at page.
+        /// </summary>
+        internal static string Thx {
+            get {
+                return ResourceManager.GetString("Thx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как &lt;div&gt;thx for your order&lt;/div&gt;
+        ///You can check Your Order &amp; History at page.
+        /// </summary>
+        internal static string Thx1 {
+            get {
+                return ResourceManager.GetString("Thx1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как Total.
+        /// </summary>
+        internal static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, такую же, как An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact your system administrator..
         /// </summary>
         internal static string UnknownError {
             get {
                 return ResourceManager.GetString("UnknownError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, такую же, как &lt;b&gt;undefined status order&lt;/b&gt;.
+        /// </summary>
+        internal static string UOrder {
+            get {
+                return ResourceManager.GetString("UOrder", resourceCulture);
             }
         }
         

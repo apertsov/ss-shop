@@ -3,12 +3,14 @@
     if (Request.IsAuthenticated) {
 %>
         Welcome <strong><%: Page.User.Identity.Name %></strong>!
-        [ <%: Html.ActionLink("Log Off", "LogOff", "Account") %> ]
+         <% string Link=GetGlobalResourceObject("Global","LogOff").ToString(); %>
+        [ <%: Html.ActionLink(Link, "LogOff", "Account") %> ]
 <%
     }
     else {
 %> 
-        [ <%: Html.ActionLink("Log On", "LogOn", "Account") %> ]
+         <% string Link=GetGlobalResourceObject("Global","LogOn").ToString(); %>
+        [ <%: Html.ActionLink(Link, "LogOn", "Account") %> ]
 <%
     }
 %>
