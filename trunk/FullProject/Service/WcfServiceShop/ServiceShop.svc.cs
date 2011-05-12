@@ -261,18 +261,17 @@ namespace WcfServiceShop
             return Recept.LoadAll();
         }
 
-        public bool CreateRecept(Recept recept)
+        public int CreateRecept(Recept recept)
         {
             if (!ConnectionDb.IsOpened) OpenDb();
             try
             {
-                recept.Create();
+                return recept.Create();
             }
             catch
             {
-                return false;
+                return 0;
             }
-            return true;
         }
 
         public bool UpdateRecept(Recept recept)

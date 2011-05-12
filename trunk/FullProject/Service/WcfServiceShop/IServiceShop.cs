@@ -89,7 +89,7 @@ namespace WcfServiceShop
         List<Recept> LoadAllRecept();
 
         [OperationContract]
-        bool CreateRecept(Recept recept);
+        int CreateRecept(Recept recept);
 
         [OperationContract]
         bool UpdateRecept(Recept recept);

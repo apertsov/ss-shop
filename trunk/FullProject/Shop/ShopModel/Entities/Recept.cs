@@ -17,7 +17,7 @@ namespace ShopModel.Entities
 
         private const string TableName = "tRecept";
         
-        public void Create()
+        public int Create()
         {
             if (string.IsNullOrEmpty(NameRecept)) throw new ArgumentException("set name recept");
             if (Ingridients == null) throw new ArgumentException("please set ingridients");
@@ -50,8 +50,9 @@ namespace ShopModel.Entities
             catch
             {
                 transaction.Rollback();
+                Id = 0;
             }
-
+            return Id;
         }
         public void Update()
         {
