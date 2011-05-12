@@ -129,6 +129,9 @@
   <data name="ChS" xml:space="preserve">
     <value>Ваш пароль успешно изменен</value>
   </data>
+  <data name="ChU" xml:space="preserve">
+    <value>Изменение пароля не удалась. Пожалуйста, исправьте ошибки и попробуйте еще раз.</value>
+  </data>
   <data name="Cor" xml:space="preserve">
     <value>Ошыбка создание акаунта. Пожайлуста введите коректные даные.</value>
   </data>
@@ -147,6 +150,9 @@
   <data name="Min" xml:space="preserve">
     <value>Пароль должын иметь минимум</value>
   </data>
+  <data name="NewMin" xml:space="preserve">
+    <value>Новый пароль должен быть минимум </value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Регистрация</value>
   </data>
@@ -155,5 +161,8 @@
   </data>
   <data name="UseForm" xml:space="preserve">
     <value>Заполнити форму для создание нового акаунта.</value>
+  </data>
+  <data name="YP" xml:space="preserve">
+    <value>Ваш пароль был успешно изменен.</value>
   </data>
 </root>

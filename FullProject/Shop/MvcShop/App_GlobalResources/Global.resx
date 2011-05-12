@@ -312,8 +312,8 @@ You can check Your Order &amp; History at page</value>
   <data name="ShoppingCartY" xml:space="preserve">
     <value>Your shopping cart</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
   </data>
   <data name="UOrder" xml:space="preserve">
     <value>&lt;b&gt;undefined status order&lt;/b&gt;</value>

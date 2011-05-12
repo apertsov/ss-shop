@@ -16,12 +16,12 @@
 </tr>
 <tr>
 <td><%=Resources.Global.FirstName%></td>
-<td> <%= Html.TextBox("Name","") %> </td>
+<td> <%= Html.TextBox("Name",Profile["first"]) %> </td>
 </tr>
 <tr>
-<td><%=Resources.Global.Phone%></td><td><%= Html.TextBox("NumberPhone","") %></td>
-</tr>
-<tr><td><%=Resources.Global.Address%></td><td><%= Html.TextBox("Address","") %></td>
+<td><%=Resources.Global.Phone%></td><td><%= Html.TextBox("NumberPhone",Profile["phone"]) %></td>
+</tr>S
+<tr><td><%=Resources.Global.Address%></td><td><%= Html.TextBox("Address",Profile["address"]) %></td>
 </tr>
 <tr><td colspan="2"> <%=Resources.Global.PleaseDate%></td></tr>
 <tr><td><%=Resources.Global.DateTime %></td> <td><%= Html.TextBox("OnDateTime", "",new { @class = "datepicker"} ) %></td></tr>

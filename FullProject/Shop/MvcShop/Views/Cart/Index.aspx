@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ShopModel.Entities.Cart>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%=Resources.Global.Cart %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<h2><%=Resources.Global.Cart %><</h2>
+<h2><%=Resources.Global.Cart %></h2>
 <% if ((Model != null) && (Model.Lines.Count>0)) { %>
 <table width="90%">
 <thead><tr>
@@ -47,6 +47,6 @@
 <% } %>
 <div class="actionButtons">
     <a href="<%= Html.Encode(ViewData["returnUrl"])%>"><%=Resources.Global.Continue %></a>
-    <%= Html.ActionLink("CheckOut Now", "CheckOut","Cart") %>
+    <%= Html.ActionLink(Resources.Global.CheckOut, "CheckOut","Cart") %>
 </div>
 </asp:Content>

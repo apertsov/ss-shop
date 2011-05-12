@@ -130,7 +130,7 @@
     <value>Изменение пароля</value>
   </data>
   <data name="CheckOut" xml:space="preserve">
-    <value>Check Out</value>
+    <value>Заказать</value>
   </data>
   <data name="Complete" xml:space="preserve">
     <value>Сформировать заказ</value>
@@ -232,7 +232,7 @@
     <value>Если вы хотите зделать заказ на дату или время, пожалуйста, введите дату</value>
   </data>
   <data name="PleaseEnter" xml:space="preserve">
-    <value>Заполните, пожалуйста, форму</value>
+    <value>Заполните, пожалуйста, форму   </value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Цена</value>
@@ -313,5 +313,8 @@
   </data>
   <data name="UOrder" xml:space="preserve">
     <value>&lt;b&gt;неопределен статус заказа&lt;/b&gt;</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Добро пожаловать, </value>
   </data>
 </root>
