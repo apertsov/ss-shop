@@ -25,6 +25,7 @@
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
                 <% Html.RenderPartial("CultureChooserUserControl"); %>
+                <% Html.RenderPartial("NavMenul"); %>
 
             </div> 
             <div id="menucontainer">
