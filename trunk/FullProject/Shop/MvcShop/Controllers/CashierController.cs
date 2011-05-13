@@ -23,7 +23,7 @@ namespace MvcShop.Controllers
             return View();
         }
 
-        public ActionResult Confirm(Order order, string confirm, string cansel, string send)
+        public ActionResult Confirm(Order order, string confirm, string cancel, string send)
         {
             if (confirm != null)
             {
@@ -33,7 +33,7 @@ namespace MvcShop.Controllers
                 ssc.UpdateOrder(order);
                 ssc.Close();
             }
-            if (cansel != null)
+            if (cancel != null)
             {
                 ServiceShopClient ssc = new ServiceShopClient();
                 order = ssc.LoadOrder(order.Id);
