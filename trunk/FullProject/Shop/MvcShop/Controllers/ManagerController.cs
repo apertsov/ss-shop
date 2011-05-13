@@ -13,26 +13,30 @@ namespace MvcShop.Controllers
 
         public ActionResult Index()
         {
+            if (!User.IsInRole("manager")) return RedirectToAction("Index", "Home");
             return View();
         }
+
         public ActionResult Role()
         {
+            if (!User.IsInRole("manager")) RedirectToAction("Index", "Home");
             return View();
         }
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Role(string name, string a, string delete, string role)
         {
+            if (!User.IsInRole("manager")) RedirectToAction("Index", "Home");
             if(name!=null)
             if(!Roles.RoleExists(name))
             Roles.CreateRole(name); 
-            if(delete!=null)
-                Roles.DeleteRole(role);
+            if(delete!=null) Roles.DeleteRole(role);
             return View();
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Delete(string role, string delete)
         {
+            if (!User.IsInRole("manager")) RedirectToAction("Index", "Home");
             if (delete != null)
             {
                 string[] user = Roles.GetUsersInRole(role);
@@ -46,6 +50,7 @@ namespace MvcShop.Controllers
 
         public ActionResult AddUser()
         {
+            if (!User.IsInRole("manager")) RedirectToAction("Index", "Home");
             return View();
         }
 
@@ -54,7 +59,7 @@ namespace MvcShop.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult AddUser(string login,string password,string first,string last,string address,string phone,FormCollection fc)
         {
-            
+            if (!User.IsInRole("manager")) return RedirectToAction("Index", "Home");
                 MembershipCreateStatus createStatus;
                 Membership.CreateUser(Server.HtmlEncode(fc["login"]),Server.HtmlEncode(fc["password"]), null, null, null, true, null, out createStatus);
 
@@ -84,6 +89,7 @@ namespace MvcShop.Controllers
 
         public ActionResult ChangeUser()
         {
+            if (!User.IsInRole("manager")) return RedirectToAction("Index", "Home");
             return View();
         }
 
@@ -91,6 +97,7 @@ namespace MvcShop.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult ChangeUser(FormCollection fc)
         {
+            if (!User.IsInRole("manager")) return RedirectToAction("Index", "Home");
             if (fc["save"] != null)
             {
                 foreach (var item in Membership.GetAllUsers())
@@ -110,6 +117,7 @@ namespace MvcShop.Controllers
 
         public ActionResult DeleteUser(string user, string x)
         {
+            if (!User.IsInRole("manager")) return RedirectToAction("Index", "Home");
             if (x != null)
                 Membership.DeleteUser(user);
             return RedirectToAction("ChangeUser", "Manager");
@@ -118,7 +126,8 @@ namespace MvcShop.Controllers
 
         public ActionResult GetAllOrders()
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            if (!User.IsInRole("manager")) return RedirectToAction("Index", "Home");
+            var ssc = new ServiceShopClient();
             ViewData["orders"] = ssc.LoadAllOrder();
             ssc.Close();
 
