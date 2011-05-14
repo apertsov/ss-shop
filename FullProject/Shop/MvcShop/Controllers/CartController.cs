@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Resources;
 using System.Web;
 using System.Web.Mvc;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace MvcShop.Controllers
 
         private static string FormResponseTable(Cart cart)
         {
+            var rm = new ResourceManager("Resources.Recept", System.Reflection.Assembly.Load("App_GlobalResources"));
             var s = "<table width=\"90%\" id=\"tableCart\"><tr><td>Your cart is empty</td></tr></table>";
             if (cart.Lines.Count > 0)
             {
@@ -42,7 +44,7 @@ namespace MvcShop.Controllers
                 {
                     s += string.Format("<tr><td><a href=\"#\" id=\"{1}\" class=\"addItemCart\"><img src=\"../../images/plus.png\" alt=\"add\"/></a>{0}", cartLine.Quantity, cartLine.Recept.Id);
                     s += string.Format("<a href=\"#\" id=\"{0}\" class=\"minusItemCart\"><img src=\"../../images/minus.png\" alt=\"minus\"/></a></td>", cartLine.Recept.Id);
-                    s += string.Format("<td>{0}</td>", cartLine.Recept.NameRecept);
+                    s += string.Format("<td>{0}</td>", rm.GetString("r"+cartLine.Recept.Id));
                     s += string.Format("<td>{0}</td>", cartLine.Recept.Price.ToString("N"));
                     s += string.Format("<td>{0}</td>", (cartLine.Recept.Price * cartLine.Quantity).ToString("N"));
                     s += string.Format("<td><a href=\"#\" id=\"{0}\" class=\"removeItemCart\"><img src=\"../../images/remove.png\" alt=\"remove\"/></a></td></tr>", cartLine.Recept.Id);

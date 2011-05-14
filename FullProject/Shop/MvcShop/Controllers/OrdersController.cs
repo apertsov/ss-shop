@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Resources;
 using System.Web.Mvc;
 using MvcShop.ServiceShop;
 using ShopModel.Entities;
@@ -16,9 +17,9 @@ namespace MvcShop.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 var ssc = new ServiceShopClient();
-                var order = ssc.LoadOrderByUserName(User.Identity.Name).Last();
+                var orders = ssc.LoadOrderByUserName(User.Identity.Name).ToList();
                 ssc.Close();
-                return View(order);    
+                if (orders.Count!=0) return View(orders.Last());    
             }
             else
             {
@@ -36,6 +37,7 @@ namespace MvcShop.Controllers
                 }
                 return View(order);    
             }
+            return View();
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
@@ -61,8 +63,9 @@ namespace MvcShop.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public string GetOrderDataById(string id)
         {
-            string s = Resources.Global.UOrder;
+            var s = Resources.Global.UOrder;
             int idI;
+            var rm = new ResourceManager("Resources.Recept", System.Reflection.Assembly.Load("App_GlobalResources"));
             if (int.TryParse(id, out idI))
             {
                 var ssc = new ServiceShopClient();
@@ -77,7 +80,7 @@ namespace MvcShop.Controllers
                     s+="<tr><th>"+Resources.Global.Item+":</th><td>";
                     if (order.OrderLines.Count > 0) {
                         s += "<table><thead><tr><th>" + Resources.Global.FirstName + "</th><th>" + Resources.Global.Quantity + "</th><th>" + Resources.Global.Price + "</th></tr></thead><tbody>";
-                        s = order.OrderLines.Aggregate(s, (current, orderLine) => current + string.Format("<tr><td><%=GetGlobalResourceObject('Recept', 'r'+{0})%></td><td>{1}</td><td>{2}</td> </tr>", orderLine.Recept.Id, orderLine.Quantity, orderLine.Quantity*orderLine.Recept.Price));
+                        s = order.OrderLines.Aggregate(s, (current, orderLine) => current + string.Format("<tr><td>{0}</td><td>{1}</td><td>{2}</td> </tr>", rm.GetString('r'+orderLine.Recept.Id.ToString()), orderLine.Quantity, orderLine.Quantity*orderLine.Recept.Price));
                         s += "</tbody><tfoot><tr><td colspan=\"2\" align=\"right\">" + Resources.Global.Total + "</td>";
                         s+=string.Format("<td>{0}</td></tr></tfoot></table>",order.ComputeTotalValue());
                     }
@@ -104,7 +107,7 @@ namespace MvcShop.Controllers
                     var lOrder = ssc.LoadOrderByUserName(User.Identity.Name??"").ToList();
                     ssc.Close();
                     lOrder = lOrder.Where(lo => lo.Start >= dFrom).Where(lo => lo.Start <= dTo).ToList();
-                    return View("SearchByUser", lOrder);
+                    return View("SearchByUser", lOrder.Count>0?lOrder:null);
                 }
                 catch (Exception)
                 {

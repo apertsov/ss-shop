@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<dynamic>" %>
 <br/>
-<%using (Html.BeginForm("GetByUser", "Orders")) %>
+<%using (Html.BeginForm("GetByUser", "Orders", FormMethod.Get)) %>
 <% { %>
         <%=Resources.Global.DateFrom%>: <%= Html.TextBox("dtFrom", DateTime.Now.AddDays(-7).ToString(), new { @class = "datepicker" })%> 
         <%=Resources.Global.DateTo%>: <%= Html.TextBox("dtTo", DateTime.Now.ToString(), new { @class = "datepicker" })%> 

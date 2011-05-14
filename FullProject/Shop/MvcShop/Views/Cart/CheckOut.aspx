@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<ShopModel.Entities.ShippingDetails>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    <%=Resources.Global.CheckOut %>   
+    <%= Resources.Global.CheckOut %>   
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<h2><%=Resources.Global.CheckOut %></h2>
-<%=Resources.Global.PleaseEnter %>
+<h2><%= Resources.Global.CheckOut %></h2>
+<%= Resources.Global.PleaseEnter %>
 
 <%= Html.ValidationSummary() %>
 <% using (Html.BeginForm()) { %>

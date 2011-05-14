@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ShopModel.Entities
@@ -41,6 +42,20 @@ namespace ShopModel.Entities
         public decimal ComputeTotalValue()
         {
             return Lines.Sum(cartLine => cartLine.Recept.Price*cartLine.Quantity);
+        }
+
+        public int GetMinutesCooking()
+        {
+            try
+            {
+                var max = Lines[0].Recept.TimeCooking;
+                return Lines.Aggregate(max, (current, cartLine) => Math.Max(current, cartLine.Recept.TimeCooking));
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+            
         }
     }
 }
