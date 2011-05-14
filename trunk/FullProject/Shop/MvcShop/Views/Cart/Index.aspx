@@ -6,6 +6,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 <h2><%=Resources.Global.Cart %></h2>
+<div>Your order can be processed no earlier than <%= DateTime.Now.AddMinutes(30+Model.GetMinutesCooking()).ToString() %></div>
+<br/>
 <% if ((Model != null) && (Model.Lines.Count>0)) { %>
 <table width="90%">
 <thead><tr>
@@ -23,8 +25,8 @@
         <tr>
             <td> <%=cartLine.Quantity%></td>
             <td> <%=GetGlobalResourceObject("Recept", "r" + cartLine.Recept.Id)%></td>
-            <td> <%=cartLine.Recept.Price%></td>
-            <td> <%=cartLine.Recept.Price*cartLine.Quantity%></td>
+            <td> <%=cartLine.Recept.Price.ToString("N")%></td>
+            <td> <%=(cartLine.Recept.Price*cartLine.Quantity).ToString("N")%></td>
             <td>
             <% using (Html.BeginForm("RemoveFromCart", "Cart")) { %>
             <%= Html.Hidden("receptId",cartLine.Recept.Id) %>
@@ -39,7 +41,7 @@
 <tfoot>
 <tr>
 <td colspan="3" align="right"><%=Resources.Global.Total%></td>
-<td><%=Model.ComputeTotalValue().ToString()%></td>
+<td><%=Model.ComputeTotalValue().ToString("N")%></td>
 <td></td>
 </tr>
 </tfoot>

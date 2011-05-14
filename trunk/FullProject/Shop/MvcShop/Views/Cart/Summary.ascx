@@ -67,7 +67,7 @@
                     <%=Resources.Global.Total%>
                 </td>
                 <td>
-                    <%=Model.ComputeTotalValue().ToString()%>
+                    <%=Model.ComputeTotalValue().ToString("N")%>
                 </td>
                 <td>
                 </td>
@@ -84,7 +84,7 @@
         <% } %>
     </table>
     </div>
-    <% string check = Resources.Global.CheckOut.ToString(); %>
+    <% var check = Resources.Global.CheckOut; %>
     <%= Html.ActionLink(check,"Index","Cart", new {returnUrl=Request.Url.PathAndQuery}, null) %>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id="clearCart" href="#">
         <%=Resources.Global.ClearCart%></a>
