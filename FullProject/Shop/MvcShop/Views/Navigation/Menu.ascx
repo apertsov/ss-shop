@@ -1,4 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<IEnumerable<MvcShop.Controllers.NavigationLink>>" %>
+<br/>
+<br/>
+
 <ul id="iconbar">
 <% foreach (var link in Model) { %>
     <li><a href="<%= Url.RouteUrl(link.RouteValues)%>" class="<%= link.IsSelected?"selected":"" %>">
