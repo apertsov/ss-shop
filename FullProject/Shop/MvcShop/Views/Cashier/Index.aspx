@@ -65,7 +65,7 @@
             <td><%= list[i].Start      %></td>
             <td><%= list[i].OnDateTime %></td>
             <td><input type="submit" value="confirm" name="confirm" style="width: 200px;"/><br/><br/>
-                <input type="submit" value="cansel"  name="cansel"  style="width: 50px;"/></td>
+                <input type="submit" value="cansel"  name="cancel"  style="width: 50px;"/></td>
         <%} %>
     </tr>
     <tr bgcolor="<%= color %>">

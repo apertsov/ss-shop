@@ -31,7 +31,7 @@
                 <td>
                     <% for (int j = 0; j < list[i].OrderLines.Count; j++) %>
                     <% { %>
-                        <%= list[i].OrderLines[j].Recept.NameRecept %><br/>
+                        <%= Html.ActionLink(list[i].OrderLines[j].Recept.NameRecept, "Recept", "Recepts", new { id = list[i].OrderLines[j].Recept.Id }, new { target = "_blank", hidefocus = "hidefocus" })%><br/>
                     <% } %>
                 </td>
                 <td>

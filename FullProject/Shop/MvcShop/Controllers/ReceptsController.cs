@@ -30,5 +30,13 @@ namespace MvcShop.Controllers
             return View(_receptRepository.Skip((page - 1) * PageSize).Take(PageSize).ToList());
         }
 
+        public ActionResult Recept(string id)
+        {
+            ServiceShopClient ssc = new ServiceShopClient();
+            ViewData["recept"] = ssc.LoadRecept(int.Parse(id));
+            ssc.Close();
+
+            return View();
+        }
     }
 }

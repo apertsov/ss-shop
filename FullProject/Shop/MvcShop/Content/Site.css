@@ -73,7 +73,6 @@ body {
     background-size: 100% 100%;
     background-attachment:fixed;
     
-    background-color: #5c87b2;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     margin: 0;
@@ -375,3 +374,48 @@ div#title {
   text-shadow: 0.1em 0.1em 0.7em #409bed;
   text-align: justify;
   }
+  
+  /* Корзина */
+  .buy a:link  {
+	font-family: "Times New Roman", Times, serif;
+	text-decoration: none;
+	font-size:25px;
+	color:#FFFFFF;
+	text-shadow: 0.1em 0.1em 0.2em #f8ffaf;
+	position:relative; 
+	top:-45px; 
+	right:-23%;
+}
+
+.buy a:visited  {
+	font-family: "Times New Roman", Times, serif;
+	text-decoration: none;
+	font-size:25px;
+	color:#FFFFFF;
+	text-shadow: 0.1em 0.1em 0.2em #f8ffaf;
+	position:relative; 
+	top:-45px; 
+	right:-23%;
+}
+
+.buy a:active {
+	font-family: "Times New Roman", Times, serif;
+	text-decoration: none;
+	font-size:25px;
+	color:#FFFFFF;
+	text-shadow: 0.1em 0.1em 0.5em #f8ffaf;
+	position:relative; 
+	top:-45px; 
+	right:-23%;
+}
+
+.buy a:hover  {
+	font-family: "Times New Roman", Times, serif;
+	text-decoration: none;
+	font-size:25px;
+	color:#FFFFFF;
+	text-shadow: 0.1em 0.1em 0.3em #030303;
+	position:relative; 
+	top:-45px; 
+	right:-23%;
+}
