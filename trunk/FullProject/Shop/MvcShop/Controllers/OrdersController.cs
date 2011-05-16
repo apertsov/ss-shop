@@ -17,9 +17,19 @@ namespace MvcShop.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 var ssc = new ServiceShopClient();
-                var orders = ssc.LoadOrderByUserName(User.Identity.Name).ToList();
+                Order order;
+                try
+                {
+                    order = ssc.LoadOrderByUserName(User.Identity.Name).Last();
+                }
+                catch
+                {
+                    order = new Order();
+                    order.OrderLines = new System.Collections.Generic.List<OrderLine>();
+                }
+                
                 ssc.Close();
-                if (orders.Count!=0) return View(orders.Last());    
+                if (order != null) return View(order);    
             }
             else
             {

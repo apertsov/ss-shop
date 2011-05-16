@@ -3,12 +3,14 @@
      <%if( Context.User.IsInRole("manager")) {%>
      <%: Html.ActionLink("Manager", "Index", "Manager") %>
      <%} %>
+	 <!--
      <%if( Context.User.IsInRole("cooker")){ %>
      <%: Html.ActionLink("CookBook", "Index","CookBook")%>
      <%} %>
+	 -->
      <%if( Context.User.IsInRole("cashier")){ %>
      <%: Html.ActionLink("Cashier", "Index", "Cashier") %>   
      <%} %>
-     <%if( Context.User.IsInRole("kitchen")){ %>
+     <%if( Context.User.IsInRole("cooker")){ %>
      <%: Html.ActionLink("Kitchen", "Index", "Kitchen") %>
      <%} %>]
