@@ -8,21 +8,25 @@
 
 <h2>AddRecipe</h2>
 
-<%using (Html.BeginForm("AddRecipe", "CookBook")) %>
+<%using (Html.BeginForm("AddRecipe", "CookBook","idCategory")) %>
 <% { %>
+   
+  Категорія <%=Html.DropDownList("cat", (SelectList)ViewData["allCategory"])%> 
+      
 <table>
+<tr>
     <tr>
         <td>Назва:</td>
         <td><%= Html.TextBox("NameRecept") %></td>
     </tr>
-    <tr>
+     <tr>
         <td>Опис:</td>
-        <td><%= Html.TextArea("Description")%></td>
+        <td><%= Html.TextBox("description")%></td>
     </tr>
-    <tr>
+   <tr>
         <td>Картинка:</td>
-        <td><!--<asp:FileUpload ID="PathToImage" runat="server" />--></td>
-    </tr>
+        <td><input type="file" name="img" /></td>
+        </tr>
     <tr>
         <td>Ціна:</td>
         <td><%= Html.TextBox("Price")%></td>
@@ -32,13 +36,10 @@
         <td><%= Html.TextBox("TimeCooking")%></td>
     </tr>
     <tr>
-        <td></td>
         <td><input type="submit" value="add" name="add"/></td>
     </tr>
 </table>
 
 <%} %>
-<br/>
-
 
 </asp:Content>
