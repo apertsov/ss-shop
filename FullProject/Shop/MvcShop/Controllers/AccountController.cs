@@ -165,6 +165,27 @@ namespace MvcShop.Controllers
             return View();
         }
 
+        public ActionResult ChangeProfile(FormCollection fc)
+        {
+            if(fc["ok"]!=null)
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("Index", "Home");
+            else
+            {
+                ProfileBase p = HttpContext.Profile;
+                p.SetPropertyValue("first", Server.HtmlEncode(fc["First"]));
+                p.SetPropertyValue("last", Server.HtmlEncode(fc["Last"]));
+                p.SetPropertyValue("address", Server.HtmlEncode(fc["Address"]));
+                p.SetPropertyValue("phone", Server.HtmlEncode(fc["Phone"]));
+                p.Save();
+                return RedirectToAction("UserInfo");
+ 
+            }
+            return View();
+        }
+
+       
+
         #region Status Codes
         private static string ErrorCodeToString(MembershipCreateStatus createStatus)
         {

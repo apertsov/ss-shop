@@ -13,4 +13,4 @@
      <%} %>
      <%if( Context.User.IsInRole("cooker")){ %>
      <%: Html.ActionLink("Kitchen", "Index", "Kitchen") %>
-     <%} %>]
+     <%} %>

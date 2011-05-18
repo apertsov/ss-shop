@@ -2,7 +2,7 @@
 <%
     if (Request.IsAuthenticated) {
 %>
-        <%=Resources.Global.Welcome %><strong><%: Page.User.Identity.Name %></strong>!
+        <%=Resources.Global.Welcome %><strong><%: Html.ActionLink(Page.User.Identity.Name,"UserInfo","Account") %></strong>!
          <% string Link=GetGlobalResourceObject("Global","LogOff").ToString(); %>
         [ <%: Html.ActionLink(Link, "LogOff", "Account") %> ]
 <%
