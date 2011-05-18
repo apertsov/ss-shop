@@ -121,7 +121,7 @@
     <value>Адрес</value>
   </data>
   <data name="AuthenError" xml:space="preserve">
-    <value>Ошибка аутентификации. Пожалуйста, проверьте ваш ввод и попробуйте еще раз. Если проблема не устраняется, обратитесь к системному администратору.</value>
+    <value>Ошибка аутентификации. Пожалуйста, проверьте правильность введенных данных. Если проблема не устраняется, обратитесь к администратору.</value>
   </data>
   <data name="Cart" xml:space="preserve">
     <value>Корзина</value>
@@ -139,13 +139,13 @@
     <value>Завершено</value>
   </data>
   <data name="Continue" xml:space="preserve">
-    <value>Продолжыть покупки</value>
+    <value>Продолжить покупки</value>
   </data>
   <data name="CorrectUser" xml:space="preserve">
-    <value>Имя пользователя или пароль, является неправильным.</value>
+    <value>Имя пользователя или пароль введен неверно.</value>
   </data>
   <data name="CreateCan" xml:space="preserve">
-    <value>запросу пользователя по создании был отменен. Пожалуйста, проверьте ваш ввод и попробуйте еще раз. Если проблема не устраняется, обратитесь к системному администратору.</value>
+    <value>Запрос пользователя по создании был отменен. Пожалуйста, проверьте правильность введенных данных. Если проблема не устраняется, обратитесь к администратору.</value>
   </data>
   <data name="CurrentPassword" xml:space="preserve">
     <value>Текущий пароль</value>
@@ -154,7 +154,7 @@
     <value>Дата и время</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email адрес</value>
+    <value> Адрес електронной почты</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
     <value>Имя пользователя для этого адреса электронной почты уже существует. Пожалуйста, введите другой адрес электронной почты.</value>
@@ -190,7 +190,7 @@
     <value>Новый пароль</value>
   </data>
   <data name="NewPassC" xml:space="preserve">
-    <value>Повторити пароль</value>
+    <value>Повторите пароль</value>
   </data>
   <data name="NotOrder" xml:space="preserve">
     <value>Вы не заказывали, или неизвесная ошибока</value>
@@ -211,7 +211,7 @@
     <value>Пароль</value>
   </data>
   <data name="PassC" xml:space="preserve">
-    <value>Пароль и подтверждение пароля не совпадают.</value>
+    <value>Подтверждение пароля не совпадает с паролем.</value>
   </data>
   <data name="PassError" xml:space="preserve">
     <value>Пароль является недействительным. Пожалуйста, введите коректное значение пароля.</value>
@@ -229,7 +229,7 @@
     <value>Телефон</value>
   </data>
   <data name="PleaseDate" xml:space="preserve">
-    <value>Если вы хотите зделать заказ на дату или время, пожалуйста, введите дату</value>
+    <value>Для заказ на дату или время, пожалуйста, введите дату</value>
   </data>
   <data name="PleaseEnter" xml:space="preserve">
     <value>Заполните, пожалуйста, форму   </value>
@@ -254,7 +254,7 @@
   </data>
   <data name="Thx" xml:space="preserve">
     <value>&lt;div&gt;Спасибо за ваш заказ&lt;/div&gt;
-Ми доставим товар как можно скорее&lt;br/&gt;
+Ваш заказ будет доставлен в ближайшее время&lt;br/&gt;
 Вы можете проверить состояние вашего заказа на странице</value>
   </data>
   <data name="Thx1" xml:space="preserve">
@@ -264,10 +264,10 @@
     <value>Вместе</value>
   </data>
   <data name="UnknownError" xml:space="preserve">
-    <value>Неизвестная ошибка. Пожалуйста, проверьте ваш ввод и попробуйте еще раз. Если проблема не устраняется, обратитесь к системному администратору.</value>
+    <value>Неизвестная ошибка. Пожалуйста, проверьте введенные данные и попробуйте еще раз. Если проблема не устраняется, обратитесь к системному администратору.</value>
   </data>
   <data name="UserInvalid" xml:space="preserve">
-    <value>Имя пользователя является недействительным. Пожалуйста, проверьте значение и повторите попытку.</value>
+    <value>Имя пользователя является недействительным. Пожалуйста, проверьте значение.</value>
   </data>
   <data name="UserName" xml:space="preserve">
     <value>Имя пользователя</value>
@@ -276,10 +276,10 @@
     <value>С даты</value>
   </data>
   <data name="DateTo" xml:space="preserve">
-    <value>По дату</value>
+    <value>по дату</value>
   </data>
   <data name="GetPeriod" xml:space="preserve">
-    <value>Получить на период</value>
+    <value>Получить за период</value>
   </data>
   <data name="LogOff" xml:space="preserve">
     <value>Выйти</value>
@@ -316,5 +316,8 @@
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Добро пожаловать, </value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактировать профиль</value>
   </data>
 </root>

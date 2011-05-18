@@ -11,4 +11,7 @@
 <%=Resources.Global.LastName %>:    <%=Profile["last"]%><br/>
 <%=Resources.Global.Address%>:      <%=Profile["address"]%><br />
 <%=Resources.Global.Phone%>:        <%=Profile["phone"]%><br />
+
+<%=Html.ActionLink(Resources.Global.ChangePassword,"ChangePassword") %>
+<%=Html.ActionLink(Resources.Global.Edit, "ChangeProfile")%>
 </asp:Content>
