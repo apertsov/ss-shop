@@ -318,4 +318,7 @@ You can check Your Order &amp; History at page</value>
   <data name="UOrder" xml:space="preserve">
     <value>&lt;b&gt;undefined status order&lt;/b&gt;</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
 </root>
