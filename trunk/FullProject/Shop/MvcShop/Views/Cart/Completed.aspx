@@ -5,13 +5,13 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<% string Link = GetGlobalResourceObject("Global","Orders").ToString(); %>
+<% var link = GetGlobalResourceObject("Global","Orders").ToString(); %>
 <% if (User.Identity.IsAuthenticated == false) { %>
 <h2><%=Resources.Global.Completed%></h2>
-<%=Resources.Global.Thx %> <%= Html.ActionLink(Link,"Index","Orders") %>
+<%=Resources.Global.Thx %> <%= Html.ActionLink(link,"Index","Orders") %>
 <% } else { %>
 <h2><%=Resources.Global.Completed%></h2>
-<%=Resources.Global.Thx1 %><%= Html.ActionLink(Link,"Index","Orders") %>
+<%=Resources.Global.Thx1 %><%= Html.ActionLink(link,"Index","Orders") %>
 <% }%> 
    
 </asp:Content>

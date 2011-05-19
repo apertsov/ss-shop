@@ -1,9 +1,8 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
 using System.Web.Profile;
-using System;
 using MvcShop.ServiceShop;
-using System.Linq;
+
 namespace MvcShop.Controllers
 {
     public class ManagerController : Controller

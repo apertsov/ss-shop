@@ -163,7 +163,7 @@
     <value>Адрес электронной почты является недействительным. Пожалуйста, проверьте значение и повторите попытку.</value>
   </data>
   <data name="EmptyCart" xml:space="preserve">
-    <value>Извените, ваша карта пустая</value>
+    <value>Извините, ваша карта пустая</value>
   </data>
   <data name="FirstName" xml:space="preserve">
     <value>Имя</value>
@@ -193,7 +193,7 @@
     <value>Повторите пароль</value>
   </data>
   <data name="NotOrder" xml:space="preserve">
-    <value>Вы не заказывали, или неизвесная ошибока</value>
+    <value>Вы не заказывали, или неизвесная ошибка</value>
   </data>
   <data name="OrderDateTime" xml:space="preserve">
     <value>Дата заказа</value>
@@ -223,7 +223,7 @@
     <value>Запрос восстановления пароля  является недействительным. Пожалуйста, проверьте значение и повторите попытку.</value>
   </data>
   <data name="PassL" xml:space="preserve">
-    <value>{0} должно бытьне мение {2} символов.</value>
+    <value>{0} должно бытьне менее {2} символов.</value>
   </data>
   <data name="Phone" xml:space="preserve">
     <value>Телефон</value>

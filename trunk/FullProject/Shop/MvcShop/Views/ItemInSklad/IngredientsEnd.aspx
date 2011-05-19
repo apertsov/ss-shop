@@ -8,7 +8,7 @@
 
 <h2>IngredientsEnd</h2>
 
-<% ShopModel.Entities.ItemInSklad[] list = (ShopModel.Entities.ItemInSklad[])ViewData["itemInSklad"]; %>
+<% var list = (ShopModel.Entities.ItemInSklad[])ViewData["itemInSklad"]; %>
 <table>
 <tr>
 <td><b>Id</b></td>
@@ -18,7 +18,7 @@
 <td><b>Quantity</b></td>
 <td><b>Difference</b></td>
 </tr>
-<% for (int i = 0; i < list.Length; i++) %>
+<% for (var i = 0; i < list.Length; i++) %>
 <% { %>
   <% if (list[i].Quantity <= list[i].MinQuantity /* * 1.1 */)  %>
   <% { %>

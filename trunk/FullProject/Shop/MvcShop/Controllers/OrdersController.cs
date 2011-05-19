@@ -24,12 +24,10 @@ namespace MvcShop.Controllers
                 }
                 catch
                 {
-                    order = new Order();
-                    order.OrderLines = new System.Collections.Generic.List<OrderLine>();
+                    return View();
                 }
-                
                 ssc.Close();
-                if (order != null) return View(order);    
+                return View(order);    
             }
             else
             {
@@ -47,7 +45,6 @@ namespace MvcShop.Controllers
                 }
                 return View(order);    
             }
-            return View();
         }
 
         [AcceptVerbs(HttpVerbs.Post)]

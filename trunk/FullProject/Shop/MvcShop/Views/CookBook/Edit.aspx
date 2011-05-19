@@ -35,7 +35,7 @@
                 Картинка:
             </td>
             <td>
-                <input type="file" name="img" /><img src="<%=Model.PathToImage%>" />
+                <input type="file" name="img" value="<%= Model.PathToImage %>" ></input><img src="<%=Model.PathToImage%>" alt="image"/>
             </td>
         </tr>
         <tr>
@@ -94,7 +94,7 @@
     <hr />
 Додавання інгридієнту
     <hr />
-   <%using (Html.BeginForm("addIn", "CookBook"))
+   <%using (Html.BeginForm("AddIn", "CookBook"))
   { %>
   <%=Html.DropDownList("ingID", (SelectList)ViewData["listIngr"])%>
   <%=Html.TextBox("quantity") %>

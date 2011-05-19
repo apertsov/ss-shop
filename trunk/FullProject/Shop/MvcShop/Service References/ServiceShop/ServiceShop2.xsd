@@ -73,6 +73,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="IdOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
       <xs:element minOccurs="0" name="Recept" nillable="true" type="tns:Recept" />
     </xs:sequence>
   </xs:complexType>
@@ -81,7 +82,10 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="Taken" />
       <xs:enumeration value="Processed" />
+      <xs:enumeration value="Prepared" />
+      <xs:enumeration value="Sending" />
       <xs:enumeration value="End" />
+      <xs:enumeration value="Canseled" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="OrderStatus" nillable="true" type="tns:OrderStatus" />

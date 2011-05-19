@@ -28,6 +28,7 @@ namespace MvcShop.Controllers
         {
             var r = _receptRepository.Find(rf=>rf.Id==receptId);//Recept.Load(Id);
             var cart = GetUserCart();
+            if (quantity != null) if (quantity < 0) return RedirectToAction("Index", new {returnUrl});
             cart.AddItem(r,quantity??1);
             Session["Cart"] = cart;
             return RedirectToAction("Index", new {returnUrl});
@@ -62,8 +63,11 @@ namespace MvcShop.Controllers
             int c;
             if (int.TryParse(quantity, out c))
             {
-                cart.AddItem(r, int.Parse(quantity));
-                Session["Cart"] = cart;
+                if (c > 0)
+                {
+                    cart.AddItem(r, int.Parse(quantity));
+                    Session["Cart"] = cart;
+                }
             }
             return FormResponseTable(cart);
         }

@@ -7,12 +7,6 @@
       <xsd:import schemaLocation="http://localhost:49101/ServiceShop.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ShopModel.Entities" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IServiceShop_CreateRecept_InputMessage">
-    <wsdl:part name="parameters" element="tns:CreateRecept" />
-  </wsdl:message>
-  <wsdl:message name="IServiceShop_CreateRecept_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CreateReceptResponse" />
-  </wsdl:message>
   <wsdl:message name="IServiceShop_UpdateRecept_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateRecept" />
   </wsdl:message>
@@ -96,12 +90,6 @@
   </wsdl:message>
   <wsdl:message name="IServiceShop_DeleteOrder_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteOrderResponse" />
-  </wsdl:message>
-  <wsdl:message name="IServiceShop_SetShop_InputMessage">
-    <wsdl:part name="parameters" element="tns:SetShop" />
-  </wsdl:message>
-  <wsdl:message name="IServiceShop_SetShop_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetShopResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceShop_LoadCategory_InputMessage">
     <wsdl:part name="parameters" element="tns:LoadCategory" />
@@ -247,11 +235,13 @@
   <wsdl:message name="IServiceShop_LoadAllRecept_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoadAllReceptResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateRecept_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRecept" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShop_CreateRecept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReceptResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServiceShop">
-    <wsdl:operation name="CreateRecept">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateRecept" message="tns:IServiceShop_CreateRecept_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateReceptResponse" message="tns:IServiceShop_CreateRecept_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="UpdateRecept">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/UpdateRecept" message="tns:IServiceShop_UpdateRecept_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/UpdateReceptResponse" message="tns:IServiceShop_UpdateRecept_OutputMessage" />
@@ -307,10 +297,6 @@
     <wsdl:operation name="DeleteOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/DeleteOrder" message="tns:IServiceShop_DeleteOrder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/DeleteOrderResponse" message="tns:IServiceShop_DeleteOrder_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="SetShop">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/SetShop" message="tns:IServiceShop_SetShop_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/SetShopResponse" message="tns:IServiceShop_SetShop_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="LoadCategory">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadCategory" message="tns:IServiceShop_LoadCategory_InputMessage" />
@@ -408,18 +394,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/LoadAllRecept" message="tns:IServiceShop_LoadAllRecept_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/LoadAllReceptResponse" message="tns:IServiceShop_LoadAllRecept_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="CreateRecept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShop/CreateRecept" message="tns:IServiceShop_CreateRecept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShop/CreateReceptResponse" message="tns:IServiceShop_CreateRecept_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceShop" type="tns:IServiceShop">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="CreateRecept">
-      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateRecept" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="UpdateRecept">
       <soap:operation soapAction="http://tempuri.org/IServiceShop/UpdateRecept" style="document" />
       <wsdl:input>
@@ -539,15 +520,6 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteOrder">
       <soap:operation soapAction="http://tempuri.org/IServiceShop/DeleteOrder" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="SetShop">
-      <soap:operation soapAction="http://tempuri.org/IServiceShop/SetShop" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -764,6 +736,15 @@
     </wsdl:operation>
     <wsdl:operation name="LoadAllRecept">
       <soap:operation soapAction="http://tempuri.org/IServiceShop/LoadAllRecept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRecept">
+      <soap:operation soapAction="http://tempuri.org/IServiceShop/CreateRecept" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

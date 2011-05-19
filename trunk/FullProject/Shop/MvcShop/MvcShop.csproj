@@ -64,6 +64,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Account.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Account.ru.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Account.uk-UA.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.uk-UA.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\Global.ru1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,8 +89,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Global.resx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\Recept.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recept.resx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CashierController.cs" />
     <Compile Include="Controllers\CookBookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngridientController.cs" />
@@ -88,6 +109,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HtmlHelpers\PagingHelpers.cs" />
+    <Compile Include="LocalizedDisplayNameAttribute .cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Language.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,6 +182,7 @@
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\JScriptCalendar.js" />
+    <Content Include="Scripts\korzinaADD.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <None Include="Properties\DataSources\ShopModel.Entities.Category.datasource" />
@@ -182,8 +205,11 @@
     <Content Include="Views\Cart\Completed.aspx" />
     <Content Include="Views\Cart\Index.aspx" />
     <Content Include="Views\Cart\Summary.ascx" />
+    <Content Include="Views\CookBook\AddRecipe.aspx" />
     <Content Include="Views\CookBook\Edit.aspx" />
+    <Content Include="Views\CookBook\Index.aspx" />
     <Content Include="Views\Ingridient\Index.aspx" />
+    <Content Include="Views\ItemInSklad\Edit.aspx" />
     <Content Include="Views\ItemInSklad\IngredientsEnd.aspx" />
     <Content Include="Views\Manager\AddUser.aspx" />
     <Content Include="Views\Manager\ChangeUser.aspx" />
@@ -196,9 +222,10 @@
     <Content Include="Views\Orders\SearchById.aspx" />
     <Content Include="Views\Orders\SearchByUser.aspx" />
     <Content Include="Views\Recepts\List.aspx" />
+    <Content Include="Views\Recepts\Recept.aspx" />
     <Content Include="Views\Shared\CultureChooserUserControl.ascx" />
+    <Content Include="Views\Shared\ReceptBookSummary.ascx" />
     <Content Include="Views\Shared\ReceptSummary.ascx" />
-    <Content Include="Views\Shared\SearchByIdPartial.ascx" />
     <Content Include="Views\Shared\SearchByUserName.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -276,6 +303,30 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Shared1.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Account.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Account.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Account.ru.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Account.ru.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Recept.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Recept.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Account.uk-UA.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Account.uk-UA.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
