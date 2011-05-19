@@ -313,7 +313,7 @@ You can check Your Order &amp; History at page</value>
     <value>Your shopping cart</value>
   </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Welcome</value>
+    <value>Welcome, </value>
   </data>
   <data name="UOrder" xml:space="preserve">
     <value>&lt;b&gt;undefined status order&lt;/b&gt;</value>

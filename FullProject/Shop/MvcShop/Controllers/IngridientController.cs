@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using MvcShop.ServiceShop;
 using ShopModel.Entities;
 
@@ -15,7 +11,7 @@ namespace MvcShop.Controllers
 
         public ActionResult Index()
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            var ssc = new ServiceShopClient();
             ViewData["ingradients"] = ssc.LoadAllIngridients();
             ssc.Close();
 
@@ -26,7 +22,7 @@ namespace MvcShop.Controllers
         {
             if (add != null)
             {
-                ServiceShopClient ssc = new ServiceShopClient();
+                var ssc = new ServiceShopClient();
                 ssc.CreateIngridient(ing);
                 ssc.Close();
             }
@@ -38,7 +34,7 @@ namespace MvcShop.Controllers
         {
             if (edit != null)
             {
-                ServiceShopClient ssc = new ServiceShopClient();
+                var ssc = new ServiceShopClient();
                 ssc.UpdateIngridient(ing);
                 ssc.Close();
             }
@@ -50,7 +46,7 @@ namespace MvcShop.Controllers
         {
             if (delete != null)
             {
-                ServiceShopClient ssc = new ServiceShopClient();
+                var ssc = new ServiceShopClient();
                 ssc.DeleteIngridient(ing);
                 ssc.Close();
             }

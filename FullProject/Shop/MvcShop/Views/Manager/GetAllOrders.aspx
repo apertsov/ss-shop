@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 <h2>SearchByUser</h2>
 
-<% ShopModel.Entities.Order[] list = (ShopModel.Entities.Order[])ViewData["orders"]; %>
+<% var list = (ShopModel.Entities.Order[])ViewData["orders"]; %>
 
 <table>
 <tr bgcolor="fbd9d9">
@@ -21,8 +21,7 @@
 </tr>
 <% for (int i = 0; i < list.Length; i++) %>
 <% { %>
-    <% string color = ""; %>
-    <% if (i % 2 == 0) color = "ebe6fd"; else color = "f0fdec"; %>
+    <% string color = i % 2 == 0 ? "ebe6fd" : "f0fdec"; %>
     <% if ((list[i].OnDateTime - new DateTime()).Hours <= 2) color = "fbd9d9";%>
     <tr bgcolor="<%= color %>">
         <%using (Html.BeginForm("Confirm", "Cashier")) %>
@@ -34,7 +33,7 @@
             <td><%= list[i].Address    %></td>
             <td><%= list[i].Start      %></td>
             <td><%= list[i].OnDateTime %></td>
-            <td><%= (ShopModel.Entities.OrderStatus) list[i].OrderStatus %></td>
+            <td><%= list[i].OrderStatus %></td>
         <%} %>
     </tr>
     <tr bgcolor="<%= color %>">
@@ -51,13 +50,13 @@
     <td></td>
     <td></td>
     <td>
-    <% for (int j = 0; j < list[i].OrderLines.Count; j++) %>
+    <% for (var j = 0; j < list[i].OrderLines.Count; j++) %>
     <% { %>
         <%= list[i].OrderLines[j].Recept.NameRecept %><br/>
     <% } %>
     </td>
     <td>
-    <% for (int j = 0; j < list[i].OrderLines.Count; j++) %>
+    <% for (var j = 0; j < list[i].OrderLines.Count; j++) %>
     <% { %>
         <%= list[i].OrderLines[j].Quantity %><br/>
     <% } %>

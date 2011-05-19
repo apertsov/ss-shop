@@ -8,7 +8,7 @@
 
 <h2>Edit Item In Sklad</h2>
 
-<% ShopModel.Entities.ItemInSklad list = (ShopModel.Entities.ItemInSklad)ViewData["itemInSklad"]; %>
+<% var list = (ShopModel.Entities.ItemInSklad)ViewData["itemInSklad"]; %>
 
 <table>
 <tr>

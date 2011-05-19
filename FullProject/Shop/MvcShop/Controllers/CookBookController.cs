@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MvcShop.ServiceShop;
 using ShopModel.Entities;
@@ -15,32 +13,31 @@ namespace MvcShop.Controllers
 
         public ActionResult Index(string idCategory)
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            var ssc = new ServiceShopClient();
             ViewData["allCategory"] = new SelectList(ssc.LoadAllCategory(), "Id", "CategoryName");
             ViewData["allRecept"] = ssc.LoadAllRecept();
-            List<Recept> recept = new List<Recept>();
-            int c = 1;
+            int c;
             if (!int.TryParse(idCategory, out c)) c = 1;
-            foreach (Recept rec in ssc.LoadReceptByCategory(c))
-                recept.Add(rec);
-
+            var recept = ssc.LoadReceptByCategory(c).ToList();
+            ssc.Close();
             return View(recept);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Delete(Recept recept, string id)
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            var ssc = new ServiceShopClient();
             ssc.DeleteRecept(ssc.LoadRecept(int.Parse(id)));
+            ssc.Close();
             return RedirectToAction("Index", "CookBook");
         }
 
         public ActionResult AddRecipe(Recept item, string cat, string add)
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            var ssc = new ServiceShopClient();
             ViewData["allCategory"] = new SelectList(ssc.LoadAllCategory(), "Id", "CategoryName");
             ViewData["listIngr"] = new SelectList(ssc.LoadAllIngridients(), "Id", "IngridientName");
-            ReceptInCategory recInCat = new ReceptInCategory();
+            var recInCat = new ReceptInCategory();
             if (add != null)
             {
                 item.Ingridients = new List<IngridientInRecept>();
@@ -56,14 +53,14 @@ namespace MvcShop.Controllers
 
 
         
-        public ActionResult Edit(Recept recept, string Edit,string update)
+        public ActionResult Edit(Recept recept, string edit,string update)
         {
-            ServiceShopClient ssc = new ServiceShopClient();
-            List <Ingridient> listIngr=new List<Ingridient> ();
-            foreach (Ingridient ing in ssc.LoadAllIngridients())
+            var ssc = new ServiceShopClient();
+            var listIngr=new List<Ingridient> ();
+            foreach (var ing in ssc.LoadAllIngridients())
             {
-                bool notInRecept = false;
-                foreach (IngridientInRecept ingr in ssc.LoadAllIngridientsInRecept(recept.Id)) {
+                var notInRecept = false;
+                foreach (var ingr in ssc.LoadAllIngridientsInRecept(recept.Id)) {
                     if (ing.Id != ingr.Ingridient.Id) { notInRecept = true; }
                     else
                     {
@@ -75,8 +72,8 @@ namespace MvcShop.Controllers
                 
             }
             ViewData["listIngr"] = new SelectList(listIngr, "Id", "IngridientName");
-            List<IngridientInRecept> lIngr = new List<IngridientInRecept>();
-            if (Edit != null)
+            var lIngr = new List<IngridientInRecept>();
+            if (edit != null)
             {
                 recept = ssc.LoadRecept(recept.Id);
                 RedirectToAction("Index", "CookBook",recept);
@@ -95,17 +92,17 @@ namespace MvcShop.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult addIn(string ingID, string add, string IdRec,string quantity) {
+        public ActionResult AddIn(string ingId, string add, string idRec,string quantity) {
 
             if (add != null)
             {
-                ServiceShopClient ssc = new ServiceShopClient();
-                IngridientInRecept newIngr = new IngridientInRecept();
-                newIngr.Ingridient = ssc.LoadIngridient(int.Parse(ingID));
-                Recept rec= ssc.LoadRecept(int.Parse(IdRec));
-               
-                newIngr.Quantity = int.Parse(quantity);
-                newIngr.IdRecept = int.Parse(IdRec);
+                var ssc = new ServiceShopClient();
+                var newIngr = new IngridientInRecept
+                                  {
+                                      Ingridient = ssc.LoadIngridient(int.Parse(ingId)),
+                                      Quantity = int.Parse(quantity),
+                                      IdRecept = int.Parse(idRec)
+                                  };
                 ssc.CreateIngridientInRecept(newIngr);
                 ssc.Close();
             }//!!!!!!!!!!!!
@@ -114,24 +111,24 @@ namespace MvcShop.Controllers
         }
 
 
-        public ActionResult DelIngr(IngridientInRecept ingridientInRecept,string IdRec,string IdInRec,  string delete)
+        public ActionResult DelIngr(IngridientInRecept ingridientInRecept,string idRec,string idInRec,  string delete)
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            
             
             if (delete != null)
-            {   {
-                ssc.DeleteIngridientInRecept(ssc.LoadIngridientInReceptById(int.Parse(IdInRec)));
-                    ssc.Close();
-                }
+            { 
+                var ssc = new ServiceShopClient();
+                ssc.DeleteIngridientInRecept(ssc.LoadIngridientInReceptById(int.Parse(idInRec)));
+                ssc.Close();  
             }
             return RedirectToAction("Index");
           }
 
-        public ActionResult EditIngr(string ingr,string IdInRec,string quantity, string editIngr)
+        public ActionResult EditIngr(string ingr,string idInRec,string quantity, string editIngr)
         {
-            ServiceShopClient ssc = new ServiceShopClient();
+            var ssc = new ServiceShopClient();
             ViewData["allIngr"] = new SelectList(ssc.LoadAllIngridients(), "Id", "IngridientName");
-            IngridientInRecept ingrInRecept = ssc.LoadIngridientInReceptById(int.Parse(IdInRec));// new IngridientInRecept { Id = int.Parse(IdInRec), Quantity = int.Parse(q) };
+            var ingrInRecept = ssc.LoadIngridientInReceptById(int.Parse(idInRec));// new IngridientInRecept { Id = int.Parse(IdInRec), Quantity = int.Parse(q) };
             ingrInRecept.Quantity = int.Parse(quantity);
             if (editIngr != null)
             {

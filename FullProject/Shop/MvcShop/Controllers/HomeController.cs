@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using MvcShop.ServiceShop;
 
 namespace MvcShop.Controllers
 {

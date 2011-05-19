@@ -8,7 +8,7 @@
 
 <h2>Recept</h2>
 
-<% ShopModel.Entities.Recept recept = (ShopModel.Entities.Recept) ViewData["recept"]; %>
+<% var recept = (ShopModel.Entities.Recept) ViewData["recept"]; %>
 
 <p>Description: 
 <%= recept.Description %>
@@ -27,7 +27,7 @@
 </p>
 
 <p>Ingridients: <br/>
-<%= for (int i = 0; i < recept.Ingridients.Count; i++) %>
+<% for (var i = 0; i < recept.Ingridients.Count; i++) %>
 <% { %>
     <%= recept.Ingridients[i].Ingridient.IngridientName %><br/>
 <% } %>

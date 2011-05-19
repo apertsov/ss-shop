@@ -20,7 +20,7 @@
 </tr>
 <tr>
 <td><%=Resources.Global.Phone%></td><td><%= Html.TextBox("NumberPhone",Profile["phone"]) %></td>
-</tr>S
+</tr>
 <tr><td><%=Resources.Global.Address%></td><td><%= Html.TextBox("Address",Profile["address"]) %></td>
 </tr>
 <tr><td colspan="2"> <%=Resources.Global.PleaseDate%></td></tr>

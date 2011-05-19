@@ -15,7 +15,7 @@
 <%} %>
 <br/>
 
-<% ShopModel.Entities.Ingridient[] list = (ShopModel.Entities.Ingridient[]) ViewData["ingradients"]; %>
+<% var list = (ShopModel.Entities.Ingridient[]) ViewData["ingradients"]; %>
 
 <table>
 <tr>
@@ -24,7 +24,7 @@
 <td></td>
 <td></td>
 </tr>
-<% for (int i = 0; i < list.Length; i++) %>
+<% for (var i = 0; i < list.Length; i++) %>
 <% { %>
     <tr>
         <%using (Html.BeginForm("Edit", "Ingridient")) %>

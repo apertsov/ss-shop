@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.Routing;
 using System.Web.Security;
 using MvcShop.Models;
 using System.Web.Profile;
 using System.Globalization;
-using MvcShop.ServiceShop;
 
 namespace MvcShop.Controllers
 {

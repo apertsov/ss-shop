@@ -9,41 +9,41 @@
   <RecentFiles>
     <RecentFiles>
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc" caret="78" fromTop="0" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9539" fromTop="9" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3713" fromTop="12" />
-      <File id="d:Miscellaneous Files/f:ConnectionDb.cs/l:D!?Projects?Softserve?Repository?FullProject?Shop?ShopModel?Entities?ConnectionDb.cs" caret="437" fromTop="10" />
-      <File id="d:Miscellaneous Files/f:Recept.cs/l:D!?Projects?Softserve?Repository?FullProject?Shop?ShopModel?Entities?Recept.cs" caret="6164" fromTop="10" />
-      <File id="d:Miscellaneous Files/f:Order.cs/l:D!?Projects?Softserve?Repository?FullProject?Shop?ShopModel?Entities?Order.cs" caret="7097" fromTop="10" />
-      <File id="d:Miscellaneous Files/f:OrderLine.cs/l:D!?Projects?Softserve?Repository?FullProject?Shop?ShopModel?Entities?OrderLine.cs" caret="3143" fromTop="16" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="7012" fromTop="9" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2298" fromTop="15" />
+      <File id="d:Miscellaneous Files/f:Category.cs/l:D!?Projects?Softserve?Repository?FullProject?Shop?ShopModel?Entities?Category.cs" caret="2045" fromTop="9" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="6903" fromTop="14" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="7229" fromTop="15" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3380" fromTop="20" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2888" fromTop="4" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2982" fromTop="7" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8377" fromTop="16" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8506" fromTop="12" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8728" fromTop="11" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8857" fromTop="16" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9079" fromTop="17" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9208" fromTop="15" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3379" fromTop="20" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2887" fromTop="4" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2981" fromTop="7" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8353" fromTop="16" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8482" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8704" fromTop="11" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="8833" fromTop="16" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9055" fromTop="17" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9184" fromTop="15" />
       <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="211" fromTop="8" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9434" fromTop="14" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9917" fromTop="20" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9962" fromTop="16" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10269" fromTop="12" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10383" fromTop="17" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10576" fromTop="14" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10690" fromTop="10" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10862" fromTop="18" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3876" fromTop="20" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3877" fromTop="19" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9604" fromTop="7" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9756" fromTop="13" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3459" fromTop="3" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10134" fromTop="12" />
-      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3899" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9410" fromTop="14" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9893" fromTop="20" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9938" fromTop="16" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10245" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10359" fromTop="17" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10552" fromTop="14" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10666" fromTop="10" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10838" fromTop="18" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3875" fromTop="20" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3876" fromTop="19" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9580" fromTop="7" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="9732" fromTop="13" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3458" fromTop="3" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="10110" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="3898" fromTop="12" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="119" fromTop="0" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:IServiceShop.cs" caret="2594" fromTop="18" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="6915" fromTop="16" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="7153" fromTop="15" />
+      <File id="8EF047C0-B895-49D6-9984-B68C4E522596/f:ServiceShop.svc.cs" caret="7062" fromTop="11" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

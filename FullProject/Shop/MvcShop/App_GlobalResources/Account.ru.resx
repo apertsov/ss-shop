@@ -118,37 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AInfo" xml:space="preserve">
-    <value>Информация по акаунту</value>
+    <value>Информация по аккаунту</value>
   </data>
   <data name="Ch" xml:space="preserve">
     <value>Изменение пароля</value>
   </data>
   <data name="ChP" xml:space="preserve">
-    <value>Заполнити форму для изменения пароля.</value>
+    <value>Заполнить форму для изменения пароля.</value>
   </data>
   <data name="ChS" xml:space="preserve">
     <value>Ваш пароль успешно изменен</value>
   </data>
   <data name="ChU" xml:space="preserve">
-    <value>Изменение пароля не удалась. Пожалуйста, исправьте ошибки и попробуйте еще раз.</value>
+    <value>Изменение пароля не удалось. Пожалуйста, исправьте ошибки и попробуйте еще раз.</value>
   </data>
   <data name="Cor" xml:space="preserve">
-    <value>Ошыбка создание акаунта. Пожайлуста введите коректные даные.</value>
+    <value>Ошибка создания аккаунта. Пожалуйста введите корректные даные.</value>
   </data>
   <data name="CreateNew" xml:space="preserve">
-    <value>Создать новый акаунт</value>
+    <value>Создать новый аккаунт</value>
   </data>
   <data name="IAc" xml:space="preserve">
-    <value>если вы не имеете акаунта</value>
+    <value>если вы не имеете аккаунта</value>
   </data>
   <data name="Len" xml:space="preserve">
     <value>символов</value>
   </data>
   <data name="LogU" xml:space="preserve">
-    <value>Логин не сущестует. Пожайлуста введите коректные даные.</value>
+    <value>Логин не существует. Пожалуйста введите корректные данные.</value>
   </data>
   <data name="Min" xml:space="preserve">
-    <value>Пароль должын иметь минимум</value>
+    <value>Пароль должен иметь минимум</value>
   </data>
   <data name="NewMin" xml:space="preserve">
     <value>Новый пароль должен быть минимум </value>
@@ -160,7 +160,7 @@
     <value>Пожалуйста введите ваш логин и пароль</value>
   </data>
   <data name="UseForm" xml:space="preserve">
-    <value>Заполнити форму для создание нового акаунта.</value>
+    <value>Заполните форму для создание нового аккаунта.</value>
   </data>
   <data name="YP" xml:space="preserve">
     <value>Ваш пароль был успешно изменен.</value>
