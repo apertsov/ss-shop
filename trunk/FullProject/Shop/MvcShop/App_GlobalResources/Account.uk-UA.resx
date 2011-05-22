@@ -157,7 +157,7 @@
     <value>Реєстрація</value>
   </data>
   <data name="UP" xml:space="preserve">
-    <value>Будь-ласка введіть ваш логін та пароль</value>
+    <value>Будь ласка введіть ваш логін та пароль</value>
   </data>
   <data name="UseForm" xml:space="preserve">
     <value>Заповнити форму для створення нового акаунту.</value>

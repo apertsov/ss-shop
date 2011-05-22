@@ -52,6 +52,7 @@ namespace ShopModel.Entities
             var command = new SqlCommand(string.Format("DELETE FROM {0} WHERE id={1}", TableName, Id), ConnectionDb.Connection);
             command.ExecuteNonQuery();
         }
+        
         public static ItemInSklad Load(int id)
         {
             ItemInSklad itemInSklad = null;
@@ -70,6 +71,26 @@ namespace ShopModel.Entities
             }
             return itemInSklad;
         }
+
+        public static ItemInSklad LoadByIngridient(int id)
+        {
+            ItemInSklad itemInSklad = null;
+            var adapter = new SqlDataAdapter(String.Format("SELECT id,idIngridient,minQuantity,priceByKgOrOne,Quantity FROM {0} WHERE idIngridient={1}", TableName, id), ConnectionDb.Connection);
+            var ds = new DataSet();
+            adapter.Fill(ds, TableName);
+            if (ds.Tables[TableName].Rows.Count > 0)
+            {
+                itemInSklad = new ItemInSklad();
+                var dr = ds.Tables[TableName].Rows[0];
+                itemInSklad.Id = id;
+                itemInSklad.Ingridient = Ingridient.Load((int) dr["idIngridient"]);
+                itemInSklad.MinQuantity = (float) dr["minQuantity"];
+                itemInSklad.PriceByKgOrOne = (decimal) dr["priceByKgOrOne"];
+                itemInSklad.Quantity = (float)dr["quantity"];
+            }
+            return itemInSklad;
+        }
+
         public static List<ItemInSklad> LoadAll()
         {
             var listItemInSklad = new List<ItemInSklad>();

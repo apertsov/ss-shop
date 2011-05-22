@@ -30,6 +30,16 @@ namespace MvcShop.Controllers
                 order = ssc.LoadOrder(order.Id);
                 order.OrderStatus = OrderStatus.Prepared;
                 ssc.UpdateOrder(order);
+                order = ssc.LoadOrder(order.Id);
+                foreach(OrderLine ol in order.OrderLines)
+                {
+                    foreach(IngridientInRecept ir in ol.Recept.Ingridients)
+                    {
+                        ItemInSklad ingridient = ssc.LoadItemInSkladByIngradient(ir.Ingridient.Id);
+                        ingridient.Quantity -= ir.Quantity * ol.Quantity;
+                        ssc.UpdateItemInSklad(ingridient);
+                    }  
+                }
                 ssc.Close();
             }
             
