@@ -17,6 +17,7 @@ namespace MvcShop.Controllers
         {
             var ss = new ServiceShopClient();
             _receptRepository = ss.LoadAllRecept().ToList();
+            ss.Close();
         }
         private Cart GetUserCart()
         {

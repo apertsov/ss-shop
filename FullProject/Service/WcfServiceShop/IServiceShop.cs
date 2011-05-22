@@ -66,6 +66,9 @@ namespace WcfServiceShop
         ItemInSklad LoadItemInSklad(int id);
 
         [OperationContract]
+        ItemInSklad LoadItemInSkladByIngradient(int id);
+
+        [OperationContract]
         List<ItemInSklad> LoadAllItemInSklad();
 
         [OperationContract]

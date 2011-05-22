@@ -193,6 +193,12 @@ namespace WcfServiceShop
             return ItemInSklad.Load(id);
         }
 
+        public ItemInSklad LoadItemInSkladByIngradient(int id)
+        {
+            if (!ConnectionDb.IsOpened) OpenDb();
+            return ItemInSklad.LoadByIngridient(id);
+        }
+
         public List<ItemInSklad> LoadAllItemInSklad()
         {
             if (!ConnectionDb.IsOpened) OpenDb();
