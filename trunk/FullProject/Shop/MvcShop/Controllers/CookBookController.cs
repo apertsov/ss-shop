@@ -3,7 +3,9 @@ using System.Linq;
 using System.Web.Mvc;
 using MvcShop.ServiceShop;
 using ShopModel.Entities;
-
+using System.Resources;
+using System.Globalization;
+using System.Collections;
 namespace MvcShop.Controllers
 {
     public class CookBookController : Controller
@@ -32,7 +34,7 @@ namespace MvcShop.Controllers
             return RedirectToAction("Index", "CookBook");
         }
 
-        public ActionResult AddRecipe(Recept item, string cat, string add)
+        public ActionResult AddRecipe(Recept item, string cat, string add, FormCollection fc)
         {
             var ssc = new ServiceShopClient();
             ViewData["allCategory"] = new SelectList(ssc.LoadAllCategory(), "Id", "CategoryName");
@@ -45,6 +47,46 @@ namespace MvcShop.Controllers
                 recInCat.IdRecept =ssc.CreateRecept(item);
                 recInCat.IdCategory = int.Parse(cat);
                 ssc.CreateReceptInCategory(recInCat);
+                //(Server.MapPath("App_GlobalResources/myresource.resx")):
+                ResXResourceReader rsxr = new ResXResourceReader(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.resx");
+                List<DictionaryEntry> l=new List<DictionaryEntry>();
+                foreach (DictionaryEntry d in rsxr)
+                l.Add(d);
+                rsxr.Close();
+                //rsxw.AddResource(r);
+                ResXResourceWriter rsxw = new ResXResourceWriter(Request.PhysicalApplicationPath +"App_GlobalResources\\" + "Recept.resx");
+                foreach(DictionaryEntry d in l)
+                    rsxw.AddResource(d.Key.ToString(),d.Value);
+                rsxw.AddResource("r" +recInCat.IdRecept,  item.NameRecept);
+                rsxw.AddResource("d" + recInCat.IdRecept, fc["description"]);
+                rsxw.Generate();
+                rsxw.Close();
+
+                
+                rsxw = new ResXResourceWriter(Request.PhysicalApplicationPath +"App_GlobalResources\\"+"Recept.ru.resx");
+                rsxr = new ResXResourceReader(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.ru.resx");
+                l=new List<DictionaryEntry>();
+                foreach (DictionaryEntry d in rsxr)
+                l.Add(d);
+                rsxr.Close();
+                foreach(DictionaryEntry d in l)
+                    rsxw.AddResource(d.Key.ToString(),d.Value);
+                rsxw.AddResource("d" + recInCat.IdRecept, fc["description1"]);
+                rsxw.AddResource("r" + recInCat.IdRecept, fc["NameRecept1"]);
+                rsxw.Close();
+
+                rsxw = new ResXResourceWriter(Request.PhysicalApplicationPath +"App_GlobalResources\\"+"Recept.uk-UA.resx");
+                rsxr = new ResXResourceReader(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.uk-UA.resx");
+                l=new List<DictionaryEntry>();
+                foreach (DictionaryEntry d in rsxr)
+                l.Add(d);
+                rsxr.Close();
+                foreach(DictionaryEntry d in l)
+                    rsxw.AddResource(d.Key.ToString(),d.Value);
+                rsxw.AddResource("d" + recInCat.IdRecept, fc["description2"]);
+                rsxw.AddResource("r" + recInCat.IdRecept, fc["NameRecept2"]);
+                rsxw.Close(); 
+               
                 ssc.Close();
                 return RedirectToAction("Index", "CookBook");
             }
@@ -53,9 +95,18 @@ namespace MvcShop.Controllers
 
 
         
-        public ActionResult Edit(Recept recept, string edit,string update)
+        public ActionResult Edit(Recept recept, string edit,string update, FormCollection fc)
         {
             var ssc = new ServiceShopClient();
+            var rm = new ResourceManager("Resources.Recept", System.Reflection.Assembly.Load("App_GlobalResources"));
+            ViewData["name"] = rm.GetString("r"+recept.Id, new CultureInfo("en"));
+            ViewData["nameru"] = rm.GetString("r" + recept.Id, new CultureInfo("ru"));
+            ViewData["nameua"] = rm.GetString("r" + recept.Id, new CultureInfo("uk-UA"));
+
+            ViewData["dname"] = rm.GetString("d"+recept.Id, new CultureInfo("en"));
+            ViewData["dnameru"] = rm.GetString("d" + recept.Id, new CultureInfo("ru"));
+            ViewData["dnameua"] = rm.GetString("d" + recept.Id, new CultureInfo("uk-UA"));
+
             var listIngr=new List<Ingridient> ();
             foreach (var ing in ssc.LoadAllIngridients())
             {
@@ -86,6 +137,49 @@ namespace MvcShop.Controllers
                 recept.PathToImage = recept.PathToImage ?? "";
                 ssc.UpdateRecept(recept);
                 ssc.Close();
+                ResXResourceReader rsxr = new ResXResourceReader(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.resx");
+                List<DictionaryEntry> l = new List<DictionaryEntry>();
+                foreach (DictionaryEntry d in rsxr)
+                    l.Add(d);
+                rsxr.Close();
+                //rsxw.AddResource(r);
+                ResXResourceWriter rsxw = new ResXResourceWriter(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.resx");
+                foreach (DictionaryEntry d in l)
+                    if (d.Key.ToString() != "r" + recept.Id)
+                    rsxw.AddResource(d.Key.ToString(), d.Value);
+                rsxw.AddResource("r" + recept.Id, recept.NameRecept);
+                rsxw.AddResource("d" + recept.Id, fc["description"]);
+                rsxw.Generate();
+                rsxw.Close();
+
+
+                rsxw = new ResXResourceWriter(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.ru.resx");
+                rsxr = new ResXResourceReader(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.ru.resx");
+                l = new List<DictionaryEntry>();
+                foreach (DictionaryEntry d in rsxr)
+                    l.Add(d);
+                rsxr.Close();
+                foreach (DictionaryEntry d in l)
+                    if (d.Key.ToString() != "r" + recept.Id)
+                    rsxw.AddResource(d.Key.ToString(), d.Value);
+                rsxw.AddResource("d" + recept.Id, fc["description1"]);
+                rsxw.AddResource("r" + recept.Id, fc["NameRecept1"]);
+                rsxw.Close();
+
+                rsxw = new ResXResourceWriter(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.uk-UA.resx");
+                rsxr = new ResXResourceReader(Request.PhysicalApplicationPath + "App_GlobalResources\\" + "Recept.uk-UA.resx");
+                l = new List<DictionaryEntry>();
+                foreach (DictionaryEntry d in rsxr)
+                    l.Add(d);
+                rsxr.Close();
+                foreach (DictionaryEntry d in l)
+                    if (d.Key.ToString() != "r" + recept.Id)
+                    rsxw.AddResource(d.Key.ToString(), d.Value);
+                rsxw.AddResource("d" + recept.Id, fc["description2"]);
+                rsxw.AddResource("r" + recept.Id, fc["NameRecept2"]);
+                rsxw.Close(); 
+               
+                
                 return RedirectToAction("Index", "CookBook");
             }
             return View(recept);

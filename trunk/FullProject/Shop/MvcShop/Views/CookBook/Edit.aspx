@@ -19,7 +19,9 @@
                 Назва:
             </td>
             <td>
-                <%= Html.TextBox("NameRecept",Model.NameRecept) %>
+                <%= Html.TextBox("NameRecept", ViewData["name"])%>
+                <%= Html.TextBox("NameRecept1", ViewData["nameru"])%>
+                <%= Html.TextBox("NameRecept2", ViewData["nameua"])%>
             </td>
         </tr>
         <tr>
@@ -27,15 +29,17 @@
                 Опис:
             </td>
             <td>
-                <%= Html.TextBox("description",Model.Description)%>
-            </td>
+                <%= Html.TextBox("description", ViewData["dname"])%>
+                <%= Html.TextBox("description1", ViewData["dnameru"])%>
+                <%= Html.TextBox("description2", ViewData["dnameua"])%>
+             </td>
         </tr>
         <tr>
             <td>
                 Картинка:
             </td>
             <td>
-                <input type="file" name="img" value="<%= Model.PathToImage %>" ></input><img src="<%=Model.PathToImage%>" alt="image"/>
+                <input type="file" name="img" value="<%= Model.PathToImage %>" /><img src="<%=Model.PathToImage%>" alt="image"/>
             </td>
         </tr>
         <tr>
@@ -61,7 +65,8 @@
     <%} %>
     <hr />
     Інгридієнти
-<hr>
+<hr/>
+<%if (Model.Ingridients!=null) %>
     <table>
         <%foreach (ShopModel.Entities.IngridientInRecept ingr in Model.Ingridients)
           {%>
@@ -102,5 +107,5 @@
   <input type ="submit" value ="add" name ="add" />
 <%} %>
 
-    
+    ]
 </asp:Content>

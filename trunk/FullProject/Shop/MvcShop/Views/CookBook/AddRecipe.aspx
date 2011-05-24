@@ -18,10 +18,14 @@
     <tr>
         <td>Назва:</td>
         <td><%= Html.TextBox("NameRecept") %></td>
+        <td><%= Html.TextBox("NameRecept1") %></td>
+        <td><%= Html.TextBox("NameRecept2") %></td>
     </tr>
      <tr>
         <td>Опис:</td>
         <td><%= Html.TextBox("description")%></td>
+        <td><%= Html.TextBox("description1")%></td>
+        <td><%= Html.TextBox("description2")%></td>
     </tr>
    <tr>
         <td>Картинка:</td>
